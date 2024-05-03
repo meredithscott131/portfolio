@@ -5,7 +5,7 @@ import { About, Code, Home, Animation } from "./components/pages";
 
 function App() {
   return (
-    <div className="App">
+    <div className={StyleSheet.App}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
