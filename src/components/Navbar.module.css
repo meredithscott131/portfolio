@@ -1,7 +1,7 @@
 @import "../vars.css";
 
 .active{
-    color: #7b7b7b;
+    opacity: 50%;
 }
 
 .navbar {
@@ -9,7 +9,6 @@
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
-    color: white;
     position: sticky;
     top: 0;
     padding: 30px;
@@ -34,7 +33,7 @@ nav ul li a {
 }
 
 nav ul li a:not(.active):hover {
-    color:#b6b6b6 ;
+    opacity: 75%;
 }
 
 nav .menu {
