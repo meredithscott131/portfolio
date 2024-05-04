@@ -4,4 +4,7 @@
   background-color: var(--color-bg);
   height: 100%;
   width: 100%;
+  color: white;
+  font-size: 18px;
+  background: linear-gradient(180deg, #000000, #000D50);
 }
