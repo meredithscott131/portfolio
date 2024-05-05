@@ -27,6 +27,12 @@
     gap: 50px;
 }
 
+.codeItemText {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+
 .codeImage {
     width: 20%;
 }
@@ -62,7 +68,23 @@
 
 .githubLink {
     color: var(--color-link);
+    bottom: 0;
+    
 }
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Outfit";
+    letter-spacing: 1.76px;
+}
+
+p {
+    line-height: normal;
+    padding: 0%;
+    padding-bottom: 2%;
+}
+
 
 @media screen and (max-width: 1000px) {
     
@@ -70,8 +92,7 @@
         line-height: normal;
         text-align: left;
         padding-left: 0%;
-        padding: 10%;
-        padding-top: 5%;
+        padding-top: 2%;
         
     }
 
