@@ -11,15 +11,18 @@ export const About = () => {
       <ul className={styles.socialsList}>
         <li className={styles.social}>
           <img src="../assets/linkedinIcon.png" className={styles.socialImage} alt="LinkedIn Icon"></img>
-          <p className={styles.socialText}>LinkedIn</p>
+          <p className={styles.socialText}>www.linkedin.com/in/meredithgscott/</p>
         </li>
         <li className={styles.social}>
           <img src="../assets/githubIcon.png" className={styles.socialImage} alt="LinkedIn Icon"></img>
-          <p className={styles.socialText}>GitHub</p>
+          <p className={styles.socialText}>github.com/meredithscott131</p>
         </li>
         <li className={styles.social}>
           <img src="../assets/emailIcon.png" className={styles.socialImage} alt="LinkedIn Icon"></img>
-          <a href="mailto:meredithscott131@gmail.com" className={styles.contact}>Contact</a>
+          <a href="mailto:meredithscott131@gmail.com" className={styles.contact}>meredithscott131@gmail.com</a>
+        </li>
+        <li className={styles.resume}>
+          Resume
         </li>
       </ul>
     </div>

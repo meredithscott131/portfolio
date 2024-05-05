@@ -25,6 +25,7 @@
     font-size: 72px;
     font-weight: bold;
     margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .description {
@@ -36,8 +37,8 @@
 .social {
     display: flex;
     flex-direction: row;
-    column-gap: 20%;
-    margin-bottom: 10%;
+    column-gap: 5%;
+    margin-bottom: 5%;
 }
 
 .socialsList {
@@ -47,6 +48,11 @@
 
 .socialText {
     text-align: left;
+}
+
+.resume {
+    text-align: left;
+    font-weight: bold;
 }
 
 .contact {
@@ -97,6 +103,10 @@
         margin-left: 10%;
         margin-right: 10%;
         height: 100vh;
+    }
+
+    .social {
+        display: flex;
     }
 
     .pfp {
