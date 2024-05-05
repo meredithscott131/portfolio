@@ -1,1 +1,81 @@
-@import "../vars.css";
+@import "../../../vars.css";
+
+.container {
+    position: relative;
+    border-radius: 15px;
+    padding: 10%;
+    padding-top: 5%;
+    z-index: 1;
+}
+
+.title {
+    font-size: 36px;
+    letter-spacing: 1.76px;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.codeItems {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.codeImage {
+    width: 20%;
+}
+
+.codeItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    list-style: none;
+    padding: 25px;
+    background-image: linear-gradient(90deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.codeItem:hover {
+    background-size: 100% 100%;
+}
+
+.react {
+    color: var(--color-react);
+}
+
+.javascript {
+    color: var(--color-javascript);
+}
+
+.java {
+    color: var(--color-java);
+}
+
+.githubLink {
+    color: var(--color-link);
+}
+
+@media screen and (max-width: 1000px) {
+    
+    p {
+        line-height: normal;
+        text-align: left;
+        padding-left: 0%;
+        padding: 10%;
+        padding-top: 5%;
+        
+    }
+
+    .codeImage {
+        display: none;
+    }
+}
