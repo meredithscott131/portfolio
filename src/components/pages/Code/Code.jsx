@@ -10,7 +10,7 @@ export const Code = () => {
     <div className={styles.content}>
       <ul className={styles.codeItems}>
         <li className={styles.codeItem}>
-          <img src="assets/tempCodePreview.png" alt="loading image" target="_blank" className={styles.codeImage}/>
+          <img src="assets/tempCodePreview.png" alt="loading image" className={styles.codeImage}/>
           <div className={styles.codeItemText}>
             <h3>Animation Production Plan Generator</h3>
             <p>
