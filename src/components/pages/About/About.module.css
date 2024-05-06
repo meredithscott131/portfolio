@@ -6,10 +6,9 @@
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-    margin-left: 10%;
-    margin-right: 10%;
     height: 100lvh;
     margin-top: -5%;
+    padding: 10%;
 }
 
 .content {
@@ -111,7 +110,6 @@
         z-index: 1;
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 10%;
         height: 100vh;
     }
 

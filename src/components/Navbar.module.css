@@ -1,64 +1,53 @@
 @import "../vars.css";
 
-.active {
-    opacity: 50%;
-}
-
 .navbar {
+    position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     background-color: #000000;
     position: sticky;
     top: 0;
     padding: 30px;
-    z-index: 9999;
+    z-index: 2;
+    opacity: 100%;
 }
 
-nav ul {
+.menuBtn {
+    width: 7%;
+    display: none;
+}
+
+.menu {
     display: flex;
 }
 
-nav ul li {
+.menuItems {
+    display: flex;
+    gap: 10px;
     list-style: none;
 }
 
-nav ul li a {
+.menuItems a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: var(--color-text);
     opacity: 100%;
     padding: 0.5rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
+    transition: .1s;
 }
 
-nav ul li a:not(.active):hover {
+.menuItems a:not(a[class="active"]):hover {
     opacity: 75%;
 }
 
-nav ul li a.active {
-    color: red; /* Change text color to red for active link */
+a[class="active"] {
+    opacity: 50%;
 }
 
-nav .menu {
-    display: none;
-    position: absolute;
-    top: 0.75rem;
-    right: 0.5rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2.25rem;
-    height: 2rem;
-}
-
-nav .menu span {
-    height: 0.4rem;
-    width: 100%;
-    border-radius: 0.2rem;
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -67,27 +56,43 @@ nav .menu span {
     .menu {
         position: absolute;
         right: 0;
-        margin-right: 10%;
         flex-direction: column;
         align-items: flex-end;
-        gap: 10px;
-        z-index: 3;
+        gap: 11px;
+        z-index: 10;
+        background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
+        background-size: 100% 0;
+        background-repeat: no-repeat;
+        transition: 0.5s;
     }
 
     .menuBtn {
         display: block;
+        margin-right: 10%;
         cursor: pointer;
+        padding-top: 15px;
     }
 
     .menuItems {
         display: none;
         flex-direction: column;
-        align-items: center;
         gap: 13px;
         border-radius: 10px;
+        background: var(--color-bg);
+        padding: 24px;
     }
 
-    nav.menu {
+    .menuItems:hover {
+        background-size: 100% 100%;
+
+    }
+
+    .menuOpen {
         display: flex;
+        z-index: 1;
+    }
+
+    .menuItem {
+        text-align: right;
     }
 }
