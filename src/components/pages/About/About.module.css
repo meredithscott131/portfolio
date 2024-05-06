@@ -1,1 +1,139 @@
-@import "../vars.css";
+@import "../../../vars.css";
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    height: 100lvh;
+    margin-top: -5%;
+    padding: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 10%;
+    text-align: left;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    margin-bottom: 5%;
+}
+
+.socialsList {
+    list-style: none;
+    padding-top: 5%;
+}
+
+.socialText {
+    text-align: left;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.resume {
+    text-align: left;
+    font-weight: bold;
+    color: var(--color-link);
+}
+
+.contact {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.pfp {
+    width: 50%;
+    z-index: 1;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.socialImage {
+    width: 30px;
+    height: 30px;
+}
+
+.subtitle {
+    font: "Outfit";
+    font-size: 24px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translat(0, 0px);
+    }
+    50% {
+        transform: translate(0, -15px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        align-items: center;
+        padding-right: 0%;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 100vh;
+    }
+
+    .resume {
+        text-align: center;
+        font-weight: bold;
+        color: var(--color-link);
+    }
+
+    .pfp {
+        width: 75%;
+        padding-top: 10%;
+    }
+
+    .socialText {
+        text-align: center;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .description {
+        text-align: center;
+    }
+}
