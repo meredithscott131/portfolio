@@ -9,6 +9,7 @@
     margin-left: 10%;
     margin-right: 10%;
     height: 100lvh;
+    margin-top: -5%;
 }
 
 .content {
@@ -18,7 +19,7 @@
     color: var(--color-text);
     z-index: 1;
     padding-right: 10%;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .title {
@@ -48,11 +49,14 @@
 
 .socialText {
     text-align: left;
+    text-decoration: none;
+    color: var(--color-text);
 }
 
 .resume {
     text-align: left;
     font-weight: bold;
+    color: var(--color-link);
 }
 
 .contact {
@@ -75,6 +79,11 @@
     height: 30px;
 }
 
+.subtitle {
+    font: "Outfit";
+    font-size: 24px;
+}
+
 @keyframes floating {
     0% {
         transform: translat(0, 0px);
@@ -87,7 +96,7 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     .content {
         align-items: center;
         padding-right: 0%;
@@ -102,11 +111,14 @@
         z-index: 1;
         margin-left: 10%;
         margin-right: 10%;
+        margin-top: 10%;
         height: 100vh;
     }
 
-    .social {
-        display: flex;
+    .resume {
+        text-align: center;
+        font-weight: bold;
+        color: var(--color-link);
     }
 
     .pfp {
@@ -120,6 +132,7 @@
 
     .title {
         text-align: center;
+        font-size: 36px;
     }
 
     .description {

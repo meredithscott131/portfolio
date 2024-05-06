@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { About, Code, Home, Animation } from "./components/pages";
 import styles from "./App.module.css";
 function App() {
+  
   return (
     <div className={styles.App}>
       <Navbar />
