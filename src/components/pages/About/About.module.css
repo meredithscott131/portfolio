@@ -108,7 +108,8 @@
         align-items: center;
         justify-content: space-between;
         z-index: 1;
-        height: 100vh;
+        height: 100%;
+        margin-top: 0%;
     }
 
     .resume {
@@ -129,6 +130,7 @@
     .title {
         text-align: center;
         font-size: 36px;
+        padding-top: 10%;
     }
 
     .description {
