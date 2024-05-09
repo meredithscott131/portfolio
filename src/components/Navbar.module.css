@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000;
+    background-color: var(--color-dark);
     position: sticky;
     top: 0;
     padding: 30px;
@@ -78,7 +78,7 @@ a[class="active"] {
         flex-direction: column;
         gap: 13px;
         border-radius: 10px;
-        background: var(--color-bg);
+        background: var(--color-dark);
         padding: 24px;
     }
 
