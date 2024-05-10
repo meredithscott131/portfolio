@@ -7,11 +7,13 @@
     justify-content: space-between;
     z-index: 1;
     height: 100lvh;
+    width: 100%;
     margin-top: -5%;
     padding: 10%;
 }
 
 .content {
+    align-items: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -43,7 +45,8 @@
 
 .socialsList {
     list-style: none;
-    padding-top: 5%;
+    padding-top: 2%;
+    padding-left: 0%;
 }
 
 .socialText {
