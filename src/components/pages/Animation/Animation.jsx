@@ -8,7 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 export const Animation = () => {
   return <section className={styles.container}>
       <h2 className={styles.title}>
-        Art and Animation
+        3D Art and Animation
       </h2>
       <div className={styles.content}>
         <div class="ratio ratio-16x9">
@@ -30,54 +30,16 @@ export const Animation = () => {
           <p className={styles.bodyText}>After a boy sneaks into the astronomy exhibit after hours, he realizes he might not be alone.</p>
         </div>
       </div>
-      <div className={styles.slideshowOne}>
+      <div>
       <Carousel interval={null} controls={true}> 
         <Carousel.Item> 
-          <video 
-            controls
-            autoPlay
-            loop
+        <img 
             className="d-block w-100"
-            src="assets\animation\flyThrough.mp4"
-            alt="Image One"
+            src="assets\animation\turnaround.gif"
+            alt="Image Two"
           /> 
-          <Carousel.Caption> 
-            <h3>Fly Through</h3>
+          <Carousel.Caption>
           </Carousel.Caption> 
-        </Carousel.Item>
-        <Carousel.Item> 
-          <video 
-            className="d-block w-100"
-            controls
-            autoPlay
-            loop
-            src="assets\animation\MeredithScott_Turnaround.mp4"
-            alt="Image One"
-          /> 
-          <Carousel.Caption> 
-            <h3>Character Turnaround</h3>
-          </Carousel.Caption> 
-        </Carousel.Item> 
-        <Carousel.Item> 
-          <img 
-            className="d-block w-100"
-            src="assets\animation\Still1.png"
-            alt="Image Two"
-          />  
-        </Carousel.Item>
-        <Carousel.Item> 
-          <img 
-            className="d-block w-100"
-            src="assets\animation\Still2.png"
-            alt="Image Two"
-          />  
-        </Carousel.Item> 
-        <Carousel.Item> 
-          <img 
-            className="d-block w-100"
-            src="assets\animation\Still3.png"
-            alt="Image Two"
-          />  
         </Carousel.Item>
         <Carousel.Item> 
           <img 
@@ -87,15 +49,40 @@ export const Animation = () => {
           />  
         </Carousel.Item>
         <Carousel.Item> 
-          <video 
+          <img 
             className="d-block w-100"
-            controls
-            autoPlay
-            loop
-            src="assets\animation\SHOT8_Test.mp4"
+            src="assets\animation\neil_rig.png"
+            alt="Image Two"
+          />  
+        </Carousel.Item>
+        <Carousel.Item> 
+        <img 
+            className="d-block w-100"
+            src="assets\animation\SHOT8_Test.gif"
             alt="Image One"
           />
-        </Carousel.Item>   
+        </Carousel.Item>
+        <Carousel.Item> 
+          <img 
+            className="d-block w-100"
+            src="assets\animation\Still2.png"
+            alt="Image Two"
+          />  
+        </Carousel.Item>
+        <Carousel.Item> 
+          <img 
+            className="d-block w-100"
+            src="assets\animation\Still_4.png"
+            alt="Image Two"
+          />  
+        </Carousel.Item>
+        <Carousel.Item> 
+          <img 
+            className="d-block w-100"
+            src="assets\animation\Still_2.png"
+            alt="Image Two"
+          />  
+        </Carousel.Item>    
       </Carousel>
       </div>
       <div className={styles.content}>
