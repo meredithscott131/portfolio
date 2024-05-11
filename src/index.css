@@ -1,7 +1,9 @@
+@import "./vars.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Outfit", Arial, Helvetica, sans-serif;
-  color-scheme: dark;
+  scrollbar-color: var(--color-scrollbar) var(--color-dark);
 }

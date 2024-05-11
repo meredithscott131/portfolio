@@ -15,12 +15,14 @@
     text-transform: uppercase;
 }
 
-.contentOne {
+.content {
     display: flex;
+    flex-direction: column;
     flex-direction: row;
     border-radius: 20px;
     list-style: none;
-    padding: 25px;
+    padding-bottom: 5%;
+    padding-top: 5%;
 }
 
 .videoLeft {
@@ -60,3 +62,7 @@
     font-family: "Outfit";
     letter-spacing: 1.76px;
 }
+
+.carousel-item video {
+    opacity: 1 !important;
+  }
