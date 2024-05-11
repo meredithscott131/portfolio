@@ -11,7 +11,7 @@ export const Animation = () => {
         Art and Animation
       </h2>
       <div className={styles.contentOne}>
-        <div class="ratio ratio-16x9">
+      <div class="ratio ratio-16x9">
           <iframe src="https://www.youtube.com/embed/_e9yMqmXWo0?si=xWUEr8Zti0Vwwn-s" title="Chipi chipi chapa chapa cat" allowFullScreen></iframe>
         </div>
         <div class={styles.descOne}>
