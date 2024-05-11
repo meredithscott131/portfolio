@@ -10,7 +10,9 @@
     --color-bg: #070e30;
     --color-dark: #030615;
     --color-secondary: #152a92;
-    --color-scrollbar: #2e3751;
+    --color-level1: #8093a4;
+    --color-level2: #2b3352;
+    --color-level3: #bbc8d5;
 
     /* Fonts */
     --font-roboto: "Roboto";

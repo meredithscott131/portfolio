@@ -12,13 +12,13 @@
 .title {
     font-size: 36px;
     letter-spacing: 1.76px;
-    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .content {
     display: flex;
-    flex-direction: column;
     flex-direction: row;
+    column-gap: 5%;
     border-radius: 20px;
     list-style: none;
     padding-bottom: 5%;
@@ -30,7 +30,9 @@
 }
 
 .descOne {
-    padding-left: 5%;
+    padding: 25px;
+    border-radius: 10px;
+    background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
 }
 
 .bodyText {
@@ -56,7 +58,6 @@
 }
 
 .subtitle {
-    
     font-size: 24px;
     font-weight: bold;
     font-family: "Outfit";
@@ -66,3 +67,34 @@
 .carousel-item video {
     opacity: 1 !important;
   }
+
+@media screen and (max-width: 800px) {
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .bodyText {
+        line-height: normal;
+        text-align: center;
+        padding-left: 0%;
+        padding-bottom: 2%;
+        
+    }
+    .title {
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .videoLeft {
+        padding-right: 0%;
+    }
+    
+    .descOne {
+        padding: 5%;
+        border-radius: 10px;
+        background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
+    }
+}

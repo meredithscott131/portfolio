@@ -84,6 +84,7 @@
 .subtitle {
     font: "Outfit";
     font-size: 24px;
+    font-weight: bold;
 }
 
 @keyframes floating {

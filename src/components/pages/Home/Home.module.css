@@ -30,6 +30,7 @@ video {
 .title {
     font-size: 124px;
     font-family: "Outfit";
+    font-weight: bold;
 }
 
 .text {

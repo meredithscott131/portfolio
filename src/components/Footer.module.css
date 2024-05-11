@@ -1,7 +1,6 @@
 .container {
     display: flex;
     justify-content: center;
-    background-color: var(--color-dark);
     position: sticky;
     padding: 30px;
     z-index: 1;
