@@ -14,22 +14,11 @@
     font-weight: bold;
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .codeItems {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    column-gap: 5%;
     padding-top: 5%;
-}
-
-.codeItemText {
-    display: flex;
-    flex-direction: column;
 }
 
 .codeImage {
@@ -96,9 +85,7 @@
         text-align: center;
         padding-left: 0%;
         padding-bottom: 2%;
-        
     }
-
 
     .title {
         padding-bottom: 10%;
