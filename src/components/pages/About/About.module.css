@@ -2,25 +2,38 @@
 
 .container {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
-    height: 100lvh;
-    width: 100%;
-    margin-top: -5%;
     padding: 10%;
+    padding-top: 5%;
+    z-index: 1;
 }
 
-.content {
+.contentItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10%;
+    padding-top: 5%;
+}
+
+.text {
     align-items: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: var(--color-text);
     z-index: 1;
-    padding-right: 10%;
-    padding-bottom: 5%;
+    max-width: 50%;
+}
+
+.pfp {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .title {
@@ -69,11 +82,15 @@
 .pfp {
     width: 50%;
     z-index: 1;
-
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+}
+
+.pfp img {
+    max-width: 100%;
+    height: auto;
 }
 
 .socialImage {
@@ -100,20 +117,14 @@
 }
 
 @media screen and (max-width: 800px) {
-    .content {
-        align-items: center;
-        padding-right: 0%;
+    .contentItems {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
     }
 
     .container {
-        flex-direction: column-reverse;
-        position: relative;
-        display: flex;
         align-items: center;
-        justify-content: space-between;
-        z-index: 1;
-        height: 100%;
-        margin-top: 0%;
     }
 
     .resume {
@@ -134,10 +145,15 @@
     .title {
         text-align: center;
         font-size: 36px;
-        padding-top: 10%;
     }
 
     .description {
         text-align: center;
+    }
+
+    .text {
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
     }
 }

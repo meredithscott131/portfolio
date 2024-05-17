@@ -8,7 +8,9 @@
     background-color: var(--color-dark);
     position: sticky;
     top: 0;
-    padding: 30px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
     z-index: 2;
     opacity: 100%;
 }
@@ -26,6 +28,7 @@
     display: flex;
     gap: 10px;
     list-style: none;
+    padding-top: 10px;
 }
 
 .menuItems a {
@@ -33,17 +36,18 @@
     text-decoration: none;
     color: var(--color-text);
     padding: 0.5rem;
-    margin: 0 0.5rem;
     border-radius: 0.5rem;
     transition: .1s;
 }
 
 .menuItems a:not(a[class="active"]):hover {
-    color: var(--color-level3);
+    /*color: var(--color-level3);*/
+    opacity: 75%;
 }
 
 a[class="active"] {
-    color: var(--color-level1);
+    /*color: var(--color-level1);*/
+    opacity: 50%;
 }
 
 @media screen and (max-width: 700px) {
