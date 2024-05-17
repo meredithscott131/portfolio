@@ -44,6 +44,10 @@ video {
         font-size: 72px;
         
     }
+
+    .content {
+        padding: 5%;
+    }
     
     .text {
         line-height: normal;

@@ -73,6 +73,10 @@
         flex-direction: column-reverse;
     }
 
+    .container {
+        padding-top: 10%;
+    }
+
     .descOne {
         float: right;
         width: 100%;

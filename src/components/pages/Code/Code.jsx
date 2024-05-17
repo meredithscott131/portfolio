@@ -43,6 +43,7 @@ export const Code = () => {
               <span className={styles.javascript}>Javascript</span>
             </p>
             <p className={styles.bodyText}>Cras sit amet tortor eu arcu gravida porta. Fusce et elementum nulla, vel congue ante. Etiam pulvinar enim a feugiat maximus. Donec molestie augue est, quis lacinia tellus rutrum et. Proin luctus convallis tellus non euismod. Aliquam faucibus tempus ligula, eu facilisis risus venenatis sed.</p>
+            
             <a href="https://github.com/meredithscott131/Portfolio-Website" target="_blank" className={styles.githubLink}>Github</a>
           </div>
         </li>

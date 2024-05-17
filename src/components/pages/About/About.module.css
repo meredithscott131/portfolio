@@ -68,10 +68,23 @@
     color: var(--color-text);
 }
 
+.socialText:hover {
+    text-decoration: underline;
+}
+
+.socialText:active {
+    opacity: 50%;
+    text-decoration: underline;
+}
+
 .resume {
     text-align: left;
-    font-weight: bold;
     color: var(--color-link);
+    text-decoration: none;
+}
+
+.resume:hover {
+    text-decoration: underline;
 }
 
 .contact {
@@ -136,6 +149,9 @@
     .pfp {
         width: 75%;
         padding-top: 10%;
+    }
+
+    .social {
     }
 
     .socialText {
