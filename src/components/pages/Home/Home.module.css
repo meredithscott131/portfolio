@@ -30,6 +30,7 @@ video {
 .title {
     font-size: 124px;
     font-family: "Outfit";
+    font-weight: bold;
 }
 
 .text {
@@ -42,6 +43,10 @@ video {
         line-height: 1.2;
         font-size: 72px;
         
+    }
+
+    .content {
+        padding: 5%;
     }
     
     .text {

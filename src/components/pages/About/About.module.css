@@ -2,23 +2,38 @@
 
 .container {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
-    height: 100lvh;
-    margin-top: -5%;
     padding: 10%;
+    padding-top: 5%;
+    z-index: 1;
 }
 
-.content {
+.contentItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10%;
+    padding-top: 5%;
+}
+
+.text {
+    align-items: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: var(--color-text);
     z-index: 1;
-    padding-right: 10%;
-    padding-bottom: 5%;
+    max-width: 50%;
+}
+
+.pfp {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .title {
@@ -43,7 +58,8 @@
 
 .socialsList {
     list-style: none;
-    padding-top: 5%;
+    padding-top: 2%;
+    padding-left: 0%;
 }
 
 .socialText {
@@ -52,10 +68,23 @@
     color: var(--color-text);
 }
 
+.socialText:hover {
+    text-decoration: underline;
+}
+
+.socialText:active {
+    opacity: 50%;
+    text-decoration: underline;
+}
+
 .resume {
     text-align: left;
-    font-weight: bold;
     color: var(--color-link);
+    text-decoration: none;
+}
+
+.resume:hover {
+    text-decoration: underline;
 }
 
 .contact {
@@ -66,11 +95,15 @@
 .pfp {
     width: 50%;
     z-index: 1;
-
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+}
+
+.pfp img {
+    max-width: 100%;
+    height: auto;
 }
 
 .socialImage {
@@ -81,6 +114,7 @@
 .subtitle {
     font: "Outfit";
     font-size: 24px;
+    font-weight: bold;
 }
 
 @keyframes floating {
@@ -96,21 +130,14 @@
 }
 
 @media screen and (max-width: 800px) {
-    .content {
-        align-items: center;
-        padding-right: 0%;
+    .contentItems {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
     }
 
     .container {
-        flex-direction: column-reverse;
-        position: relative;
-        display: flex;
         align-items: center;
-        justify-content: space-between;
-        z-index: 1;
-        margin-left: 10%;
-        margin-right: 10%;
-        height: 100vh;
     }
 
     .resume {
@@ -124,6 +151,9 @@
         padding-top: 10%;
     }
 
+    .social {
+    }
+
     .socialText {
         text-align: center;
     }
@@ -135,5 +165,11 @@
 
     .description {
         text-align: center;
+    }
+
+    .text {
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
     }
 }

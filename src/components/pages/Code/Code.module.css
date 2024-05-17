@@ -11,25 +11,14 @@
 .title {
     font-size: 36px;
     letter-spacing: 1.76px;
-    text-transform: uppercase;
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    font-weight: bold;
 }
 
 .codeItems {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    column-gap: 5%;
     padding-top: 5%;
-}
-
-.codeItemText {
-    display: flex;
-    flex-direction: column;
 }
 
 .codeImage {
@@ -71,9 +60,35 @@
 }
 
 .githubLink {
-    color: var(--color-link);
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 100;
     bottom: 0;
-    
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color-secondary);
+    border: 2px solid var(--color-secondary); 
+    transition: all 0.3s; 
+}
+
+.githubLink:hover {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 100;
+    bottom: 0;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid var(--color-secondary); 
+}
+
+.githubLink:active {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 100;
+    bottom: 0;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid var(--color-link); 
 }
 
 .subtitle {
@@ -85,25 +100,26 @@
 
 .bodyText {
     line-height: normal;
-    padding: 0%;
     padding-bottom: 5%;
 }
 
-
 @media screen and (max-width: 800px) {
+
+    .container {
+        align-items: center;
+        padding: 5%;
+    }
     
     .bodyText {
         line-height: normal;
         text-align: center;
         padding-left: 0%;
         padding-bottom: 2%;
-        
     }
 
-
     .title {
-        padding-bottom: 10%;
         text-align: center;
+        padding-left: 5%;
     }
 
     .codeItemText {

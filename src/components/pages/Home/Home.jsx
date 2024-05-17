@@ -1,5 +1,5 @@
 import React from "react";
-import videoBg from '../../../../assets/flyThrough.mp4'
+import videoBg from '../../../../assets/animation/flyThrough.mp4'
 import styles from "./Home.module.css";
 import {useEffect} from "react";
 

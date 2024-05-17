@@ -5,10 +5,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000;
+    background-color: var(--color-dark);
     position: sticky;
     top: 0;
-    padding: 30px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
     z-index: 2;
     opacity: 100%;
 }
@@ -26,24 +28,25 @@
     display: flex;
     gap: 10px;
     list-style: none;
+    padding-top: 10px;
 }
 
 .menuItems a {
     display: block;
     text-decoration: none;
     color: var(--color-text);
-    opacity: 100%;
     padding: 0.5rem;
-    margin: 0 0.5rem;
     border-radius: 0.5rem;
     transition: .1s;
 }
 
 .menuItems a:not(a[class="active"]):hover {
+    /*color: var(--color-level3);*/
     opacity: 75%;
 }
 
 a[class="active"] {
+    /*color: var(--color-level1);*/
     opacity: 50%;
 }
 
@@ -78,7 +81,7 @@ a[class="active"] {
         flex-direction: column;
         gap: 13px;
         border-radius: 10px;
-        background: var(--color-bg);
+        background: var(--color-dark);
         padding: 24px;
     }
 
