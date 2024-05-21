@@ -18,8 +18,22 @@ export const Code = () => {
               <span>, </span>
               <span className={styles.typescript}>Typescript</span>
             </p>
-            <p className={styles.bodyText}>Cras sit amet tortor eu arcu gravida porta. Fusce et elementum nulla, vel congue ante. Etiam pulvinar enim a feugiat maximus. Donec molestie augue est, quis lacinia tellus rutrum et. Proin luctus convallis tellus non euismod. Aliquam faucibus tempus ligula, eu facilisis risus venenatis sed.</p>
-            <a href="https://github.com/Abby-Dennin/Animation-Production-Plan-Generator" target="_blank" className={styles.githubLink}>Github</a>
+            <p className={styles.bodyText}>
+              <ul className={styles.bodyul}>
+                <li className={styles.bodyli}>
+                  Collaborated with a team of peers to create a web application that automates production
+                  plans with generative AI for animation students and creative hobbyists.
+                </li>
+                <li className={styles.bodyli}>
+                  Directed the interface design, ensuring a seamless user experience and aesthetic appeal.
+                </li>
+                <li className={styles.bodyli}>
+                  Interviewed target end users to understand current frustrations with tasks and find prototype errors.
+                </li>
+              </ul>
+            </p>
+            <a href="https://github.com/Abby-Dennin/Animation-Production-Plan-Generator"
+            target="_blank" className={styles.githubLink}>Github</a>
           </div>
         </li>
         <li className={styles.codeItem}>
@@ -30,7 +44,8 @@ export const Code = () => {
               <span className={styles.java}>Java</span>
             </p>
             <p className={styles.bodyText}>Cras sit amet tortor eu arcu gravida porta. Fusce et elementum nulla, vel congue ante. Etiam pulvinar enim a feugiat maximus. Donec molestie augue est, quis lacinia tellus rutrum et. Proin luctus convallis tellus non euismod. Aliquam faucibus tempus ligula, eu facilisis risus venenatis sed.</p>
-            <a href="https://github.com/meredithscott131/battleship" target="_blank" className={styles.githubLink}>Github</a>
+            <a href="https://github.com/meredithscott131/battleship" target="_blank"
+            className={styles.githubLink}>Github</a>
           </div>
         </li>
         <li className={styles.codeItem}>
@@ -44,7 +59,8 @@ export const Code = () => {
             </p>
             <p className={styles.bodyText}>Cras sit amet tortor eu arcu gravida porta. Fusce et elementum nulla, vel congue ante. Etiam pulvinar enim a feugiat maximus. Donec molestie augue est, quis lacinia tellus rutrum et. Proin luctus convallis tellus non euismod. Aliquam faucibus tempus ligula, eu facilisis risus venenatis sed.</p>
             
-            <a href="https://github.com/meredithscott131/Portfolio-Website" target="_blank" className={styles.githubLink}>Github</a>
+            <a href="https://github.com/meredithscott131/Portfolio-Website"
+            target="_blank" className={styles.githubLink}>Github</a>
           </div>
         </li>
       </ul>

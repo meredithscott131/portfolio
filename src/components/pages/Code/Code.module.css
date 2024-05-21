@@ -37,6 +37,7 @@
     background-size: 100% 0;
     background-repeat: no-repeat;
     transition: 0.5s;
+    width: 33%;
 }
 
 .codeItem:hover {
@@ -72,13 +73,9 @@
 }
 
 .githubLink:hover {
-    color: var(--color-text);
-    text-decoration: none;
-    font-weight: 100;
-    bottom: 0;
+    color: var(--color-link);
     padding: 15px;
     background-color: transparent;
-    border: 2px solid var(--color-secondary); 
 }
 
 .githubLink:active {
@@ -103,11 +100,21 @@
     padding-bottom: 5%;
 }
 
+.bodyul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.bodyli {
+    padding-bottom: 20px;
+}
+
 @media screen and (max-width: 800px) {
 
     .container {
         align-items: center;
         padding: 5%;
+        padding-top: 10%;
     }
     
     .bodyText {
@@ -132,5 +139,15 @@
         display: flex;
         flex-direction: column;
         gap: 50px;
+    }
+
+    .codeItem {
+        width: 100%;
+    }
+
+    .bodyul { 
+        text-align: center;
+        list-style-position: inside;
+        padding-left: 0;
     }
 }
