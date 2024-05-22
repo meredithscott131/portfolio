@@ -10,7 +10,10 @@ export const Code = () => {
     <div className={styles.content}>
       <ul className={styles.codeItems}>
         <li className={styles.codeItem}>
-          <img src="assets/tempCodePreview.png" alt="loading image" className={styles.codeImage}/>
+          <video
+          controls
+          className={styles.codeImage}
+          src="assets\code\production_plan_demo.mp4"/>
           <div className={styles.codeItemText}>
             <h3 className={styles.subtitle}>Animation Production Plan Generator</h3>
             <p className={styles.bodyText}>
@@ -49,7 +52,7 @@ export const Code = () => {
           </div>
         </li>
         <li className={styles.codeItem}>
-          <img src="assets/tempCodePreview.png" alt="loading image" className={styles.codeImage}/>
+          <img src="assets\code\website_preview.png" alt="loading image" className={styles.codeImage}/>
           <div className={styles.codeItemText}>
             <h3 className={styles.subtitle}>This Website!</h3>
             <p className={styles.bodyText}>

@@ -26,9 +26,8 @@
 }
 
 .videoLeft {
-    padding-right: 10%;
-    overflow: hidden;
-    min-height: 50px;
+    max-width: 70%;
+    height: 100%;
 }
 
 .descOne {
@@ -68,6 +67,10 @@
     letter-spacing: 1.76px;
 }
 
+.carouselCap {
+    font-size: 24px;
+}
+
 @media screen and (max-width: 800px) {
     .content {
         flex-direction: column-reverse;
@@ -104,6 +107,7 @@
 
     .videoLeft {
         padding-right: 0%;
+        max-width: 100%;
     }
     
     .descOne {
