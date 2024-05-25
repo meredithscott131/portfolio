@@ -15,12 +15,8 @@ export const Code = () => {
           className={styles.codeImage}
           src="assets\code\production_plan_demo.mp4"/>
           <div className={styles.codeItemText}>
-            <h3 className={styles.subtitle}>Animation Production Plan Generator</h3>
-            <p className={styles.bodyText}>
-              <span className={styles.react}>React</span>
-              <span>, </span>
-              <span className={styles.typescript}>Typescript</span>
-            </p>
+            <h3 className={styles.projectTitle}>Animation Production Plan Generator</h3>
+            <p className={styles.subtitle}>React, Typescript</p>
             <p className={styles.bodyText}>
               <ul className={styles.bodyul}>
                 <li className={styles.bodyli}>
@@ -45,18 +41,8 @@ export const Code = () => {
           className={styles.codeImage}
           src="assets\code\quizzy_demo.mp4"/>
           <div className={styles.codeItemText}>
-            <h3 className={styles.subtitle}>Quiz Database "Quizzy"</h3>
-            <p className={styles.bodyText}>
-              <span className={styles.typescript}>Python</span>
-              <span>, </span>
-              <span className={styles.cpp}>MySQL</span>
-              <span>, </span>
-              <span className={styles.react}>Docker</span>
-              <span>, </span>
-              <span className={styles.cpp}>DataGrip</span>
-              <span>, </span>
-              <span className={styles.java}>Appsmith</span>
-            </p>
+            <h3 className={styles.projectTitle}>Quiz Database "Quizzy"</h3>
+            <p className={styles.subtitle}>Python, MySQL, Docker, DataGrip, Appsmith</p>
             <p className={styles.bodyText}>
               <ul className={styles.bodyul}>
                 <li className={styles.bodyli}>
@@ -77,12 +63,8 @@ export const Code = () => {
         <li className={styles.codeItem}>
           <img src="assets\code\website_preview.png" alt="loading image" className={styles.codeImage}/>
           <div className={styles.codeItemText}>
-            <h3 className={styles.subtitle}>This Website!</h3>
-            <p className={styles.bodyText}>
-              <span className={styles.react}>React</span>
-              <span>, </span>
-              <span className={styles.javascript}>Javascript</span>
-            </p>
+            <h3 className={styles.projectTitle}>This Website!</h3>
+            <p className={styles.subtitle}>React, Javascript</p>
             <p className={styles.bodyText}>
               <ul className={styles.bodyul}>
                 <li className={styles.bodyli}>

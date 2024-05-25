@@ -7,7 +7,9 @@ export const About = () => {
       <ul className={styles.contentItems}>
         <li className={styles.text}>
           <h2 className={styles.title}>Hi, I'm Meredith!</h2>
-          <p className={styles.description}>Cras sit amet tortor eu arcu gravida porta. Fusce et elementum nulla, vel congue ante. Etiam pulvinar enim a feugiat maximus. Donec molestie augue est, quis lacinia tellus rutrum et. Proin luctus convallis tellus non euismod. Aliquam faucibus tempus ligula, eu facilisis risus venenatis sed.</p>
+          <p className={styles.description}>
+          I’m a third-year computer science and media arts student at Northeastern University, passionate about discovering technology and art’s intersections. I’m currently working as an AJC Merit Research Scholar Co-op in the Lages Laboratory at Northeastern University, exploring how mixed reality can fit into everyday use and create new ways to experience entertainment. In my education I’ve taken classes across computer science and animation curriculums, learning both animation and software development pipelines. 
+          </p>
           <h3 className={styles.subtitle}>Contact</h3>
           <ul className={styles.socialsList}>
             <li className={styles.social}>
@@ -28,7 +30,7 @@ export const About = () => {
           </ul>
         </li>
         <li className={styles.pfp}>
-        <img src="../assets/tempCodePreview.png" alt="profile image"></img>
+        <img src="assets\about_picture.png" alt="profile image"></img>
         </li>
       </ul>
     </div>

@@ -44,24 +44,8 @@
     background-size: 100% 100%;
 }
 
-.react {
-    color: var(--color-react);
-}
-
-.javascript {
-    color: var(--color-javascript);
-}
-
-.java {
-    color: var(--color-java);
-}
-
-.typescript {
-    color: var(--color-typescript);
-}
-
-.cpp {
-    color: var(--color-c);
+.subtitle {
+    color: var(--color-tertiary);
 }
 
 .githubLink {
@@ -92,7 +76,7 @@
     border: 2px solid var(--color-link); 
 }
 
-.subtitle {
+.projectTitle {
     font-size: 24px;
     font-weight: bold;
     font-family: "Outfit";
