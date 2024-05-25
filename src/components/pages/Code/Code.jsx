@@ -40,15 +40,38 @@ export const Code = () => {
           </div>
         </li>
         <li className={styles.codeItem}>
-          <img src="assets/tempCodePreview.png" alt="loading image" className={styles.codeImage}/>
+        <video
+          controls
+          className={styles.codeImage}
+          src="assets\code\quizzy_demo.mp4"/>
           <div className={styles.codeItemText}>
-            <h3 className={styles.subtitle}>Battleship</h3>
+            <h3 className={styles.subtitle}>Quiz Database "Quizzy"</h3>
             <p className={styles.bodyText}>
-              <span className={styles.java}>Java</span>
+              <span className={styles.typescript}>Python</span>
+              <span>, </span>
+              <span className={styles.cpp}>MySQL</span>
+              <span>, </span>
+              <span className={styles.react}>Docker</span>
+              <span>, </span>
+              <span className={styles.cpp}>DataGrip</span>
+              <span>, </span>
+              <span className={styles.java}>Appsmith</span>
             </p>
-            <p className={styles.bodyText}>Cras sit amet tortor eu arcu gravida porta. Fusce et elementum nulla, vel congue ante. Etiam pulvinar enim a feugiat maximus. Donec molestie augue est, quis lacinia tellus rutrum et. Proin luctus convallis tellus non euismod. Aliquam faucibus tempus ligula, eu facilisis risus venenatis sed.</p>
-            <a href="https://github.com/meredithscott131/battleship" target="_blank"
-            className={styles.githubLink}>Github</a>
+            <p className={styles.bodyText}>
+              <ul className={styles.bodyul}>
+                <li className={styles.bodyli}>
+                  Conceptualized and generated a database for a proof-of-concept quiz taking platform with a team of peers.
+                </li>
+                <li className={styles.bodyli}>
+                  Managed the REST API implementation of query commands in Python to optimize the retrieval of quiz statistics and management of user profiles.
+                </li>
+                <li className={styles.bodyli}>
+                  Adapted the database to a front-end application by implementing UI screens in Appsmith with sample data.
+                </li>
+              </ul>
+            </p>
+            <a href="https://github.com/meredithscott131/quiz-database"
+            target="_blank" className={styles.githubLink}>Github</a>
           </div>
         </li>
         <li className={styles.codeItem}>
@@ -60,8 +83,19 @@ export const Code = () => {
               <span>, </span>
               <span className={styles.javascript}>Javascript</span>
             </p>
-            <p className={styles.bodyText}>Cras sit amet tortor eu arcu gravida porta. Fusce et elementum nulla, vel congue ante. Etiam pulvinar enim a feugiat maximus. Donec molestie augue est, quis lacinia tellus rutrum et. Proin luctus convallis tellus non euismod. Aliquam faucibus tempus ligula, eu facilisis risus venenatis sed.</p>
-            
+            <p className={styles.bodyText}>
+              <ul className={styles.bodyul}>
+                <li className={styles.bodyli}>
+                  Learned React and other web-development tools and languages to build a portfolio website showcasing my programming and animation projects.
+                </li>
+                <li className={styles.bodyli}>
+                  Designed the interface with Figma, considering  the overall user experience and interaction.
+                </li>
+                <li className={styles.bodyli}>
+                  Applied experience with the Adobe Suite to design graphics and produce media for the site.
+                </li>
+              </ul>
+            </p>
             <a href="https://github.com/meredithscott131/Portfolio-Website"
             target="_blank" className={styles.githubLink}>Github</a>
           </div>
