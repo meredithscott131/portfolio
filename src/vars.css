@@ -1,18 +1,13 @@
 :root {
     /* Colors */
     --color-text: #fff;
-    --color-java: #FF3333;
-    --color-react: #29D9FF;
-    --color-javascript: #FFE924;
-    --color-c: #4CDB35;
-    --color-typescript: #0f67cd;
+    --color-tertiary: #2fb3ff;
     --color-link: #0085FF;
     --color-bg: #070e30;
     --color-dark: #030615;
+    --color-bg-gradient1: #0b1546;
     --color-secondary: #152a92;
-    --color-level1: #8093a4;
-    --color-level2: #3f4a74;
-    --color-level3: #bbc8d5;
+    --color-scrollBar: #3f4a74;
 
     /* Fonts */
     --font-roboto: "Roboto";

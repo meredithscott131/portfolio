@@ -7,7 +7,7 @@ export const Home = () => {
   
   return <section>
       <div class={styles.launchPage}>
-        <video src={videoBg} autoPlay loop muted/>
+        <video className={styles.bgVideo} src={videoBg} autoPlay loop muted/>
       </div>
       <div className={styles.content}>
         <h1 class={styles.title}>Meredith Scott</h1>

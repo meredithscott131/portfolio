@@ -23,17 +23,13 @@
     list-style: none;
     padding-bottom: 5%;
     padding-top: 5%;
-}
-
-.videoLeft {
-    padding-right: 10%;
-    overflow: hidden;
-    min-height: 50px;
+    align-items: center;
 }
 
 .descOne {
     float: right;
-    width: 50%;
+    max-width: 25%;
+    height: auto;
     padding: 25px;
     border-radius: 10px;
     background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
@@ -45,32 +41,25 @@
     padding-bottom: 5%;
 }
 
-.maya {
-    color: var(--color-react);
-}
-
-.sp {
-    color: var(--color-c);
-}
-
-.rigging {
-    color: var(--color-javascript);
-}
-
-.animation {
-    color: var(--color-java);
-}
-
 .subtitle {
+    color: var(--color-tertiary);
+}
+
+.projectTitle {
     font-size: 24px;
     font-weight: bold;
     font-family: "Outfit";
     letter-spacing: 1.76px;
 }
 
-@media screen and (max-width: 800px) {
+.carouselCap {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1200px) {
     .content {
         flex-direction: column-reverse;
+        padding-top: 0%;
     }
 
     .container {
@@ -79,7 +68,7 @@
 
     .descOne {
         float: right;
-        width: 100%;
+        max-width: 100%;
         padding: 25px;
         margin-top: 10%;
         border-radius: 10px;
@@ -93,16 +82,23 @@
         padding-bottom: 2%;
         
     }
+    
     .title {
+        text-align: center;
+    }
+
+    .projectTitle {
         text-align: center;
     }
 
     .subtitle {
         text-align: center;
     }
-
+    
     .videoLeft {
-        padding-right: 0%;
+        position: fixed;
+        height: auto;
+        max-width: 100%;
     }
     
     .descOne {
