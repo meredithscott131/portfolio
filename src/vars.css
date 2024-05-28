@@ -1,5 +1,5 @@
 :root {
-    /* Colors */
+    /* Colors
     --color-text: #fff;
     --color-tertiary: #2fb3ff;
     --color-link: #0085FF;
@@ -8,6 +8,15 @@
     --color-bg-gradient1: #0b1546;
     --color-secondary: #152a92;
     --color-scrollBar: #3f4a74;
+    */
+
+    --color-text: #fefcfb;
+    --color-tertiary: #33beec;
+    --color-dark: #0a1128;
+    --color-bg-gradient: #112145;
+    --color-secondary: #12518c;
+    --color-scrollBar: #12518c;
+
 
     /* Fonts */
     --font-roboto: "Roboto";
