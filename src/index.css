@@ -7,3 +7,7 @@
   font-family: "Outfit", Arial, Helvetica, sans-serif;
   scrollbar-color: var(--color-scrollBar) var(--color-dark);
 }
+
+body {
+  background: var(--color-dark);
+}

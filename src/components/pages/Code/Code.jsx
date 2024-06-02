@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Code.module.css";
 import { getImageUrl } from "../../../utils";
+import Carousel from 'react-bootstrap/Carousel';
 
 export const Code = () => {
   return (<section className={styles.container}>
@@ -10,10 +11,17 @@ export const Code = () => {
     <div className={styles.content}>
       <ul className={styles.codeItems}>
         <li className={styles.codeItem}>
-          <video
-          controls
-          className={styles.codeImage}
-          src="assets\code\production_plan_demo.mp4"/>
+          <div className={styles.codeImage}>
+          <Carousel interval={null} controls={true}>
+            <Carousel.Item>
+              <video className="d-block w-100" controls autoPlay muted loop>
+                  <source src="assets\code\production_plan_demo.mp4"
+                  type="video/mp4"
+                  />
+              </video>
+            </Carousel.Item>
+          </Carousel>
+          </div>
           <div className={styles.codeItemText}>
             <h3 className={styles.projectTitle}>Animation Production Plan Generator</h3>
             <p className={styles.subtitle}>React, Typescript</p>
