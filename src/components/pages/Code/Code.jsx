@@ -11,17 +11,10 @@ export const Code = () => {
     <div className={styles.content}>
       <ul className={styles.codeItems}>
         <li className={styles.codeItem}>
-          <div className={styles.codeImage}>
-          <Carousel interval={null} controls={true}>
-            <Carousel.Item>
-              <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="assets\code\production_plan_demo.mp4"
-                  type="video/mp4"
-                  />
-              </video>
-            </Carousel.Item>
-          </Carousel>
-          </div>
+          <video
+            controls
+            className={styles.codeImage}
+            src="assets\code\production_plan_demo.mp4"/>
           <div className={styles.codeItemText}>
             <h3 className={styles.projectTitle}>Animation Production Plan Generator</h3>
             <p className={styles.subtitle}>React, Typescript</p>
@@ -45,9 +38,9 @@ export const Code = () => {
         </li>
         <li className={styles.codeItem}>
         <video
-          controls
-          className={styles.codeImage}
-          src="assets\code\quizzy_demo.mp4"/>
+            controls
+            className={styles.codeImage}
+            src="assets\code\quizzy_demo.mp4"/>
           <div className={styles.codeItemText}>
             <h3 className={styles.projectTitle}>Quiz Database "Quizzy"</h3>
             <p className={styles.subtitle}>Python, MySQL, Docker, DataGrip, Appsmith</p>
@@ -87,6 +80,30 @@ export const Code = () => {
               </ul>
             </p>
             <a href="https://github.com/meredithscott131/Portfolio-Website"
+            target="_blank" className={styles.githubLink}>Github</a>
+          </div>
+        </li>
+      </ul>
+      <ul className={styles.codeItems}>
+        <li className={styles.codeItem}>
+          <img src="assets\code\journal_preview.png" alt="loading image" className={styles.codeImage}/>
+          <div className={styles.codeItemText}>
+            <h3 className={styles.projectTitle}>Bullet Journal</h3>
+            <p className={styles.subtitle}>Java, JavaFX, Scene Builder</p>
+            <p className={styles.bodyText}>
+              <ul className={styles.bodyul}>
+                <li className={styles.bodyli}>
+                  Collaborated with peers to create a bullet journal application with a variety of features including event/task creation, event/task ordering, file creation, and theme customization. 
+                </li>
+                <li className={styles.bodyli}>
+                  Directed the development of the file creation and saving features for the application. 
+                </li>
+                <li className={styles.bodyli}>
+                  Implemented graphics using Scene Builder to create GUI layouts for flexible customization.
+                </li>
+              </ul>
+            </p>
+            <a href="https://github.com/meredithscott131/bullet-journal"
             target="_blank" className={styles.githubLink}>Github</a>
           </div>
         </li>
