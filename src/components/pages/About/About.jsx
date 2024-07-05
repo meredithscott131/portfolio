@@ -1,14 +1,16 @@
 import React from "react";
 import styles from "./About.module.css";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.compat.css"
 
 export const About = () => {
   return <section className={styles.container}>
     <div className={styles.content}>
       <ul className={styles.contentItems}>
         <li className={styles.text}>
-          <h2 className={styles.title}>Hi, I'm Meredith!</h2>
+            <h2 className={styles.title}>Hi, I'm Meredith!</h2>
           <p className={styles.description}>
-          I’m a third-year computer science and animation student at Northeastern University, passionate about exploring the intersections of technology and art. I’m currently working as an AJC Merit Research Scholar Co-op in the Lages Laboratory at Northeastern University, programming augmented reality prototypes to better understand how mixed reality can be integrated into everyday life and enhance entertainment experiences. My professional goal is to develop innovative solutions and tools that improve the technology that touches our lives. In my free time, I enjoy exploring the scenery of my hometown, New England and creating stories through my personal art.  
+            I’m a third-year computer science and animation student at Northeastern University, passionate about exploring the intersections of technology and art. I’m currently working as an AJC Merit Research Scholar Co-op in the Lages Laboratory at Northeastern University, programming augmented reality prototypes to better understand how mixed reality can be integrated into everyday life and enhance entertainment experiences. My professional goal is to develop innovative solutions and tools that improve the technology that touches our lives. In my free time, I enjoy exploring the scenery of my hometown, New England and creating stories through my personal art.  
           </p>
           <h3 className={styles.subtitle}>Contact</h3>
           <ul className={styles.socialsList}>

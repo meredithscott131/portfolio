@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./Animation.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../../vars.css";
-import ReactPlayer from "react-player";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.compat.css"
 
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -11,6 +12,7 @@ export const Animation = () => {
       <h2 className={styles.title}>
         3D Art and Animation Projects
       </h2>
+
       <div className={styles.content}>
         <div class="ratio ratio-16x9">
         <video className={styles.videoLeft}
@@ -23,10 +25,10 @@ export const Animation = () => {
             The Trespassers
           </h3>
           <p className={styles.subtitle}>Maya, Substance Painter, Rigging, Animation</p>
-          <p className={styles.bodyText}>After a boy sneaks into the astronomy exhibit after hours, he realizes he might not be alone.</p>
+          <p className={styles.descText}>After a boy sneaks into the astronomy exhibit after hours, he realizes he might not be alone.</p>
           <p className={styles.bodyText}>Made for my Animation 1 course where I was independently responsible for conceptualizing, modeling, UV unwrapping, texturing, and lighting a set and character to produce an animated film. Used Advanced Skeleton to rig the character and Arnold to render.</p>
         </div>
-      </div>
+      </div>    
       <div>
       <Carousel interval={null} controls={true}>
         <Carousel.Item> 
@@ -93,6 +95,7 @@ export const Animation = () => {
             Talent Show
           </h3>
           <p className={styles.subtitle}>Maya, Animation</p>
+          <p className={styles.descText}>How high can a singer go before they reach their limit?</p>
           <p className={styles.bodyText}>Made for my Animation Basics course final where I was tasked to model and texture a character and animate them performing their unique talent on a provided stage, focusing on animation principles and staging. Rendered with Arnold.</p>
         </div>
       </div>
