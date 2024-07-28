@@ -38,6 +38,7 @@
 }
 
 .title {
+    color: var(--color-secondary);
     font-size: 72px;
     font-weight: bold;
     margin-bottom: 5%;

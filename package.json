@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
     "@fontsource/montserrat": "^5.0.18",
     "@fontsource/outfit": "^5.0.13",
     "@fontsource/roboto": "^5.0.13",
     "@fontsource/rubik": "^5.0.20",
+    "@mui/material": "^5.16.5",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Code.module.css";
+import Card from 'react-bootstrap/Card';
 import { getImageUrl } from "../../../utils";
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -9,6 +10,7 @@ export const Code = () => {
       <h2 className={styles.title}>Coding Projects</h2>
       <div className={styles.content}>
         <div className={styles.grid}>
+ 
           <div className={styles.codeItem}>
             <video
               controls
@@ -60,13 +62,13 @@ export const Code = () => {
               <p className={styles.bodyText}>
                 <ul className={styles.bodyul}>
                   <li className={styles.bodyli}>
-                    Conceptualized and generated a database for a proof-of-concept quiz taking platform with a team of peers.
+                    Developed a custom Krita docker plugin for generating and managing color palettes from images, utilizing PyQt5 and Krita’s API for a dynamic and interactive user interface.
                   </li>
                   <li className={styles.bodyli}>
-                    Managed the REST API implementation of query commands in Python to optimize the retrieval of quiz statistics and management of user profiles.
+                    Implemented functionality to load, regenerate, save, and display color palettes, including drag-and-drop image support and customizable image paths for palette generation.
                   </li>
                   <li className={styles.bodyli}>
-                    Adapted the database to a front-end application by implementing UI screens in Appsmith with sample data.
+                    
                   </li>
                 </ul>
               </p>
