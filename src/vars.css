@@ -1,11 +1,11 @@
 :root {
 
-    --color-text: rgb(75, 73, 60);
-    --color-tertiary: #CAD49D;
-    --color-dark: #7ac9bd;
-    --color-bg-gradient: #e2eef3;
-    --color-secondary: #ec7554;
-    --color-scrollBar: #1d3363;
+    --color-text: rgb(21, 34, 61);
+    --color-peri: #8d9aff;
+    --color-peri-hover: #c6cdff;
+    --color-green: #ebf568;
+    --colorss-bg: #e2eef3;
+    --color-red: #ff6d40;
 
 
     /* Fonts */

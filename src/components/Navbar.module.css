@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color-dark);
+    background-color: var(--color-green);
     position: sticky;
     top: 0;
     padding: 10px;
@@ -35,6 +35,8 @@
     display: block;
     text-decoration: none;
     color: var(--color-text);
+    font-family: 'DM Sans';
+    font-weight: bolder;
     padding: 0.5rem;
     border-radius: 0.5rem;
     transition: .1s;
@@ -42,7 +44,7 @@
 
 .menuItems a:not(a[class="active"]):hover {
     /*color: var(--color-level3);*/
-    opacity: 75%;
+    opacity: 65%;
 }
 
 a[class="active"] {
@@ -82,7 +84,7 @@ a[class="active"] {
         flex-direction: column;
         gap: 13px;
         border-radius: 10px;
-        background: var(--color-dark);
+        background: var(--color-green);
         padding: 24px;
     }
 

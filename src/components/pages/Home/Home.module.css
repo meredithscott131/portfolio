@@ -3,7 +3,6 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    background-color: black;
 }
 
 .bgVideo {
@@ -21,20 +20,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: center;
+    text-align: center;
     padding: 10%;
-    font-family: "Outfit";
+    font-family: "DM Sans";
     line-height: 1.5;
 }
 
 .title {
     font-size: 124px;
-    font-family: "Outfit";
-    font-weight: bold;
+    font-family: "DM Sans";
+    font-weight: bolder;
 }
 
 .text {
     line-height: normal;
+    font-size: 32px;
 }
 
 @media screen and (max-width: 1000px) {

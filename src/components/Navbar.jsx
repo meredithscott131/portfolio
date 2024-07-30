@@ -9,13 +9,13 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <img src="assets/Logo_White.png" width={150} height={50} alt="Logo" />
+      <img src="assets\Icons\Logo_White.png" width={150} height={50} alt="Logo" />
       <div className={styles.menu}>
         <img className={styles.menuBtn}
         src={
           menuOpen
-            ? "assets/menuClose.png"
-            : "assets/menuIcon.png"
+            ? "assets/Icons/menuClose.png"
+            : "assets/Icons/menuIcon.png"
         }
         alt="Menu-button"
         onClick={() => setMenuOpen(!menuOpen)}/>
