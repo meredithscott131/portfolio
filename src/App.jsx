@@ -1,19 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.module.css";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { About, Code, Home, Animation } from "./components/pages";
+import withFadeIn from "./withFadeIn";
 import styles from "./App.module.css";
+
 function App() {
-  
   return (
     <div className={styles.App}>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/code" element={<Code />} />
-        <Route path="/animation" element={<Animation />} />
+        <Route path="/" element={withFadeIn(Home)()} />
+        <Route path="/about" element={withFadeIn(About)()} />
+        <Route path="/code" element={withFadeIn(Code)()} />
+        <Route path="/animation" element={withFadeIn(Animation)()} />
       </Routes>
       <Footer />
     </div>
