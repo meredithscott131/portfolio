@@ -30,7 +30,7 @@ export const Navbar = () => {
             <NavLink to="/code">Code</NavLink>
           </li>
           <li className={styles.menuItem}>
-            <NavLink to="/animation">3D Art</NavLink>
+            <NavLink to="/animation">3D Animation</NavLink>
           </li>
           <li className={styles.menuItem}>
             <NavLink to="/about">About</NavLink>

@@ -13,6 +13,7 @@
 }
 
 .item {
+    aspect-ratio: 16 / 9;
     display: flex;
     flex-direction: row;
     width: 15%;
@@ -27,12 +28,19 @@
     align-content: center;
     top: 15%;
     width: 75%;
-    height: 75%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 75%; /* Ensure it doesn't overflow the viewport */
     z-index: 10;
     transform: scale(1);
     box-shadow: none;
     opacity: 1;
     transform: translateY(-5px);
+}
+
+.expanded video,
+.expanded img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
 }
 
 .expanded-enter {
