@@ -8,6 +8,7 @@ export const Animation = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const expandedRef = useRef(null);
   const videoRefs = useRef([]);
+  const scrollPosition = useRef(0);
 
   const handleItemClick = (index) => {
     if (index === expandedItem) {
@@ -40,14 +41,31 @@ export const Animation = () => {
   };
 
   useEffect(() => {
+    if (expandedItem !== null) {
+      // Preserve the current scroll position
+      scrollPosition.current = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition.current}px`;
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollPosition.current);
+    }
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [expandedItem]);
 
   return (
     <section className={styles.container}>
+      {expandedItem !== null && <div className={styles.overlay} />}
       <h2 className={styles.title}>
         3D Art and Animation Projects
       </h2>

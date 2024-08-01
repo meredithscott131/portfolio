@@ -24,18 +24,17 @@
 
 .expanded {
     position: fixed;
-    justify-content: center;
-    align-content: center;
-    top: 15%;
-    width: 75%;
-    height: auto; /* Maintain aspect ratio */
-    max-height: 75%; /* Ensure it doesn't overflow the viewport */
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: auto; /* Adjust to fit content */
+    max-height: 80%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%); /* Center the element */
     z-index: 10;
-    transform: scale(1);
-    box-shadow: none;
-    opacity: 1;
-    transform: translateY(-5px);
-}
+    overflow: hidden;
+  }
 
 .expanded video,
 .expanded img {
@@ -189,3 +188,22 @@
         background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
     }
 }
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }

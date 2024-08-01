@@ -10,7 +10,7 @@
     font-family: 'DM Sans';
     font-weight: bolder;
     color: var(--color-red);
-    padding-bottom: 4%;
+    padding-bottom: 5%;
 }
 
 .grid {
@@ -101,5 +101,14 @@
 
     .title {
         font-size: 54px;
+    }
+    
+    .grid {
+        display: flex;
+        justify-items: center;
+        flex-wrap: wrap;
+        gap: 5%;
+        row-gap: 50px;
+        padding-bottom: 20px;
     }
 }

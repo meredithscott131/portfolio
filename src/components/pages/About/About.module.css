@@ -25,6 +25,8 @@
 .pfp {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center the content */
     z-index: 1;
 
     animation-name: floating;
@@ -118,13 +120,13 @@
 
 @keyframes floating {
     0% {
-        transform: translat(0, 0px);
+        transform: translate(0, 0px);
     }
     50% {
         transform: translate(0, -15px);
     }
     100% {
-        transform: translate(0, -0px);
+        transform: translate(0, 0px);
     }
 }
 
@@ -133,6 +135,7 @@
         display: flex;
         flex-direction: column-reverse;
         gap: 50px;
+        align-items: center; /* Center the items */
     }
 
     .container {
@@ -147,6 +150,8 @@
     .pfp {
         width: 75%;
         padding-top: 10%;
+        align-items: center; /* Center the content */
+        justify-content: center; /* Center the content */
     }
 
     .socialText {
