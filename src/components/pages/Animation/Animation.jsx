@@ -95,7 +95,7 @@ export const Animation = () => {
           <h3 className={styles.projectTitle}>
             The Trespassers
           </h3>
-          <p className={styles.subtitle}>Maya, Animation, Substance Painter, Rigging, Adobe Suite</p>
+          <p className={styles.subtitle}>Maya, Substance Painter, Rigging, Animation</p>
           <p className={styles.descText}>After a boy sneaks into the astronomy exhibit after hours, he realizes he might not be alone.</p>
           <ul>
             <li>Independently created a short film over the course of four months with the goal of conveying the relationship between a character and room.</li>

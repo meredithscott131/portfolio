@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { About, Code, Home, Animation, Art } from "./components/pages";
+import { About, Code, Home, Animation } from "./components/pages";
 import withFadeIn from "./withFadeIn";
 import styles from "./App.module.css";
 
@@ -14,7 +14,6 @@ function App() {
         <Route path="/about" element={withFadeIn(About)()} />
         <Route path="/code" element={withFadeIn(Code)()} />
         <Route path="/animation" element={withFadeIn(Animation)()} />
-        <Route path="/art" element={withFadeIn(Art)()} />
       </Routes>
       <Footer />
     </div>

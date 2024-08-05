@@ -33,9 +33,6 @@ export const Navbar = () => {
             <NavLink to="/animation">3D Animation</NavLink>
           </li>
           <li className={styles.menuItem}>
-            <NavLink to="/art">Art</NavLink>
-          </li>
-          <li className={styles.menuItem}>
             <NavLink to="/about">About</NavLink>
           </li>
         </ul>
