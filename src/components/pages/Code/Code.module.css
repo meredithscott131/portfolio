@@ -18,7 +18,7 @@
     justify-items: center;
     flex-wrap: wrap;
     gap: 5%;
-    row-gap: 30px;
+    row-gap: 50px;
     padding-bottom: 20px;
 }
 
@@ -47,6 +47,13 @@
 
 .subtitle {
     color: var(--color-peri);
+}
+
+.definition {
+    font-size: 18px;
+    color: var(--color-peri);
+    font-weight: 1000;
+    font-family: "DM Sans";
 }
 
 .githubLink {
@@ -101,6 +108,10 @@
 
     .title {
         font-size: 54px;
+    }
+
+    .definition {
+        text-align: center;
     }
     
     .grid {

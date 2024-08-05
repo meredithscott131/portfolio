@@ -1,33 +1,101 @@
 .homeContainer {
-    outline: red;
-    position: relative;
-    max-height: 100vh; /* Ensure it takes up at least the full viewport height */
-    overflow-x: hidden; /* Prevent horizontal overflow */
-    box-sizing: border-box; /* Include padding and border in the width and height */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 5%;
+  padding-bottom: 0%;
+}
+
+.blurb {
+  font-size: 24px;
+  color: var(--color-peri);
+  font-weight: 1000;
+  font-family: "DM Sans";
+  max-width: 70%;
+  padding-left: 5%;
+}
+
+.textContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.threeContainer {
+  position: relative;
+  width: 70vw;
+  height: 65vh;
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.headerContainer {
+  position: relative;
+  width: 50vw;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.welcome {
+  position: absolute;
+  left: 60%; /* Adjust as needed */
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+}
+
+.title {
+  color: var(--color-red);
+  text-align: left;
+  font-family: 'DM Sans';
+  font-weight: bolder;
+  font-size: 126px;
+  z-index: 3;
+  position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  .homeContainer {
+      flex-direction: column;
+      padding: 0%;
+      padding-top: 5%;
   }
-  
+
+  .blurb {
+    max-width: 100%;
+    padding-left: 0%;
+    text-align: center;
+    padding: 5%;
+  }
+
   .threeContainer {
-    position: relative;
-    width: 100vw; /* Full viewport width */
-    height: 50vh; /* Set a maximum height to crop the model */
-    overflow: hidden; /* Hide the overflowing part of the model */
-    z-index: 1; /* Ensure this is above other content, including footer */
-    box-sizing: border-box; /* Include padding and border in the width and height */
-  }
-  
+    width: 100vw;
+    height: 50%;
+  } 
+
   .headerContainer {
-    position: relative;
-    z-index: 2; /* Ensure this is above the 3D model */
-    text-align: center; /* Center align the header text */
-    margin-top: 20px; /* Add some space between the 3D model and the header */
+    padding-left: 0%;
+    width: 100vw;
+    height: 50%;
   }
-  
+
   .title {
-    color: var(--color-red);
-    font-family: 'DM Sans';
-    font-weight: bolder;
-    font-size: 108px;
-    margin-bottom: 5%;
-    z-index: 3;
-    position: relative; /* Ensure z-index works correctly */
-  }  
+      font-size: 72px;
+      text-align: center;
+  }
+
+  .welcome {
+      top: -10px; /* Adjust as needed */
+      left: 55%; /* Adjust as needed */
+      width: 150px;
+      height: 150px;
+  }
+}

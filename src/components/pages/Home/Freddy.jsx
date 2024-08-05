@@ -14,7 +14,7 @@ const Freddy = () => {
     container.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 1, 1000);
+    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 1, 100);
     camera.position.set(5, 3, 10);
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 3);
@@ -40,7 +40,7 @@ const Freddy = () => {
           child.receiveShadow = true;
         }
       });
-      model.position.set(5, 0, 0); // Adjust as needed
+      model.position.set(4, .5, 1); // Adjust as needed
       scene.add(model);
     });
 
@@ -58,8 +58,8 @@ const Freddy = () => {
         const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
         const maxRotationY = Math.PI / 3;
         const maxRotationX = Math.PI / 6;
-        model.rotation.y = clamp(mouseX * Math.PI, -maxRotationY, maxRotationY);
-        model.rotation.x = clamp(-mouseY * Math.PI / 4, -maxRotationX, maxRotationX);
+        model.rotation.y = clamp((mouseX - 0.5) * Math.PI, -maxRotationY, maxRotationY);
+        model.rotation.x = clamp(-(mouseY - 0.5) * Math.PI / 4, -maxRotationX, maxRotationX);
       }
     };
 

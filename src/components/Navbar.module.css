@@ -4,19 +4,17 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align content to the left */
     background-color: var(--color-green);
     position: sticky;
     top: 0;
-    padding: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
     z-index: 5;
     opacity: 100%;
+    height: 75px;
 }
 
 .menuBtn {
-    width: 7%;
+    width: 10%;
     display: none;
 }
 
@@ -26,9 +24,9 @@
 
 .menuItems {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     list-style: none;
-    padding-top: 10px;
+    padding-top: 5%;
 }
 
 .menuItems a {
@@ -37,34 +35,29 @@
     color: var(--color-text);
     font-family: 'DM Sans';
     font-weight: bolder;
-    padding: 0.5rem;
     border-radius: 0.5rem;
     transition: .1s;
 }
 
 .menuItems a:not(a[class="active"]):hover {
-    /*color: var(--color-level3);*/
     opacity: 65%;
 }
 
 a[class="active"] {
-    /*color: var(--color-level1);*/
     opacity: 50%;
 }
 
 @media screen and (max-width: 700px) {
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
-        align-items: right;
+        align-items: flex-start; /* Align items to the left in small screens */
     }
 
     .menu {
         position: absolute;
-        right: 0;
         flex-direction: column;
-        align-items: flex-end;
-        gap: 11px;
+        align-items: flex-start;
+        gap: 10px;
         z-index: 10;
         background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
         background-size: 100% 0;
@@ -74,23 +67,22 @@ a[class="active"] {
 
     .menuBtn {
         display: block;
-        margin-right: 10%;
+        margin-top: 5%;
+        margin-left: 5%;
         cursor: pointer;
-        padding-top: 15px;
     }
 
     .menuItems {
         display: none;
         flex-direction: column;
-        gap: 13px;
+        gap: 20px;
         border-radius: 10px;
         background: var(--color-green);
-        padding: 24px;
+        padding: 20px;
     }
 
     .menuItems:hover {
         background-size: 100% 100%;
-
     }
 
     .menuOpen {
@@ -99,6 +91,6 @@ a[class="active"] {
     }
 
     .menuItem {
-        text-align: right;
+        text-align: left; /* Align menu items to the left */
     }
 }
