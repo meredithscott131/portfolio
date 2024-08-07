@@ -156,11 +156,11 @@ export const Animation = () => {
           <p className={styles.descText}>How high can a singer go before they reach their limit?</p>
           <ul>
             <li>Learned Maya to create a short animation showcasing knowledge on animation principles, staging, and simple storytelling.</li>
-            <li>Modeled, textured, and designed an original character inspired by my own beloved debugging duck.</li>
+            <li>Modeled, textured, and designed an original character inspired by my own beloved <a target="_blank" className={styles.link} href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">debug duck</a>.</li>
             <li>Utilized Maya’s blend shape feature to animate the character.</li>
             <li>Edited all content in Adobe Premiere Pro and After Effects.</li>
             <li>Rendered in Arnold.</li>
-          </ul>
+        </ul>
         </div>
       </div>
       <div className={styles.grid}>

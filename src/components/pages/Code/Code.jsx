@@ -53,7 +53,7 @@ export const Code = () => {
                   </li>
                 </ul>
                 <a href="https://github.com/meredithscott131/ImageToPalette"
-            target="_blank" className={styles.githubLink}>Github</a>
+            target="_blank" className={styles.githubLink}>Github Repo</a>
             </Card.Body>
           </Card>
 
@@ -87,18 +87,17 @@ export const Code = () => {
               <p className={styles.subtitle}>Typescript, Javascript, React, Generative AI</p>
               <ul className={styles.bodyul}>
                   <li className={styles.bodyli}>
-                    Collaborated with a team of peers to create a web application that automates
-                    production plans with generative AI for animation students and creative hobbyists.
+                    Collaborated with a team to develop a web application that generates production plans with OpenAI for animation students and creative hobbyists.
                   </li>
                   <li className={styles.bodyli}>
-                    Directed the interface design, ensuring a seamless user experience and aesthetic appeal.
+                    Incorporated csv export and spreadsheet stylization for a user-friendly experience.
                   </li>
                   <li className={styles.bodyli}>
-                    Interviewed target end users to understand current frustrations with tasks and find prototype errors.
+                    Interviewed capstone students to understand current frustrations with spreadsheet platforms and find prototype errors.
                   </li>
                 </ul>
                 <a href="https://github.com/Abby-Dennin/Animation-Production-Plan-Generator"
-            target="_blank" className={styles.githubLink}>Github</a>
+            target="_blank" className={styles.githubLink}>Github Repo</a>
             </Card.Body>
           </Card>
 
@@ -138,7 +137,47 @@ export const Code = () => {
                   </li>
                 </ul>
                 <a href="https://github.com/nicolesorial/quizzy"
-            target="_blank" className={styles.githubLink}>Github</a>
+            target="_blank" className={styles.githubLink}>Github Repo</a>
+            </Card.Body>
+          </Card>
+          
+          {/* Bullet Journal */}
+          <Card className={styles.codeItem}>
+            <Carousel variant="dark" interval={null} controls={true}>
+              <Carousel.Item> 
+                <img 
+                  className="d-block w-100"
+                  src="assets\code\Bullet Journal\journal_preview.png"
+                  alt="Image Two"
+                />   
+              </Carousel.Item> 
+              <Carousel.Item>
+                <img 
+                    className="d-block w-100"
+                    src="assets\code\Bullet Journal\filePopup.png"
+                    alt="Image Two"
+                  /> 
+              </Carousel.Item>
+              </Carousel>
+            <Card.Body>
+              <h3 className={styles.projectTitle}>Bullet Journal</h3>
+              <p className={styles.subtitle}>Java, JavaFX, MVC Pattern</p>
+              <ul className={styles.bodyul}>
+                  <li className={styles.bodyli}>
+                    Collaborated with a team to create a bullet journal application with a variety of features including event/task creation, event/task ordering, file creation, and theme customization.
+                  </li>
+                  <li className={styles.bodyli}>
+                    Directed the custom .bujo file creation and saving features for the application, utilizing JSON conversion.
+                  </li>
+                  <li className={styles.bodyli}>
+                    Structured the project with the model-view-controller design pattern for a streamlined development process. 
+                  </li>
+                  <li className={styles.bodyli}>
+                    Implemented graphics in JavaFX using Scene Builder to create dynamic layouts.
+                  </li>
+                </ul>
+                <a href="https://github.com/meredithscott131/bullet-journal"
+            target="_blank" className={styles.githubLink}>Github Repo</a>
             </Card.Body>
           </Card>
           </div>
