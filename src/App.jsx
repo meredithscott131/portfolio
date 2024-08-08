@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
+import { Navbar } from "./components/navbar/Navbar.jsx";
+import { Footer } from "./components/footer/Footer.jsx";
 import { About, Code, Home, Animation } from "./components/pages";
 import withFadeIn from "./withFadeIn";
 import styles from "./App.module.css";

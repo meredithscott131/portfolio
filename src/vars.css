@@ -1,11 +1,11 @@
 :root {
 
     --color-text: rgb(21, 34, 61);
-    --color-peri: #8d9aff;
-    --color-peri-hover: #c6cdff;
-    --color-green: #ebf568;
+    --color-peri: rgb(141, 154, 255);
+    --color-peri-hover: rgb(198, 205, 255);
+    --color-green: rgb(235, 245, 104);
     --colorss-bg: #e2eef3;
-    --color-red: #ff6d40;
+    --color-red: rgb(255, 109, 64);
 
 
     /* Fonts */
