@@ -4,15 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../../vars.css";
 import "animate.css/animate.compat.css";
 
-const ExpandedView = ({ item, onClose }) => {
+// Component displaying an expanded view of an image/video thumbnail
+const ExpandedView = ({ thumbnail, onClose }) => {
   const expandedRef = useRef(null);
 
+  // Handles clicks outside the expanded content to close it
   const handleClickOutside = (event) => {
     if (expandedRef.current && !expandedRef.current.contains(event.target)) {
       onClose();
     }
   };
 
+  // Attaches event listener on expanded mount, remove on unmount
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
@@ -20,23 +23,28 @@ const ExpandedView = ({ item, onClose }) => {
     };
   }, []);
 
+  // Prevents click propagation when clicking inside the expanded media
+  const handleMediaClick = (event) => {
+    event.stopPropagation();
+  };
+
   return (
-    <div className={styles.overlay}>
-      <div className={styles.expanded} ref={expandedRef} onClick={onClose}>
-        {item.src.endsWith('.mp4') ? (
+    <div className={styles.overlay} onClick={onClose}>
+      <div className={styles.expanded} ref={expandedRef} onClick={handleMediaClick}>
+        {thumbnail.src.endsWith('.mp4') ? (
           <video
             className="d-block w-100"
-            src={`assets/animation/${item.src}`}
+            src={`assets/animation/${thumbnail.src}`}
             controls
             loop
-            poster={item.poster}
+            poster={thumbnail.poster}
             autoPlay
           />
         ) : (
           <img
             className="d-block w-100"
-            src={`assets/animation/${item.src}`}
-            alt="Expanded item"
+            src={`assets/animation/${thumbnail.src}`}
+            alt="Expanded thumbnail"
           />
         )}
       </div>
@@ -44,29 +52,32 @@ const ExpandedView = ({ item, onClose }) => {
   );
 };
 
+// Main Animation component
 export const Animation = () => {
-  const [expandedItem, setExpandedItem] = useState(null);
+  const [expandedthumbnail, setExpandedthumbnail] = useState(null);
   const videoRefs = useRef([]);
-  const videoSources1 = [
+  const anim1Content = [
     { src: 'anim1/concept_art.png', poster: null },
-    { src: 'anim1/flyThrough.mp4', poster: 'assets/animation/Anim1/Still_4.png' },
-    { src: 'anim1/MeredithScott_Turnaround.mp4', poster: null },
+    { src: 'anim1/room_fly_through.mp4',
+      poster: 'assets/animation/Anim1/room_fly_through_thumb.png' },
+    { src: 'anim1/neil_turnaround.mp4', poster: null },
     { src: 'anim1/neil_rig.png', poster: null },
-    { src: 'anim1/SHOT8_Test.mp4', poster: null }
+    { src: 'anim1/progress_shot.mp4', poster: null }
   ];
-  const videoSources2 = [
-    { src: 'basics/Sketches.png', poster: null },
-    { src: 'basics/Turnaround.png', poster: null },
-    { src: 'basics/Animatic.mp4', poster: null },
-    { src: 'basics/demo.mp4', poster: null }
+  const basicsContent = [
+    { src: 'basics/concept_art.png', poster: null },
+    { src: 'basics/turnaround.png', poster: null },
+    { src: 'basics/animatic.mp4', poster: null },
+    { src: 'basics/blend_shapes_demo.mp4', poster: null }
   ];
 
-  const handleItemClick = (index, videoSources) => {
-    if (expandedItem !== null) {
+  // Handles clicks on thumbnails to open the expanded view
+  const handlethumbnailClick = (index, videoSources) => {
+    if (expandedthumbnail !== null) {
       // Close expanded view
-      setExpandedItem(null);
+      setExpandedthumbnail(null);
       // Pause and reset the video
-      const refIndex = expandedItem;
+      const refIndex = expandedthumbnail;
       if (videoRefs.current[refIndex]) {
         videoRefs.current[refIndex].pause();
         videoRefs.current[refIndex].currentTime = 0;
@@ -75,7 +86,7 @@ export const Animation = () => {
       }
     } else {
       // Open expanded view
-      setExpandedItem(index);
+      setExpandedthumbnail(index);
     }
   };
 
@@ -83,20 +94,20 @@ export const Animation = () => {
     <section className={styles.container}>
       <h2 className={styles.title}>3D Art and Animation Projects</h2>
 
-      {/* The Trespassers */}
-      <div className={styles.content}>
+      {/* The Trespassers - Anim 1*/}
+      <div className={styles.project}>
         <div className="ratio ratio-16x9">
-          <video className={styles.videoLeft}
+          <video
             controls
-            src="assets/animation/Anim1/MeredithScott_Final.mp4"
+            src="assets/animation/Anim1/anim1_final.mp4"
           />
         </div>
-        <div className={styles.descOne}>
+        <div className={styles.textContainer}>
           <h3 className={styles.projectTitle}>
             The Trespassers
           </h3>
           <p className={styles.subtitle}>Maya, Substance Painter, Rigging, Animation</p>
-          <p className={styles.descText}>After a boy sneaks into the astronomy exhibit after hours, he realizes he might not be alone.</p>
+          <p className={styles.logLine}>After a boy sneaks into the astronomy exhibit after hours, he realizes he might not be alone.</p>
           <ul>
             <li>Independently created a short film over the course of four months with the goal of conveying the relationship between a character and room.</li>
             <li>Modeled and lit all room objects in Maya and textured content in Substance Painter.</li>
@@ -107,53 +118,53 @@ export const Animation = () => {
         </div>
       </div>
       <div className={styles.grid}>
-        {videoSources1.map((item, index) => (
+        {anim1Content.map((thumbnail, index) => (
           <div
             key={index}
-            className={`${styles.item} ${expandedItem === index ? styles.expandedPlaceholder : ''}`}
-            onClick={() => handleItemClick(index, videoSources1)}
+            className={`${styles.thumbnail} ${expandedthumbnail === index ? styles.expandedPlaceholder : ''}`}
+            onClick={() => handlethumbnailClick(index, anim1Content)}
           >
-            {item.src.endsWith('.mp4') ? (
+            {thumbnail.src.endsWith('.mp4') ? (
               <video
                 className="d-block w-100"
-                src={`assets/animation/${item.src}`}
+                src={`assets/animation/${thumbnail.src}`}
                 controls={false}
                 loop
-                poster={item.poster}
+                poster={thumbnail.poster}
                 ref={(el) => videoRefs.current[index] = el}
-                alt={`Item ${index + 1}`}
+                alt={`thumbnail ${index + 1}`}
               />
             ) : (
               <img
                 className="d-block w-100"
-                src={`assets/animation/${item.src}`}
-                alt={`Item ${index + 1}`}
+                src={`assets/animation/${thumbnail.src}`}
+                alt={`thumbnail ${index + 1}`}
               />
             )}
           </div>
         ))}
       </div>
-      {expandedItem !== null && expandedItem < videoSources1.length && (
+      {expandedthumbnail !== null && expandedthumbnail < anim1Content.length && (
         <ExpandedView
-          item={videoSources1[expandedItem]}
-          onClose={() => setExpandedItem(null)}
+          thumbnail={anim1Content[expandedthumbnail]}
+          onClose={() => setExpandedthumbnail(null)}
         />
       )}
 
-      {/* Talent Show */}
-      <div className={styles.content}>
+      {/* Talent Show - Basics */}
+      <div className={styles.project}>
         <div className="ratio ratio-16x9">
-          <video className={styles.videoLeft}
+          <video
             controls
-            src="assets/animation/Basics/TalentShow_FINAL.mp4"
+            src="assets/animation/Basics/basics_final.mp4"
           />
         </div>
-        <div className={styles.descOne}>
+        <div className={styles.textContainer}>
           <h3 className={styles.projectTitle}>
             Talent Show
           </h3>
           <p className={styles.subtitle}>Maya, Animation, Adobe Suite</p>
-          <p className={styles.descText}>How high can a singer go before they reach their limit?</p>
+          <p className={styles.logLine}>How high can a singer go before they reach their limit?</p>
           <ul>
             <li>Learned Maya to create a short animation showcasing knowledge on animation principles, staging, and simple storytelling.</li>
             <li>Modeled, textured, and designed an original character inspired by my own beloved <a target="_blank" className={styles.link} href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">debug duck</a>.</li>
@@ -164,36 +175,36 @@ export const Animation = () => {
         </div>
       </div>
       <div className={styles.grid}>
-        {videoSources2.map((item, index) => (
+        {basicsContent.map((thumbnail, index) => (
           <div
             key={index}
-            className={`${styles.item} ${expandedItem === videoSources1.length + index ? styles.expandedPlaceholder : ''}`}
-            onClick={() => handleItemClick(videoSources1.length + index, videoSources2)}
+            className={`${styles.thumbnail} ${expandedthumbnail === anim1Content.length + index ? styles.expandedPlaceholder : ''}`}
+            onClick={() => handlethumbnailClick(anim1Content.length + index, basicsContent)}
           >
-            {item.src.endsWith('.mp4') ? (
+            {thumbnail.src.endsWith('.mp4') ? (
               <video
                 className="d-block w-100"
-                src={`assets/animation/${item.src}`}
+                src={`assets/animation/${thumbnail.src}`}
                 controls={false}
                 loop
-                poster={item.poster}
-                ref={(el) => videoRefs.current[videoSources1.length + index] = el}
-                alt={`Item ${videoSources1.length + index + 1}`}
+                poster={thumbnail.poster}
+                ref={(el) => videoRefs.current[anim1Content.length + index] = el}
+                alt={`thumbnail ${anim1Content.length + index + 1}`}
               />
             ) : (
               <img
                 className="d-block w-100"
-                src={`assets/animation/${item.src}`}
-                alt={`Item ${videoSources1.length + index + 1}`}
+                src={`assets/animation/${thumbnail.src}`}
+                alt={`thumbnail ${anim1Content.length + index + 1}`}
               />
             )}
           </div>
         ))}
       </div>
-      {expandedItem !== null && expandedItem >= videoSources1.length && expandedItem < videoSources1.length + videoSources2.length && (
+      {expandedthumbnail !== null && expandedthumbnail >= anim1Content.length && expandedthumbnail < anim1Content.length + basicsContent.length && (
         <ExpandedView
-          item={videoSources2[expandedItem - videoSources1.length]}
-          onClose={() => setExpandedItem(null)}
+          thumbnail={basicsContent[expandedthumbnail - anim1Content.length]}
+          onClose={() => setExpandedthumbnail(null)}
         />
       )}
     </section>

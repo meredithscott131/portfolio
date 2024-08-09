@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Code.module.css";
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -8,28 +7,28 @@ export const Code = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Coding Projects</h2>
-        <div className={styles.content}>
+        <div>
           <div className={styles.grid}>
           {/* Krita Plugin */}
-          <Card className={styles.codeItem}>
+          <Card className={styles.projectCard}>
             <Carousel variant="dark" interval={null} controls={true}>
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="assets\code\Image To Palette\itp_interface.png"
+                  src="assets\code\Image To Palette\interface.png"
                   alt="Image Two"
                 />   
               </Carousel.Item> 
               <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="assets\code\Image To Palette\itp_demo_dragndrop.mp4"
+                  <source src="assets\code\Image To Palette\dragndrop_demo.mp4"
                   type="video/mp4"
                   />
                 </video>
               </Carousel.Item>
               <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="assets\code\Image To Palette\itp_demo_saving.mp4"
+                  <source src="assets\code\Image To Palette\saving_demo.mp4"
                   type="video/mp4"
                   />
                 </video>
@@ -58,25 +57,25 @@ export const Code = () => {
           </Card>
 
           {/* Production Plan */}
-          <Card className={styles.codeItem}>
+          <Card className={styles.projectCard}>
             <Carousel variant="dark" interval={null} controls={true}>
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="assets\code\Production Plan\ppg_1.png"
+                  src="assets\code\Production Plan\top_view.png"
                   alt="Image Two"
                 />   
               </Carousel.Item>
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="assets\code\Production Plan\ppg_2.png"
+                  src="assets\code\Production Plan\bottom_view.png"
                   alt="Image Two"
                 />   
               </Carousel.Item> 
               <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="assets\code\Production Plan\production_plan_demo.mp4"
+                  <source src="assets\code\Production Plan\full_demo.mp4"
                   type="video/mp4"
                   />
                 </video>
@@ -102,7 +101,7 @@ export const Code = () => {
           </Card>
 
           {/* Quiz Database */}
-          <Card className={styles.codeItem}>
+          <Card className={styles.projectCard}>
             <Carousel interval={null} controls={true}>
               <Carousel.Item> 
                 <img 
@@ -113,7 +112,7 @@ export const Code = () => {
               </Carousel.Item> 
               <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="assets\code\Quizzy\quizzy_demo.mp4"
+                  <source src="assets\code\Quizzy\full_demo.mp4"
                   type="video/mp4"
                   />
                 </video>
@@ -142,19 +141,19 @@ export const Code = () => {
           </Card>
           
           {/* Bullet Journal */}
-          <Card className={styles.codeItem}>
+          <Card className={styles.projectCard}>
             <Carousel variant="dark" interval={null} controls={true}>
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="assets\code\Bullet Journal\journal_preview.png"
+                  src="assets\code\Bullet Journal\main_view.png"
                   alt="Image Two"
                 />   
               </Carousel.Item> 
               <Carousel.Item>
                 <img 
                     className="d-block w-100"
-                    src="assets\code\Bullet Journal\filePopup.png"
+                    src="assets\code\Bullet Journal\start_screen.png"
                     alt="Image Two"
                   /> 
               </Carousel.Item>

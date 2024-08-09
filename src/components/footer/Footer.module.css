@@ -1,3 +1,4 @@
+/* Footer Container */
 .container {
     display: flex;
     justify-content: center;
@@ -6,12 +7,14 @@
     z-index: 1;
 }
 
+/* Social List */
 footer ul {
     text-align: center;
     display: flex;
     align-items: center;
 }
 
+/* Social List Item */
 footer ul li {
     list-style: none;
     padding: 0.5rem;
@@ -19,6 +22,7 @@ footer ul li {
     border-radius: 0.5rem;
 }
 
+/* Social Image */
 .socialImage {
     width: 20px;
     height: 20px;
