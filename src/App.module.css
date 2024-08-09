@@ -1,4 +1,6 @@
 @import "./vars.css";
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@coreui/coreui/dist/css/coreui.min.css';
 
 .App {
   background-color: var(--color-bg);
@@ -6,5 +8,18 @@
   width: 100%;
   color: var(--color-text);
   font-size: 18px;
-  background: linear-gradient(180deg, var(--color-bg-gradient1), var(--color-dark));
+  background: white;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

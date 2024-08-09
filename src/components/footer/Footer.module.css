@@ -1,0 +1,29 @@
+/* Footer Container */
+.container {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    padding: 30px;
+    z-index: 1;
+}
+
+/* Social List */
+footer ul {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Social List Item */
+footer ul li {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Social Image */
+.socialImage {
+    width: 20px;
+    height: 20px;
+}

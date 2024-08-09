@@ -1,109 +1,210 @@
 @import "../../../vars.css";
 
-
+/* Page Section Container */
 .container {
     position: relative;
     border-radius: 15px;
-    padding: 10%;
-    padding-top: 5%;
+    padding: 5%;
     z-index: 1;
 }
 
+/* Page Title */
 .title {
-    font-size: 36px;
-    letter-spacing: 1.76px;
-    font-weight: bold;
+    font-size: 72px;
+    font-family: 'DM Sans';
+    font-weight: bolder;
+    color: var(--color-red);
+    padding-bottom: 5%;
 }
 
-.content {
+/* Project Container */
+.project {
     display: flex;
     flex-direction: row;
     column-gap: 5%;
     border-radius: 20px;
     list-style: none;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    align-items: center;
 }
 
-.descOne {
+/* Project Text Container */
+.textContainer {
     float: right;
-    max-width: 25%;
+    max-width: 40%;
     height: auto;
     padding: 25px;
     border-radius: 10px;
     background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
 }
 
-.bodyText {
-    line-height: normal;
-    padding: 0%;
-    padding-bottom: 5%;
-}
-
-.subtitle {
-    color: var(--color-tertiary);
-}
-
+/* Project Title */
 .projectTitle {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Outfit";
-    letter-spacing: 1.76px;
+    font-size: 32px;
+    font-weight: 1000;
+    font-family: "DM Sans";
+    font-weight: bolder;
+    color: var(--color-red);
 }
 
-.carouselCap {
-    font-size: 24px;
+/* Project Technologies */
+.subtitle {
+    color: var(--color-peri);
+}
+
+/* Project Log Line */
+.logLine {
+    font-style: italic;
+    line-height: normal;
+}
+
+/* External Link Text */
+.link {
+    color: var(--color-peri);
+}
+
+/* Grid of Project Thumbnails */
+.grid {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/************************************* PROJECT ADDITIONAL MEDIA GRID *************************************/
+
+
+/* Item in Thumbnail Grid */
+.thumbnail {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    position: relative;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Item in Thumbnail Grid Hover Animation */
+.thumbnail:hover {
+    opacity: 0.75;
+}
+
+/* Expanded Item in Thumbnail Grid */
+.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: auto;
+    max-height: 80%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Expanded Item Content */
+.expanded video,
+.expanded img {
+    width: 100%;
+    height: auto;
+}
+
+/* Expanded Image Background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+/* Expanded Item Enter Start */
+.expanded-enter {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Expanded Item Enter End */
+.expanded-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Expanded Item Exit Start */
+.expanded-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Expanded Item Exit End */
+.expanded-exit-active {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/*********************************************************************************************************/
+
+@media screen and (max-width: 800px) {
+    /* Page Title */
+    .title {
+        font-size: 54px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
-    .content {
-        flex-direction: column-reverse;
-        padding-top: 0%;
-    }
-
+    /* Page Section Container */
     .container {
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
-    .descOne {
-        float: right;
-        max-width: 100%;
-        padding: 25px;
-        margin-top: 10%;
-        border-radius: 10px;
-        background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
-    }
-
-    .bodyText {
-        line-height: normal;
-        text-align: center;
-        padding-left: 0%;
-        padding-bottom: 2%;
-        
-    }
-    
+    /* Page Title */
     .title {
         text-align: center;
     }
 
+    /* Project Container */
+    .project {
+        flex-direction: column-reverse;
+        padding-top: 0%;
+    }
+
+    /* Project Text Container */
+    .textContainer {
+        float: right;
+        max-width: 100%;
+        padding: 25px;
+        border-radius: 10px;
+        background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
+    }
+
+    /* Project Title */
     .projectTitle {
         text-align: center;
     }
 
+    /* Project Technologies */
     .subtitle {
         text-align: center;
     }
-    
-    .videoLeft {
-        position: fixed;
-        height: auto;
-        max-width: 100%;
-    }
-    
-    .descOne {
-        padding: 5%;
-        border-radius: 10px;
-        background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
+
+    /* Project Log Line */
+    .logLine {
+        font-style: italic;
+        line-height: normal;
+        text-align: center;
+        padding: 0%;
+        padding-bottom: 2%;
     }
 }

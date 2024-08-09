@@ -4,10 +4,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 
-import "@fontsource/outfit"
-import "@fontsource/roboto"
-import "@fontsource/montserrat"
-import "@fontsource/rubik"
+import "@fontsource/outfit";
+import "@fontsource/roboto";
+import "@fontsource/montserrat";
+import "@fontsource/rubik";
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

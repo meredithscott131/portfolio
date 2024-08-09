@@ -1,21 +1,17 @@
 @import "../../../vars.css";
 
+/* About Page Container */
 .container {
     position: relative;
-    padding: 10%;
-    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    padding: 5%;
     z-index: 1;
 }
 
-.contentItems {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 10%;
-    padding-top: 5%;
-}
-
-.text {
+/* Text Container */
+.textContainer {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -25,30 +21,38 @@
     max-width: 50%;
 }
 
-.pfp {
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
+/* Page Title */
 .title {
+    color: var(--color-red);
+    font-family: 'DM Sans';
+    font-weight: bolder;
     font-size: 72px;
-    font-weight: bold;
     margin-bottom: 5%;
-    margin-top: 5%;
 }
 
+/* Profile Description */
 .description {
     font-size: 18px;
     margin-bottom: 5%;
     text-align: left;
 }
 
+/* Contact Title */
+.contactTitle {
+    font-family: 'DM Sans';
+    font-size: 24px;
+    font-weight: bolder;
+    color: var(--color-red);
+}
+
+/* List of Social Media Elements */
+.socialsList {
+    list-style: none;
+    padding-top: 2%;
+    padding-left: 0%;
+}
+
+/* Social Media Element */
 .social {
     display: flex;
     flex-direction: row;
@@ -56,118 +60,125 @@
     margin-bottom: 5%;
 }
 
-.socialsList {
-    list-style: none;
-    padding-top: 2%;
-    padding-left: 0%;
+/* Social Media Image Icon Sizing */
+.socialImage {
+    width: 30px;
+    height: 30px;
 }
 
+/* Social Media Text */
 .socialText {
     text-align: left;
     text-decoration: none;
     color: var(--color-text);
 }
 
+/* Social Media Text Hover Animation */
 .socialText:hover {
     text-decoration: underline;
 }
 
+/* Social Media Text On Click Animation */
 .socialText:active {
     opacity: 50%;
     text-decoration: underline;
 }
 
+/* Resume Text */
 .resume {
     text-align: left;
-    color: var(--color-link);
+    color: var(--color-text);
     text-decoration: none;
 }
 
+/* Resume Text Hover Animation */
 .resume:hover {
     text-decoration: underline;
 }
 
-.contact {
-    text-decoration: none;
-    color: var(--color-text);
+/* Resume Text On Click Animation */
+.resume:active {
+    opacity: 50%;
+    text-decoration: underline;
 }
 
-.pfp {
-    width: 50%;
+/* Profile Image */
+.profileImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
+
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
-.pfp img {
+/* Profile Image Sizing */
+.profileImage img {
     max-width: 100%;
     height: auto;
 }
 
-.socialImage {
-    width: 30px;
-    height: 30px;
-}
-
-.subtitle {
-    font: "Outfit";
-    font-size: 24px;
-    font-weight: bold;
-}
-
+/* Floating Animation */
 @keyframes floating {
     0% {
-        transform: translat(0, 0px);
+        transform: translate(0, 0px);
     }
     50% {
         transform: translate(0, -15px);
     }
     100% {
-        transform: translate(0, -0px);
+        transform: translate(0, 0px);
     }
 }
 
 @media screen and (max-width: 800px) {
-    .contentItems {
+    /* About Page Container */
+    .container {
         display: flex;
         flex-direction: column-reverse;
         gap: 50px;
-    }
-
-    .container {
         align-items: center;
+        align-items: center;
+        padding: 5%;
     }
 
-    .resume {
+    /* Text Container */
+    .textContainer {
         text-align: center;
-        font-weight: bold;
-        color: var(--color-link);
+        align-items: center;
+        max-width: 100%;
     }
 
-    .pfp {
-        width: 75%;
-        padding-top: 10%;
-    }
-
-    .socialText {
-        text-align: center;
-    }
-
+    /* Page Title */
     .title {
-        text-align: center;
-        font-size: 36px;
+        font-size: 54px;
         margin-top: 0;
     }
 
+    /* Profile Description */
     .description {
         text-align: center;
     }
 
-    .text {
+    /* Social Media Text */
+    .socialText {
         text-align: center;
+    }
+
+    /* Resume Text */
+    .resume {
+        text-align: center;
+    }
+
+    /* Profile Image */
+    .profileImage {
+        width: 75%;
+        padding-top: 10%;
         align-items: center;
-        max-width: 100%;
+        justify-content: center;
     }
 }

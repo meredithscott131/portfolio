@@ -1,13 +1,12 @@
 :root {
+
     /* Colors */
-    --color-text: #fff;
-    --color-tertiary: #2fb3ff;
-    --color-link: #0085FF;
-    --color-bg: #070e30;
-    --color-dark: #030615;
-    --color-bg-gradient1: #0b1546;
-    --color-secondary: #152a92;
-    --color-scrollBar: #3f4a74;
+    --color-text: rgb(21, 34, 61);
+    --color-peri: rgb(141, 154, 255);
+    --color-peri-hover: rgb(198, 205, 255);
+    --color-green: rgb(235, 245, 104);
+    --colorss-bg: #e2eef3;
+    --color-red: rgb(255, 109, 64);
 
     /* Fonts */
     --font-roboto: "Roboto";

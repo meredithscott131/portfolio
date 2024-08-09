@@ -10,27 +10,42 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@blacklab/react-image-magnify": "^4.1.1",
+    "@coreui/coreui": "^5.1.0",
+    "@coreui/react": "^5.2.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
     "@fontsource/montserrat": "^5.0.18",
     "@fontsource/outfit": "^5.0.13",
     "@fontsource/roboto": "^5.0.13",
     "@fontsource/rubik": "^5.0.20",
+    "@mui/material": "^5.16.5",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
+    "react-animate-on-scroll": "^2.1.9",
     "react-bootstrap": "^2.10.2",
     "react-bootstrap-carousel": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-player": "^2.16.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.13.0",
-    "react-youtube": "^10.1.0"
+    "react-transition-group": "^4.4.5",
+    "react-youtube": "^10.1.0",
+    "three": "^0.167.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
+    "css-loader": "^7.1.2",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.0",
+    "style-loader": "^4.0.0",
     "vite": "^4.3.9"
   }
 }
