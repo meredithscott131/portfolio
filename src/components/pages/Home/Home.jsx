@@ -57,7 +57,9 @@ export const Home = () => {
     <div>
       <div className={styles.foregroundContent}>
         <h1 className={styles.title}>Meredith Scott</h1>
-        <h2 className={styles.subtitle}>Computer science and animation student, passionate about developing creative technology.</h2>
+        <h2 className={styles.subtitle}>
+          Software developer and artist passionate about computer graphics and human-computer interaction.
+        </h2>
         <img
           className={styles.avatar}
           src={imageSrc}

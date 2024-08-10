@@ -100,6 +100,57 @@ export const Code = () => {
             </Card.Body>
           </Card>
 
+          {/* Personal Website */}
+          <Card className={styles.projectCard}>
+            <Carousel variant="dark" interval={null} controls={true}>
+              <Carousel.Item> 
+                <img 
+                  className="d-block w-100"
+                  src="assets\code\Website\home_page.png"
+                  alt="Image Two"
+                />   
+              </Carousel.Item>
+              <Carousel.Item> 
+                <img 
+                  className="d-block w-100"
+                  src="assets\code\Website\code_page.png"
+                  alt="Image Two"
+                />   
+              </Carousel.Item>
+              <Carousel.Item> 
+                <img 
+                  className="d-block w-100"
+                  src="assets\code\Website\animation_page.png"
+                  alt="Image Two"
+                />   
+              </Carousel.Item>
+              <Carousel.Item> 
+                <img 
+                  className="d-block w-100"
+                  src="assets\code\Website\about_page.png"
+                  alt="Image Two"
+                />   
+              </Carousel.Item>
+              </Carousel>
+            <Card.Body>
+              <h3 className={styles.projectTitle}>This Website!</h3>
+              <p className={styles.subtitle}>Javascript, React, CSS, HTML</p>
+              <ul className={styles.bodyul}>
+                  <li className={styles.bodyli}>
+                    Collaborated with a team to develop a web application that generates production plans with OpenAI for animation students and creative hobbyists.
+                  </li>
+                  <li className={styles.bodyli}>
+                    Incorporated csv export and spreadsheet stylization for a user-friendly experience.
+                  </li>
+                  <li className={styles.bodyli}>
+                    Interviewed capstone students to understand current frustrations with spreadsheet platforms and find prototype errors.
+                  </li>
+                </ul>
+                <a href="https://github.com/meredithscott131/Portfolio"
+            target="_blank" className={styles.githubLink}>Github Repo</a>
+            </Card.Body>
+          </Card>
+
           {/* Quiz Database */}
           <Card className={styles.projectCard}>
             <Carousel interval={null} controls={true}>
