@@ -29,7 +29,7 @@ html, body {
   left: 0;
   opacity: 50%;
 
-  svg {
+  :is(svg) {
     display: none;
   }
 

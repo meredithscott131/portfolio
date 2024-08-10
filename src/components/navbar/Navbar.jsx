@@ -25,16 +25,16 @@ export const Navbar = () => {
             onClick={() => setMenuOpen(false)}
           >
             <li className={styles.menuItem}>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/Portfolio/">Home</NavLink>
             </li>
             <li className={styles.menuItem}>
-              <NavLink to="/code">Code</NavLink>
+              <NavLink to="/Portfolio/code">Code</NavLink>
             </li>
             <li className={styles.menuItem}>
-              <NavLink to="/animation">3D Animation</NavLink>
+              <NavLink to="/Portfolio/animation">3D Animation</NavLink>
             </li>
             <li className={styles.menuItem}>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/Portfolio/about">About</NavLink>
             </li>
           </ul>
         </div>
