@@ -10,10 +10,10 @@ function App() {
     <div className={styles.App}>
       <Navbar />
       <Routes>
-        <Route path="/" element={withFadeIn(Home)()} />
-        <Route path="/about" element={withFadeIn(About)()} />
-        <Route path="/code" element={withFadeIn(Code)()} />
-        <Route path="/animation" element={withFadeIn(Animation)()} />
+        <Route path="/Portfolio/" element={withFadeIn(Home)()} />
+        <Route path="/Portfolio/about" element={withFadeIn(About)()} />
+        <Route path="/Portfolio/code" element={withFadeIn(Code)()} />
+        <Route path="/Portfolio/animation" element={withFadeIn(Animation)()} />
       </Routes>
       <Footer />
     </div>
