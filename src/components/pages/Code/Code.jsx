@@ -137,13 +137,13 @@ export const Code = () => {
               <p className={styles.subtitle}>Javascript, React, CSS, HTML</p>
               <ul className={styles.bodyul}>
                   <li className={styles.bodyli}>
-                    Collaborated with a team to develop a web application that generates production plans with OpenAI for animation students and creative hobbyists.
+                    Built a portfolio website showcasing my programming and animation projects with Javascript and Vite JS
                   </li>
                   <li className={styles.bodyli}>
-                    Incorporated csv export and spreadsheet stylization for a user-friendly experience.
+                    Utilized React and other libraries like MUI to implement dynamic animations and interactions to the site.
                   </li>
                   <li className={styles.bodyli}>
-                    Interviewed capstone students to understand current frustrations with spreadsheet platforms and find prototype errors.
+                    Deployed on Github Pages.
                   </li>
                 </ul>
                 <a href="https://github.com/meredithscott131/Portfolio"
