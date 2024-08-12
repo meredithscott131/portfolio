@@ -14,8 +14,8 @@ export const Navbar = () => {
             className={styles.menuBtn}
             src={
               menuOpen
-                ? "/Portfolio/assets/Icons/menu_close_icon.png"
-                : "/Portfolio/assets/Icons/menu_icon.png"
+                ? import.meta.env.BASE_URL +"assets/Icons/menu_close_icon.png"
+                : import.meta.env.BASE_URL +"assets/Icons/menu_icon.png"
             }
             alt="Menu-button"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -25,16 +25,16 @@ export const Navbar = () => {
             onClick={() => setMenuOpen(false)}
           >
             <li className={styles.menuItem}>
-              <NavLink to="/Portfolio/">Home</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li className={styles.menuItem}>
-              <NavLink to="/Portfolio/code">Code</NavLink>
+              <NavLink to="/code">Code</NavLink>
             </li>
             <li className={styles.menuItem}>
-              <NavLink to="/Portfolio/animation">3D Animation</NavLink>
+              <NavLink to="/animation">3D Animation</NavLink>
             </li>
             <li className={styles.menuItem}>
-              <NavLink to="/Portfolio/about">About</NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
           </ul>
         </div>

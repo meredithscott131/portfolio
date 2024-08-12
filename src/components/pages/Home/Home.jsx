@@ -56,7 +56,7 @@ export const Home = () => {
   return (
     <div>
       <div className={styles.foregroundContent}>
-        <h1 className={styles.title}>Meredith Scot</h1>
+        <h1 className={styles.title}>Meredith Scott</h1>
         <h2 className={styles.subtitle}>
           Software developer and artist passionate about computer graphics and human-computer interaction.
         </h2>
