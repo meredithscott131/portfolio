@@ -12,24 +12,24 @@ export const About = () => {
           <h3 className={styles.contactTitle}>Contact</h3>
           <ul className={styles.socialsList}>
             <li className={styles.social}>
-              <img src="assets\Icons\linkedin_icon.png" className={styles.socialImage} alt="LinkedIn"></img>
+              <img src="/portfolio/assets/Icons/linkedin_icon.png" className={styles.socialImage} alt="LinkedIn"></img>
               <a href="https://www.linkedin.com/in/meredithgscott/" className={styles.socialText} target="_blank">www.linkedin.com/in/meredithgscott/</a>
             </li>
             <li className={styles.social}>
-              <img src="assets\Icons\github_icon.png" className={styles.socialImage} alt="gitHub"></img>
+              <img src="/portfolio/assets/Icons/github_icon.png" className={styles.socialImage} alt="gitHub"></img>
               <a href="https://github.com/meredithscott131" className={styles.socialText} target="_blank">github.com/meredithscott131</a>
             </li>
             <li className={styles.social}>
-              <img src="assets\Icons\email_icon.png" className={styles.socialImage} alt="Email"></img>
+              <img src="/portfolio/assets/Icons/email_icon.png" className={styles.socialImage} alt="Email"></img>
               <a href="mailto:meredithscott131@gmail.com" className={styles.socialText} target="_blank">meredithscott131@gmail.com</a>
             </li>
             <li className={styles.resume}>
-              <a href="assets\about\resume.pdf" className={styles.resume} target="_blank">Resume</a>
+              <a href="/portfolio/assets/about/resume.pdf" className={styles.resume} target="_blank">Resume</a>
             </li>
           </ul>
         </li>
         <li className={styles.profileImage}>
-        <img src="assets\about\portrait.png" alt="profile image"></img>
+          <img src="/portfolio/asset/about/portrait.png" alt="profile image"></img>
         </li>
   </section>
 };

@@ -34,7 +34,7 @@ const ExpandedView = ({ thumbnail, onClose }) => {
         {thumbnail.src.endsWith('.mp4') ? (
           <video
             className="d-block w-100"
-            src={`assets/animation/${thumbnail.src}`}
+            src={`/portfolio/assets/animation/${thumbnail.src}`}
             controls
             loop
             poster={thumbnail.poster}
@@ -43,7 +43,7 @@ const ExpandedView = ({ thumbnail, onClose }) => {
         ) : (
           <img
             className="d-block w-100"
-            src={`assets/animation/${thumbnail.src}`}
+            src={`/portfolio/assets/animation/${thumbnail.src}`}
             alt="Expanded thumbnail"
           />
         )}
@@ -59,7 +59,7 @@ export const Animation = () => {
   const anim1Content = [
     { src: 'anim1/concept_art.png', poster: null },
     { src: 'anim1/room_fly_through.mp4',
-      poster: 'assets/animation/Anim1/room_fly_through_thumb.png' },
+      poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png' },
     { src: 'anim1/neil_turnaround.mp4', poster: null },
     { src: 'anim1/neil_rig.png', poster: null },
     { src: 'anim1/progress_shot.mp4', poster: null }
@@ -99,7 +99,7 @@ export const Animation = () => {
         <div className="ratio ratio-16x9">
           <video
             controls
-            src="assets/animation/Anim1/anim1_final.mp4"
+            src="/portfolio/assets/animation/Anim1/anim1_final.mp4"
           />
         </div>
         <div className={styles.textContainer}>
@@ -127,7 +127,7 @@ export const Animation = () => {
             {thumbnail.src.endsWith('.mp4') ? (
               <video
                 className="d-block w-100"
-                src={`assets/animation/${thumbnail.src}`}
+                src={`/portfolio/assets/animation/${thumbnail.src}`}
                 controls={false}
                 loop
                 poster={thumbnail.poster}
@@ -137,7 +137,7 @@ export const Animation = () => {
             ) : (
               <img
                 className="d-block w-100"
-                src={`assets/animation/${thumbnail.src}`}
+                src={`/portfolio/assets/animation/${thumbnail.src}`}
                 alt={`thumbnail ${index + 1}`}
               />
             )}
@@ -156,7 +156,7 @@ export const Animation = () => {
         <div className="ratio ratio-16x9">
           <video
             controls
-            src="assets/animation/Basics/basics_final.mp4"
+            src="/portfolio/assets/animation/Basics/basics_final.mp4"
           />
         </div>
         <div className={styles.textContainer}>
@@ -184,7 +184,7 @@ export const Animation = () => {
             {thumbnail.src.endsWith('.mp4') ? (
               <video
                 className="d-block w-100"
-                src={`assets/animation/${thumbnail.src}`}
+                src={`/portfolio/assets/animation/${thumbnail.src}`}
                 controls={false}
                 loop
                 poster={thumbnail.poster}
@@ -194,7 +194,7 @@ export const Animation = () => {
             ) : (
               <img
                 className="d-block w-100"
-                src={`assets/animation/${thumbnail.src}`}
+                src={`/portfolio/assets/animation/${thumbnail.src}`}
                 alt={`thumbnail ${anim1Content.length + index + 1}`}
               />
             )}
