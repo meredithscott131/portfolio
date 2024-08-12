@@ -15,20 +15,20 @@ export const Code = () => {
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src={import.meta.env.BASE_URL +"assets/code/Image To Palette/interface.png"}
+                  src={`${import.meta.env.BASE_URL}assets/code/Image To Palette/interface.png`}
                   alt="Image Two"
                 />   
               </Carousel.Item> 
               <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src={import.meta.env.BASE_URL +"assets/code/Image To Palette/dragndrop_demo.mp4"}
+                  <source src={`${import.meta.env.BASE_URL}assets/code/Image To Palette/dragndrop_demo.mp4`}
                   type="video/mp4"
                   />
                 </video>
               </Carousel.Item>
               <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src={import.meta.env.BASE_URL +"assets/code/Image To Palette/saving_demo.mp4"}
+                  <source src={`${import.meta.env.BASE_URL}assets/code/Image To Palette/saving_demo.mp4`}
                   type="video/mp4"
                   />
                 </video>
