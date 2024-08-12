@@ -55,20 +55,20 @@ export const Code = () => {
             <Carousel.Item> 
               <img 
                 className="d-block w-100"
-                src={`${import.meta.env.BASE_URL}assets/code/Production Plan/top_view.png`}
+                src="/portfolio/assets/code/Production Plan/top_view.png"
                 alt="Top View"
               />   
             </Carousel.Item>
             <Carousel.Item> 
               <img 
                 className="d-block w-100"
-                src={`${import.meta.env.BASE_URL}assets/code/Production Plan/bottom_view.png`}
+                src="/portfolio/assets/code/Production Plan/bottom_view.png"
                 alt="Bottom View"
               />   
             </Carousel.Item> 
             <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                <source src={`${import.meta.env.BASE_URL}assets/code/Production Plan/full_demo.mp4`}
+                <source src="/portfolio/assets/code/Production Plan/full_demo.mp4"
                 type="video/mp4"
                 />
               </video>
