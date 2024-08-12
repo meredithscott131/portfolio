@@ -25,7 +25,7 @@ export const Navbar = () => {
             onClick={() => setMenuOpen(false)}
           >
             <li className={styles.menuItem}>
-              <NavLink to="/">H</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li className={styles.menuItem}>
               <NavLink to="/code">Code</NavLink>
