@@ -15,7 +15,7 @@ export const Code = () => {
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="assets\code\Image To Palette\interface.png"
+                  src={import.meta.env.BASE_URL +"assets\code\Image To Palette\interface.png"}
                   alt="Image Two"
                 />   
               </Carousel.Item> 
