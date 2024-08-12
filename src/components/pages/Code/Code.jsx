@@ -12,28 +12,21 @@ export const Code = () => {
           {/* Krita Plugin */}
           <Card className={styles.projectCard}>
             <Carousel variant="dark" interval={null} controls={true}>
-              <Carousel.Item> 
+              <Carousel.Item>
                 <img 
                   className="d-block w-100"
                   src={`${import.meta.env.BASE_URL}assets/code/Image To Palette/interface.png`}
-                  alt="Image Two"
+                  alt="Image One"
                 />   
               </Carousel.Item> 
               <Carousel.Item>
-              <video className="d-block w-100" controls autoPlay muted loop>
+                <video className="d-block w-100" controls autoPlay muted loop>
                   <source src={`${import.meta.env.BASE_URL}assets/code/Image To Palette/dragndrop_demo.mp4`}
                   type="video/mp4"
                   />
                 </video>
               </Carousel.Item>
-              <Carousel.Item>
-              <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src={`${import.meta.env.BASE_URL}assets/code/Image To Palette/saving_demo.mp4`}
-                  type="video/mp4"
-                  />
-                </video>
-              </Carousel.Item>  
-              </Carousel>
+            </Carousel>
             <Card.Body>
               <h3 className={styles.projectTitle}>Image to Palette Krita Plugin</h3>
               <p className={styles.subtitle}>Python, PyQt, Krita API</p>
@@ -59,28 +52,28 @@ export const Code = () => {
           {/* Production Plan */}
           <Card className={styles.projectCard}>
             <Carousel variant="dark" interval={null} controls={true}>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="assets\code\Production Plan\top_view.png"
-                  alt="Image Two"
-                />   
-              </Carousel.Item>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="assets\code\Production Plan\bottom_view.png"
-                  alt="Image Two"
-                />   
-              </Carousel.Item> 
-              <Carousel.Item>
+            <Carousel.Item> 
+              <img 
+                className="d-block w-100"
+                src={`${import.meta.env.BASE_URL}assets/code/Production Plan/top_view.png`}
+                alt="Top View"
+              />   
+            </Carousel.Item>
+            <Carousel.Item> 
+              <img 
+                className="d-block w-100"
+                src={`${import.meta.env.BASE_URL}assets/code/Production Plan/bottom_view.png`}
+                alt="Bottom View"
+              />   
+            </Carousel.Item> 
+            <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="assets\code\Production Plan\full_demo.mp4"
-                  type="video/mp4"
-                  />
-                </video>
-              </Carousel.Item> 
-              </Carousel>
+                <source src={`${import.meta.env.BASE_URL}assets/code/Production Plan/full_demo.mp4`}
+                type="video/mp4"
+                />
+              </video>
+            </Carousel.Item>
+            </Carousel>
             <Card.Body>
               <h3 className={styles.projectTitle}>Animation Production Plan Generator</h3>
               <p className={styles.subtitle}>Typescript, Javascript, React, Generative AI</p>
@@ -106,32 +99,18 @@ export const Code = () => {
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="assets\code\Website\home_page.png"
-                  alt="Image Two"
+                  src={`${import.meta.env.BASE_URL}assets/code/Website/home_page.png`}
+                  alt="Home Page"
                 />   
               </Carousel.Item>
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="assets\code\Website\code_page.png"
-                  alt="Image Two"
+                  src={`${import.meta.env.BASE_URL}assets/code/Website/code_page.png`}
+                  alt="Code Page"
                 />   
               </Carousel.Item>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="assets\code\Website\animation_page.png"
-                  alt="Image Two"
-                />   
-              </Carousel.Item>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="assets\code\Website\about_page.png"
-                  alt="Image Two"
-                />   
-              </Carousel.Item>
-              </Carousel>
+            </Carousel>
             <Card.Body>
               <h3 className={styles.projectTitle}>This Website!</h3>
               <p className={styles.subtitle}>Javascript, React, CSS, HTML</p>
