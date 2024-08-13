@@ -58,8 +58,7 @@ export const Animation = () => {
   const videoRefs = useRef([]);
   const anim1Content = [
     { src: 'Anim1/concept_art.png', poster: null },
-    { src: 'Anim1/room_fly_through.mp4',
-      poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png' },
+    { src: 'Anim1/room_fly_through.mp4', poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png' },
     { src: 'Anim1/neil_turnaround.mp4', poster: null },
     { src: 'Anim1/neil_rig.png', poster: null },
     { src: 'Anim1/progress_shot.mp4', poster: null }
