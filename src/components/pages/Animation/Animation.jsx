@@ -65,7 +65,7 @@ export const Animation = () => {
     { src: 'Anim1/progress_shot.mp4', poster: null }
   ];
   const basicsContent = [
-    { src: 'Basics/concept_art.png', poster: null },
+    { src: 'Basics/concept_art.PNG', poster: null },
     { src: 'Basics/turnaround.png', poster: null },
     { src: 'Basics/animatic.mp4', poster: null },
     { src: 'Basics/blend_shapes_demo.mp4', poster: null }
