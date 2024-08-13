@@ -24,7 +24,7 @@ export const About = () => {
               <a href="mailto:meredithscott131@gmail.com" className={styles.socialText} target="_blank">meredithscott131@gmail.com</a>
             </li>
             <li className={styles.resume}>
-              <a href="/portfolio/assets/about/resume.pdf" className={styles.resume} target="_blank">Resume</a>
+              <a href="/portfolio/assets/about/Resume.pdf" className={styles.resume} target="_blank">Resume</a>
             </li>
           </ul>
         </li>

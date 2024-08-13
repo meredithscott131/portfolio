@@ -57,18 +57,18 @@ export const Animation = () => {
   const [expandedthumbnail, setExpandedthumbnail] = useState(null);
   const videoRefs = useRef([]);
   const anim1Content = [
-    { src: 'anim1/concept_art.png', poster: null },
-    { src: 'anim1/room_fly_through.mp4',
+    { src: 'Anim1/concept_art.png', poster: null },
+    { src: 'Anim1/room_fly_through.mp4',
       poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png' },
-    { src: 'anim1/neil_turnaround.mp4', poster: null },
-    { src: 'anim1/neil_rig.png', poster: null },
-    { src: 'anim1/progress_shot.mp4', poster: null }
+    { src: 'Anim1/neil_turnaround.mp4', poster: null },
+    { src: 'Anim1/neil_rig.png', poster: null },
+    { src: 'Anim1/progress_shot.mp4', poster: null }
   ];
   const basicsContent = [
-    { src: 'basics/concept_art.png', poster: null },
-    { src: 'basics/turnaround.png', poster: null },
-    { src: 'basics/animatic.mp4', poster: null },
-    { src: 'basics/blend_shapes_demo.mp4', poster: null }
+    { src: 'Basics/concept_art.png', poster: null },
+    { src: 'Basics/turnaround.png', poster: null },
+    { src: 'Basics/animatic.mp4', poster: null },
+    { src: 'Basics/blend_shapes_demo.mp4', poster: null }
   ];
 
   // Handles clicks on thumbnails to open the expanded view
