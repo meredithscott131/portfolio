@@ -59,14 +59,14 @@ export const Animation = () => {
   const anim1Content = [
     { src: 'Anim1/concept_art.png', poster: null },
     { src: 'Anim1/room_fly_through.mp4', poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png' },
-    { src: 'Anim1/Neil_Turnaround.mp4', poster: null },
+    { src: 'Anim1/neil_Turnaround.mp4', poster: null },
     { src: 'Anim1/neil_rig.png', poster: null },
     { src: 'Anim1/progress_shot.mp4', poster: null }
   ];
   const basicsContent = [
     { src: 'Basics/concept_art.PNG', poster: null },
-    { src: 'Basics/Turnaround.png', poster: null },
-    { src: 'Basics/Animatic.mp4', poster: null },
+    { src: 'Basics/turnaround.png', poster: null },
+    { src: 'Basics/animatic.mp4', poster: null },
     { src: 'Basics/blend_shapes_demo.mp4', poster: null }
   ];
 
