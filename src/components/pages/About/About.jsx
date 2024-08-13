@@ -29,7 +29,7 @@ export const About = () => {
           </ul>
         </li>
         <li className={styles.profileImage}>
-          <img src="/portfolio/asset/about/portrait.png" alt="profile image"></img>
+          <img src="/portfolio/assets/about/portrait.png" alt="profile image"></img>
         </li>
   </section>
 };
