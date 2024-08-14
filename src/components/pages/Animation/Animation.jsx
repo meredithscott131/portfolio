@@ -17,13 +17,13 @@ export const Animation = () => {
       poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png',
       title: 'Room Flythrough' },
     { src: 'Anim1/neil_turnaround.mp4',
-      poster: null,
+      poster: '/portfolio/assets/animation/Anim1/neil_turnaround_thumb.png',
       title: 'Character Turnaround' },
     { src: 'Anim1/neil_rig.png',
       poster: null,
       title: 'Character Rig' },
     { src: 'Anim1/progress_shot.mp4',
-      poster: null,
+      poster: '/portfolio/assets/animation/Anim1/progress_shot_thumb.png',
       title: 'Progress Shot' }
   ];
   const basicsContent = [
@@ -34,10 +34,10 @@ export const Animation = () => {
       poster: null,
       title: 'Character Turnaround' },
     { src: 'Basics/animatic.mp4',
-      poster: null,
+      poster: '/portfolio/assets/animation/Anim1/animatic_thumb.png',
       title: 'Animatic' },
     { src: 'Basics/blend_shapes_demo.mp4',
-      poster: null,
+      poster: '/portfolio/assets/animation/Anim1/blend_shapes_demo_thumb.png',
       title: 'Blend Shapes Demo' }
   ];
   
@@ -70,6 +70,7 @@ export const Animation = () => {
           <video
             controls
             src="/portfolio/assets/animation/Anim1/anim1_final.mp4"
+            poster='/portfolio/assets/animation/Anim1/anim1_final_thumb.png'
           />
         </div>
         <div className={styles.textContainer}>
@@ -128,6 +129,7 @@ export const Animation = () => {
           <video
             controls
             src="/portfolio/assets/animation/Basics/basics_final.mp4"
+            poster='/portfolio/assets/animation/Basics/basics_final_thumb.png'
           />
         </div>
         <div className={styles.textContainer}>
