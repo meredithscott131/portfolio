@@ -34,10 +34,10 @@ export const Animation = () => {
       poster: null,
       title: 'Character Turnaround' },
     { src: 'Basics/animatic.mp4',
-      poster: '/portfolio/assets/animation/Anim1/animatic_thumb.png',
+      poster: '/portfolio/assets/animation/Basics/animatic_thumb.png',
       title: 'Animatic' },
     { src: 'Basics/blend_shapes_demo.mp4',
-      poster: '/portfolio/assets/animation/Anim1/blend_shapes_demo_thumb.png',
+      poster: '/portfolio/assets/animation/Basics/blend_shapes_demo_thumb.png',
       title: 'Blend Shapes Demo' }
   ];
   
