@@ -5,7 +5,7 @@ import "../../../vars.css";
 import "animate.css/animate.compat.css";
 
 // Component displaying an expanded view of an image/video thumbnail
-const ExpandedView = ({ thumbnail, onClose }) => {
+const ExpandedView = ({ thumbnail, title, onClose }) => {
   const expandedRef = useRef(null);
 
   // Handles clicks outside the expanded content to close it
@@ -14,6 +14,7 @@ const ExpandedView = ({ thumbnail, onClose }) => {
       onClose();
     }
   };
+  
 
   // Attaches event listener on expanded mount, remove on unmount
   useEffect(() => {
@@ -31,6 +32,9 @@ const ExpandedView = ({ thumbnail, onClose }) => {
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.expanded} ref={expandedRef} onClick={handleMediaClick}>
+        <div className={styles.titleContainer}>
+          <h3 className={styles.expandedTitle}>{title}</h3>
+        </div>
         {thumbnail.src.endsWith('.mp4') ? (
           <video
             className="d-block w-100"
@@ -57,18 +61,19 @@ export const Animation = () => {
   const [expandedthumbnail, setExpandedthumbnail] = useState(null);
   const videoRefs = useRef([]);
   const anim1Content = [
-    { src: 'Anim1/concept_art.png', poster: null },
-    { src: 'Anim1/room_fly_through.mp4', poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png' },
-    { src: 'Anim1/neil_turnaround.mp4', poster: null },
-    { src: 'Anim1/neil_rig.png', poster: null },
-    { src: 'Anim1/progress_shot.mp4', poster: null }
+    { src: 'Anim1/concept_art.png', poster: null, title: 'Concept Art' },
+    { src: 'Anim1/room_fly_through.mp4', poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png', title: 'Room Flythrough' },
+    { src: 'Anim1/neil_turnaround.mp4', poster: null, title: 'Character Turnaround' },
+    { src: 'Anim1/neil_rig.png', poster: null, title: 'Character Rig' },
+    { src: 'Anim1/progress_shot.mp4', poster: null, title: 'Progress Shot' }
   ];
   const basicsContent = [
-    { src: 'Basics/concept_art.PNG', poster: null },
-    { src: 'Basics/turnaround.png', poster: null },
-    { src: 'Basics/animatic.mp4', poster: null },
-    { src: 'Basics/blend_shapes_demo.mp4', poster: null }
+    { src: 'Basics/concept_art.PNG', poster: null, title: 'Concept Art' },
+    { src: 'Basics/turnaround.png', poster: null, title: 'Character Turnaround' },
+    { src: 'Basics/animatic.mp4', poster: null, title: 'Animatic' },
+    { src: 'Basics/blend_shapes_demo.mp4', poster: null, title: 'Blend Shapes Demo' }
   ];
+  
 
   // Handles clicks on thumbnails to open the expanded view
   const handlethumbnailClick = (index, videoSources) => {
@@ -146,6 +151,7 @@ export const Animation = () => {
       {expandedthumbnail !== null && expandedthumbnail < anim1Content.length && (
         <ExpandedView
           thumbnail={anim1Content[expandedthumbnail]}
+          title={anim1Content[expandedthumbnail].title}
           onClose={() => setExpandedthumbnail(null)}
         />
       )}
@@ -203,6 +209,7 @@ export const Animation = () => {
       {expandedthumbnail !== null && expandedthumbnail >= anim1Content.length && expandedthumbnail < anim1Content.length + basicsContent.length && (
         <ExpandedView
           thumbnail={basicsContent[expandedthumbnail - anim1Content.length]}
+          title={basicsContent[expandedthumbnail - anim1Content.length].title}
           onClose={() => setExpandedthumbnail(null)}
         />
       )}

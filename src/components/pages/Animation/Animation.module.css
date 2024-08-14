@@ -77,6 +77,25 @@
 
 /************************************* PROJECT ADDITIONAL MEDIA GRID *************************************/
 
+/* Title Container in Expanded View */
+.titleContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 11; /* Make sure it's on top of the image/video */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Expanded Title Style */
+.expandedTitle {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
 
 /* Item in Thumbnail Grid */
 .thumbnail {
