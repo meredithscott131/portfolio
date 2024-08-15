@@ -52,7 +52,7 @@ export const Code = () => {
                   </li>
                 </ul>
                 <a href="https://github.com/meredithscott131/ImageToPalette"
-            target="_blank" className={styles.githubLink}>Github Repo</a>
+            target="_blank" className={styles.githubLink}>GitHub Repo</a>
             </Card.Body>
           </Card>
 
@@ -83,7 +83,7 @@ export const Code = () => {
             </Carousel>
             <Card.Body>
               <h3 className={styles.projectTitle}>Animation Production Plan Generator</h3>
-              <p className={styles.subtitle}>Typescript, Javascript, React, Generative AI</p>
+              <p className={styles.subtitle}>TypeScript, JavaScript, React, Generative AI</p>
               <ul className={styles.bodyul}>
                   <li className={styles.bodyli}>
                     Collaborated with a team to develop a web application that generates production plans with OpenAI for animation students and creative hobbyists.
@@ -95,8 +95,9 @@ export const Code = () => {
                     Interviewed capstone students to understand current frustrations with spreadsheet platforms and find prototype errors.
                   </li>
                 </ul>
+                <p className={styles.contributors}>Contributors: Abby Dennin, Natasha Mishra Daas, Sophia Allen</p>
                 <a href="https://github.com/Abby-Dennin/Animation-Production-Plan-Generator"
-            target="_blank" className={styles.githubLink}>Github Repo</a>
+            target="_blank" className={styles.githubLink}>GitHub Repo</a>
             </Card.Body>
           </Card>
 
@@ -134,20 +135,23 @@ export const Code = () => {
             </Carousel>
             <Card.Body>
               <h3 className={styles.projectTitle}>This Website!</h3>
-              <p className={styles.subtitle}>Javascript, React, CSS, HTML</p>
+              <p className={styles.subtitle}>JavaScript, React, CSS, HTML, Adobe Suite</p>
               <ul className={styles.bodyul}>
                   <li className={styles.bodyli}>
-                    Built a portfolio website showcasing my programming and animation projects with Javascript and Vite JS
+                    Built a portfolio website showcasing programming and animation projects with JavaScript and Vite JS.
                   </li>
                   <li className={styles.bodyli}>
                     Utilized React and other libraries like MUI to implement dynamic animations and interactions to the site.
                   </li>
                   <li className={styles.bodyli}>
-                    Deployed on Github Pages.
+                    Deployed on GitHub Pages using GitHub Workflows.
+                  </li>
+                  <li className={styles.bodyli}>
+                    Created and edited all media for the site using the Adobe Suite.
                   </li>
                 </ul>
                 <a href="https://github.com/meredithscott131/Portfolio"
-            target="_blank" className={styles.githubLink}>Github Repo</a>
+            target="_blank" className={styles.githubLink}>GitHub Repo</a>
             </Card.Body>
           </Card>
 
@@ -174,7 +178,7 @@ export const Code = () => {
               <p className={styles.subtitle}>Python, MySQL, REST API, Docker, Appsmith</p>
               <ul className={styles.bodyul}>
                   <li className={styles.bodyli}>
-                    Conceptualized and implemented a database for a proof-of-concept quiz taking platform with a team of peers.
+                    Conceptualized and implemented a database for a proof-of-concept quiz taking platform with a team.
                   </li>
                   <li className={styles.bodyli}>
                     Arranged user profiles with functionality to create, delete and edit quizzes as well as view their aggregated statistics.
@@ -186,8 +190,9 @@ export const Code = () => {
                     Adapted the database to a front-end application by a local Appsmith server with sample data.
                   </li>
                 </ul>
+                <p className={styles.contributors}>Contributors: Nicole Sorial, Jenna Sigman</p>
                 <a href="https://github.com/nicolesorial/quizzy"
-            target="_blank" className={styles.githubLink}>Github Repo</a>
+            target="_blank" className={styles.githubLink}>GitHub Repo</a>
             </Card.Body>
           </Card>
           
@@ -226,8 +231,9 @@ export const Code = () => {
                     Implemented graphics in JavaFX using Scene Builder to create dynamic layouts.
                   </li>
                 </ul>
+                <p className={styles.contributors}>Contributors: Aspen Tabar, Zeynep Lal Celikbilek</p>
                 <a href="https://github.com/meredithscott131/bullet-journal"
-            target="_blank" className={styles.githubLink}>Github Repo</a>
+            target="_blank" className={styles.githubLink}>GitHub Repo</a>
             </Card.Body>
           </Card>
           </div>

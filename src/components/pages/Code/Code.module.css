@@ -58,6 +58,10 @@
 .subtitle {
     color: var(--color-peri);
 }
+/* Project Contributors */
+.contributors {
+    font-size: 14px;
+}
 
 /* Project Description */
 .bodyli {
