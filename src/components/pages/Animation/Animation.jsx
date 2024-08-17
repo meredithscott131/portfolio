@@ -69,8 +69,8 @@ export const Animation = () => {
         <div className="ratio ratio-16x9">
           <video
             controls
-            src="/portfolio/assets/animation/Anim1/anim1_final.mp4"
-            poster='/portfolio/assets/animation/Anim1/anim1_final_thumb.png'
+            src="/assets/animation/Anim1/anim1_final.mp4"
+            poster='/assets/animation/Anim1/anim1_final_thumb.png'
           />
         </div>
         <div className={styles.textContainer}>
@@ -98,7 +98,7 @@ export const Animation = () => {
             {thumbnail.src.endsWith('.mp4') ? (
               <video
                 className="d-block w-100"
-                src={`/portfolio/assets/animation/${thumbnail.src}`}
+                src={`/assets/animation/${thumbnail.src}`}
                 controls={false}
                 loop
                 poster={thumbnail.poster}
@@ -108,7 +108,7 @@ export const Animation = () => {
             ) : (
               <img
                 className="d-block w-100"
-                src={`/portfolio/assets/animation/${thumbnail.src}`}
+                src={`/assets/animation/${thumbnail.src}`}
                 alt={`thumbnail ${index + 1}`}
               />
             )}
@@ -128,8 +128,8 @@ export const Animation = () => {
         <div className="ratio ratio-16x9">
           <video
             controls
-            src="/portfolio/assets/animation/Basics/basics_final.mp4"
-            poster='/portfolio/assets/animation/Basics/basics_final_thumb.png'
+            src="/assets/animation/Basics/basics_final.mp4"
+            poster='/assets/animation/Basics/basics_final_thumb.png'
           />
         </div>
         <div className={styles.textContainer}>
@@ -157,7 +157,7 @@ export const Animation = () => {
             {thumbnail.src.endsWith('.mp4') ? (
               <video
                 className="d-block w-100"
-                src={`/portfolio/assets/animation/${thumbnail.src}`}
+                src={`/assets/animation/${thumbnail.src}`}
                 controls={false}
                 loop
                 poster={thumbnail.poster}
@@ -167,7 +167,7 @@ export const Animation = () => {
             ) : (
               <img
                 className="d-block w-100"
-                src={`/portfolio/assets/animation/${thumbnail.src}`}
+                src={`/assets/animation/${thumbnail.src}`}
                 alt={`thumbnail ${anim1Content.length + index + 1}`}
               />
             )}

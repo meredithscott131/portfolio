@@ -14,8 +14,8 @@ export const Navbar = () => {
             className={styles.menuBtn}
             src={
               menuOpen
-                ? "/portfolio/assets/Icons/menu_close_icon.png"
-                : "/portfolio/assets/Icons/menu_icon.png"
+                ? "/assets/Icons/menu_close_icon.png"
+                : "/assets/Icons/menu_icon.png"
             }
             alt="Menu-button"
             onClick={() => setMenuOpen(!menuOpen)}

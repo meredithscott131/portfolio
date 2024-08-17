@@ -5,7 +5,7 @@ export const Home = () => {
   // Reference to interactive element
   const interactiveRef = useRef(null);
   // State to manage the image source
-  const [imageSrc, setImageSrc] = useState("/portfolio/assets/home/welcome_graphic.png");
+  const [imageSrc, setImageSrc] = useState("/assets/home/welcome_graphic.png");
 
   useEffect(() => {
     const interBubble = interactiveRef.current;
@@ -42,8 +42,8 @@ export const Home = () => {
 
   // Temporarily changes the image source
   const changeImageTemporarily = () => {
-    const originalSrc = "/portfolio/assets/home/welcome_graphic.png";
-    const newSrc = "/portfolio/assets/home/welcome_graphic_click.png";
+    const originalSrc = "/assets/home/welcome_graphic.png";
+    const newSrc = "/assets/home/welcome_graphic_click.png";
 
     setImageSrc(newSrc);
 

@@ -15,20 +15,20 @@ export const Code = () => {
               <Carousel.Item>
                 <img 
                   className="d-block w-100"
-                  src="/portfolio/assets/code/Image-To-Palette/interface.png"
+                  src="/assets/code/Image-To-Palette/interface.png"
                   alt="Image One"
                 />   
               </Carousel.Item> 
               <Carousel.Item>
                 <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="/portfolio/assets/code/Image-To-Palette/dragndrop_demo.mp4"
+                  <source src="/assets/code/Image-To-Palette/dragndrop_demo.mp4"
                   type="video/mp4"
                   />
                 </video>
               </Carousel.Item>
               <Carousel.Item>
                 <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="/portfolio/assets/code/Image-To-Palette/saving_demo.mp4"
+                  <source src="/assets/code/Image-To-Palette/saving_demo.mp4"
                   type="video/mp4"
                   />
                 </video>
@@ -62,20 +62,20 @@ export const Code = () => {
             <Carousel.Item> 
               <img 
                 className="d-block w-100"
-                src="/portfolio/assets/code/Production-Plan/top_view.png"
+                src="/assets/code/Production-Plan/top_view.png"
                 alt="Top View"
               />   
             </Carousel.Item>
             <Carousel.Item> 
               <img 
                 className="d-block w-100"
-                src="/portfolio/assets/code/Production-Plan/bottom_view.png"
+                src="/assets/code/Production-Plan/bottom_view.png"
                 alt="Bottom View"
               />   
             </Carousel.Item> 
             <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                <source src="/portfolio/assets/code/Production-Plan/full_demo.mp4"
+                <source src="/assets/code/Production-Plan/full_demo.mp4"
                 type="video/mp4"
                 />
               </video>
@@ -107,28 +107,28 @@ export const Code = () => {
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="/portfolio/assets/code/Website/home_page.png"
+                  src="/assets/code/Website/home_page.png"
                   alt="Home Page"
                 />   
               </Carousel.Item>
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="/portfolio/assets/code/Website/code_page.png"
+                  src="/assets/code/Website/code_page.png"
                   alt="Code Page"
                 />   
               </Carousel.Item>
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="/portfolio/assets/code/Website/animation_page.png"
+                  src="/assets/code/Website/animation_page.png"
                   alt="Code Page"
                 />   
               </Carousel.Item>
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="/portfolio/assets/code/Website/about_page.png"
+                  src="/assets/code/Website/about_page.png"
                   alt="Code Page"
                 />   
               </Carousel.Item>
@@ -161,13 +161,13 @@ export const Code = () => {
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="/portfolio/assets/code/Quizzy/diagram.png"
+                  src="/assets/code/Quizzy/diagram.png"
                   alt="Image Two"
                 />   
               </Carousel.Item> 
               <Carousel.Item>
               <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="/portfolio/assets/code/Quizzy/full_demo.mp4"
+                  <source src="/assets/code/Quizzy/full_demo.mp4"
                   type="video/mp4"
                   />
                 </video>
@@ -202,14 +202,14 @@ export const Code = () => {
               <Carousel.Item> 
                 <img 
                   className="d-block w-100"
-                  src="/portfolio/assets/code/Bullet-Journal/main_view.png"
+                  src="/assets/code/Bullet-Journal/main_view.png"
                   alt="Image Two"
                 />   
               </Carousel.Item> 
               <Carousel.Item>
                 <img 
                     className="d-block w-100"
-                    src="/portfolio/assets/code/Bullet-Journal/start_screen.png"
+                    src="/assets/code/Bullet-Journal/start_screen.png"
                     alt="Image Two"
                   /> 
               </Carousel.Item>
