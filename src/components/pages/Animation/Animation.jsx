@@ -14,16 +14,16 @@ export const Animation = () => {
       poster: null,
       title: 'Concept Art' },
     { src: 'Anim1/room_fly_through.mp4',
-      poster: '/portfolio/assets/animation/Anim1/room_fly_through_thumb.png',
+      poster: '/assets/animation/Anim1/room_fly_through_thumb.png',
       title: 'Room Flythrough' },
     { src: 'Anim1/neil_turnaround.mp4',
-      poster: '/portfolio/assets/animation/Anim1/neil_turnaround_thumb.png',
+      poster: '/assets/animation/Anim1/neil_turnaround_thumb.png',
       title: 'Character Turnaround' },
     { src: 'Anim1/neil_rig.png',
       poster: null,
       title: 'Character Rig' },
     { src: 'Anim1/progress_shot.mp4',
-      poster: '/portfolio/assets/animation/Anim1/progress_shot_thumb.png',
+      poster: '/assets/animation/Anim1/progress_shot_thumb.png',
       title: 'Progress Shot' }
   ];
   const basicsContent = [
@@ -34,10 +34,10 @@ export const Animation = () => {
       poster: null,
       title: 'Character Turnaround' },
     { src: 'Basics/animatic.mp4',
-      poster: '/portfolio/assets/animation/Basics/animatic_thumb.png',
+      poster: '/assets/animation/Basics/animatic_thumb.png',
       title: 'Animatic' },
     { src: 'Basics/blend_shapes_demo.mp4',
-      poster: '/portfolio/assets/animation/Basics/blend_shapes_demo_thumb.png',
+      poster: '/assets/animation/Basics/blend_shapes_demo_thumb.png',
       title: 'Blend Shapes Demo' }
   ];
   

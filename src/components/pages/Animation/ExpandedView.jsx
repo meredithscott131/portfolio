@@ -17,7 +17,7 @@ const ExpandedView = ({ thumbnail, title, onClose }) => {
       <div className={styles.overlay}>
         <div className={styles.expanded} ref={expandedRef} onClick={handleMediaClick}>
           <button className={styles.closeButton} onClick={onClose}>
-            <img src="/portfolio/assets/Icons/menu_close_icon_white.png" alt="Close" />
+            <img src="/assets/Icons/menu_close_icon_white.png" alt="Close" />
           </button>
           <div className={styles.titleContainer}>
             <h3 className={styles.expandedTitle}>{title}</h3>
@@ -25,7 +25,7 @@ const ExpandedView = ({ thumbnail, title, onClose }) => {
           {thumbnail.src.endsWith('.mp4') ? (
             <video
               className="d-block w-100"
-              src={`/portfolio/assets/animation/${thumbnail.src}`}
+              src={`/assets/animation/${thumbnail.src}`}
               controls
               loop
               poster={thumbnail.poster}
@@ -34,7 +34,7 @@ const ExpandedView = ({ thumbnail, title, onClose }) => {
           ) : (
             <img
               className="d-block w-100"
-              src={`/portfolio/assets/animation/${thumbnail.src}`}
+              src={`/assets/animation/${thumbnail.src}`}
               alt="Expanded thumbnail"
             />
           )}
