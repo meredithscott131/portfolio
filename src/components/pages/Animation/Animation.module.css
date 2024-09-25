@@ -120,12 +120,12 @@
     position: relative;
     cursor: pointer;
     opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
 /* Item in Thumbnail Grid Hover Animation */
 .thumbnail:hover {
-    opacity: 0.75;
+    opacity: 0.5;
 }
 
 /* Expanded View Styles */
