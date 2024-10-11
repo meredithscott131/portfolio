@@ -1,7 +1,21 @@
+/* Fix the size of the carousel */
+.carousel, .carousel-inner, .carousel-item {
+    width: 100%; /* You can specify a fixed width like 800px if necessary */
+    height: 100%; /* Define a fixed height for the carousel */
+}
+
+/* Ensure that the video inside the carousel fits the fixed container */
+.carousel video {
+    width: 100%; /* Set video width to 100% of the carousel */
+    height: 100%; /* Ensure the video height matches the carousel height */
+    object-fit: cover; /* Scale the video to cover the entire carousel without distortion */
+}
+
 /* Page Container */
 .container {
     position: relative;
     border-radius: 15px;
+    justify-content: center;
     padding: 5%;
     z-index: 1;
 }
@@ -18,11 +32,11 @@
 /* Project Card Grid */
 .grid {
     display: flex;
-    justify-items: center;
     flex-wrap: wrap;
     gap: 5%;
-    row-gap: 50px;
+    row-gap: 60px;
     padding-bottom: 20px;
+    padding-top: 5%;
 }
 
 /* Project Card */
@@ -32,18 +46,17 @@
     align-items: center;
     list-style: none;
     width: 47%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.2s ease-in-out, transform 0.3s ease-in-out;
     position: relative; /* Add this line */
     padding-bottom: 50px; /* Add some padding to accommodate the button */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Card Hover Animation */
+/* Project Card Hover Animation
 .projectCard:hover {
     background-size: 100% 100%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-5px);
-}
+}*/
 
 /* Project Title */
 .projectTitle {
@@ -90,6 +103,34 @@
     background-color: var(--color-peri-hover);
 }
 
+/* Project Container */
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5%;
+    list-style: none;
+}
+
+/* Project Text Container */
+.textContainer {
+    float: right;
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
+}
+
+/* Project Log Line */
+.logLine {
+    line-height: normal;
+}
+
+/* External Link Text */
+.link {
+    color: var(--color-peri);
+}
+
 @media (max-width: 1200px) {
     /* Project Card */
     .projectCard {
@@ -98,6 +139,22 @@
 }
 
 @media (max-width: 800px) {
+    /* Project Container */
+    .project {
+        flex-direction: column;
+        padding-top: 0%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Project Text Container */
+    .textContainer {
+        float: right;
+        max-width: 100%;
+        padding: 25px;
+        border-radius: 10px;
+        background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
+    }
+    
     /* Page Container */
     .container {
         position: relative;
@@ -114,6 +171,7 @@
         gap: 5%;
         row-gap: 50px;
         padding-bottom: 20px;
+        padding-top: 50px;
     }
 
     /* Project Card */

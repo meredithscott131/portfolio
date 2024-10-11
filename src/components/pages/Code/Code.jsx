@@ -7,10 +7,68 @@ export const Code = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Coding Projects</h2>
+      {/* AR */}
+      <div className={styles.project}>
+        <Carousel interval={null} controls={true} className={styles.carousel}>
+          <Carousel.Item>
+            <video className="d-block w-100" controls loop
+              poster="public\assets\code\Gestures\demo_thumb.png">
+                <source src="public\assets\code\Gestures\Demo.mp4"
+                type="video/mp4"
+                />
+              </video>
+              <Carousel.Caption>
+                <h3>Demo</h3>
+              </Carousel.Caption>  
+            </Carousel.Item>
+            <Carousel.Item>
+            <video className="d-block w-100" autoPlay loop muted>
+                <source src="public\assets\code\Gestures\OpenBook.mp4"
+                type="video/mp4"
+                />
+              </video>
+              <Carousel.Caption>
+                <h3>Open Book Gesture</h3>
+              </Carousel.Caption>  
+            </Carousel.Item>
+            <Carousel.Item>
+            <video className="d-block w-100" autoPlay loop muted>
+                <source src="public\assets\code\Gestures\Slinky.mp4"
+                type="video/mp4"
+                />
+              </video>
+              <Carousel.Caption>
+                <h3>Pull Gesture</h3>
+              </Carousel.Caption>  
+            </Carousel.Item>
+            <Carousel.Item>
+            <video className="d-block w-100" autoPlay loop muted>
+                <source src="public\assets\code\Gestures\FingerGun.mp4"
+                type="video/mp4"
+                />
+              </video>
+              <Carousel.Caption>
+                <h3>Finger Gun Gesture</h3>
+              </Carousel.Caption>  
+            </Carousel.Item> 
+          </Carousel>
+        <div className={styles.textContainer}>
+          <h3 className={styles.projectTitle}>
+            AR Gesture Prototype Series [Ongoing]
+          </h3>
+          <p className={styles.subtitle}>C#, Unity, MRTK, Microsoft HoloLens 2</p>
+          <p className={styles.logLine}>Investigating the abilities of single-handed, gesture-based UI as an Augmented Reality Research Co-op at the Northeastern <a target="_blank" className={styles.link} href="http://www.realitydesign.studio/">Reality Design Studio</a>, led by Dr. Wallace Lages.</p>
+          <ul>
+            <li>Leveraging the Mixed Reality Toolkit (MRTK) Unity package to program and deploy prototypes to the Microsoft HoloLens 2.</li>
+            <li>Conducting user interviews and usability testing to discover prototype errors, utilizing gesture elicitation study frameworks.</li>
+          </ul>
+          <p className={styles.contributors}>Contributors: Shiqi Yu</p>
+        </div>
+      </div>
         <div>
           <div className={styles.grid}>
           {/* Krita Plugin */}
-          <Card className={styles.projectCard}>
+          <Card className={`${styles.projectCard} border-0`}>
             <Carousel variant="dark" interval={null} controls={true}>
               <Carousel.Item>
                 <img 
@@ -57,7 +115,7 @@ export const Code = () => {
           </Card>
 
           {/* Production Plan */}
-          <Card className={styles.projectCard}>
+          <Card className={`${styles.projectCard} border-0`}>
             <Carousel variant="dark" interval={null} controls={true}>
             <Carousel.Item> 
               <img 
@@ -102,7 +160,7 @@ export const Code = () => {
           </Card>
 
           {/* Personal Website */}
-          <Card className={styles.projectCard}>
+          <Card className={`${styles.projectCard} border-0`}>
             <Carousel variant="dark" interval={null} controls={true}>
               <Carousel.Item> 
                 <img 
@@ -156,7 +214,7 @@ export const Code = () => {
           </Card>
 
           {/* Quiz Database */}
-          <Card className={styles.projectCard}>
+          <Card className={`${styles.projectCard} border-0`}>
             <Carousel interval={null} controls={true}>
               <Carousel.Item> 
                 <img 
@@ -197,7 +255,7 @@ export const Code = () => {
           </Card>
           
           {/* Bullet Journal */}
-          <Card className={styles.projectCard}>
+          <Card className={`${styles.projectCard} border-0`}>
             <Carousel variant="dark" interval={null} controls={true}>
               <Carousel.Item> 
                 <img 
