@@ -12,8 +12,8 @@ export const Code = () => {
         <Carousel interval={null} controls={true} className={styles.carousel}>
           <Carousel.Item>
             <video className="d-block w-100" controls loop
-              poster="public\assets\code\Gestures\demo_thumb.png">
-                <source src="public\assets\code\Gestures\Demo.mp4"
+              poster="/assets/code/Gestures/demo_thumb.png">
+                <source src="/assets/code/Gestures/Demo.mp4"
                 type="video/mp4"
                 />
               </video>
@@ -23,7 +23,7 @@ export const Code = () => {
             </Carousel.Item>
             <Carousel.Item>
             <video className="d-block w-100" autoPlay loop muted>
-                <source src="public\assets\code\Gestures\OpenBook.mp4"
+                <source src="/assets/code/Gestures/OpenBook.mp4"
                 type="video/mp4"
                 />
               </video>
@@ -33,7 +33,7 @@ export const Code = () => {
             </Carousel.Item>
             <Carousel.Item>
             <video className="d-block w-100" autoPlay loop muted>
-                <source src="public\assets\code\Gestures\Slinky.mp4"
+                <source src="/assets/code/Gestures/Slinky.mp4"
                 type="video/mp4"
                 />
               </video>
@@ -43,7 +43,7 @@ export const Code = () => {
             </Carousel.Item>
             <Carousel.Item>
             <video className="d-block w-100" autoPlay loop muted>
-                <source src="public\assets\code\Gestures\FingerGun.mp4"
+                <source src="/assets/code/Gestures/FingerGun.mp4"
                 type="video/mp4"
                 />
               </video>
