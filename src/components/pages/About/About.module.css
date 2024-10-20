@@ -109,16 +109,11 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
-
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
 }
 
 /* Profile Image Sizing */
 .profileImage img {
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
 }
 

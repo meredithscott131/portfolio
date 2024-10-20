@@ -83,6 +83,9 @@ export const Code = () => {
                   type="video/mp4"
                   />
                 </video>
+                <Carousel.Caption>
+                  <h3>Loading Demo</h3>
+                </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <video className="d-block w-100" controls autoPlay muted loop>
@@ -90,6 +93,9 @@ export const Code = () => {
                   type="video/mp4"
                   />
                 </video>
+                <Carousel.Caption>
+                  <h3>Saving Demo</h3>
+                </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
             <Card.Body>
@@ -199,7 +205,7 @@ export const Code = () => {
                     Built a portfolio website showcasing programming and animation projects with JavaScript and Vite JS.
                   </li>
                   <li className={styles.bodyli}>
-                    Utilized React and other libraries like MUI to implement dynamic animations and interactions to the site.
+                    Utilized React, Bootstrap, and MUI to implement dynamic animations and interactions to the site.
                   </li>
                   <li className={styles.bodyli}>
                     Deployed on GitHub Pages using GitHub Workflows.
