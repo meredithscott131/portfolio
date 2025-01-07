@@ -57,35 +57,21 @@ export const Home = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Meredith Scott</h1>
           <h2 className={styles.subtitle}>
-            Software developer and researcher interested in filmmaking, games, and emerging technology. Specializing in human-computer interaction and computer graphics.
+            Software developer and researcher interested in animation, games, and emerging technology. Specializing in human-computer interaction and computer graphics.
           </h2>
-          <p className={styles.skillTitle}>Skills</p>
-          <div className={styles.skillsContainer}>
-            <div className={styles.skillGroup}>
-              <p className={styles.skillGroupTitle}>Programming</p>
-              <p className={styles.skillGroupBody}>
-                C#, C++, Python, OpenGL, JavaScript, Java, React, PyQt, SQL, Linux, Git, Visual Studio
-              </p>
-            </div>
-            <div className={styles.skillGroup}>
-              <p className={styles.skillGroupTitle}>Animation</p>
-              <p className={styles.skillGroupBody}>
-                Maya, Z-Brush, Substance Painter, Blender, After Effects, Premiere Pro, Photoshop
-              </p>
-            </div>
-          </div>
         </div>
+        <img src="/assets/Icons/break_line.png" alt="Girl in a jacket" width="200" ></img>
         <div>
+        <p className={styles.skillTitle}>Recent Work</p>
+        <p className={styles.preview}>AR Gesture Prototype Series (Click to learn more!)</p>
         <video
           className={styles.videoPrev} autoPlay loop muted
           onClick={handleVideoClick}>
           <source
-            src="/assets/code/Gestures/Demo.mp4"
+            src="/assets/code/Gestures/GesturesCompilation.mp4"
             type="video/mp4"
           />
         </video>
-        <p className={styles.previewTitle}>Augmented Reality Gesture Prototype Series</p>
-        <p className={styles.preview}>Click to learn more!</p>
         </div>
       </div>
       <div className={styles.gradientBg}>

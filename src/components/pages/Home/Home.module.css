@@ -21,7 +21,7 @@ html, body {
 /* Page Background And Bubbles */
 .gradient-bg {
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   overflow: hidden;
   background: --color-bg;
@@ -140,9 +140,10 @@ html, body {
   width: 100vw;
   height: 90vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute;
   align-items: center;
+  text-align: center;
   user-select: none;
 }
 
@@ -161,18 +162,21 @@ html, body {
 .skillsContainer {
   display: flex;
   flex-direction: row;
+  column-gap: 5%;
+  justify-content: center;
+  padding-bottom: 5%;
 }
 
 .skillGroup {
   max-width: 300px;
-  padding-right: 3%;
 }
 
 .skillTitle {
   font-family: 'DM Sans';
   font-size: 24px;
   font-weight: bolder;
-  color: var(--color-red);
+  color: var(--color-peri);
+  padding-top: 5%;
 }
 
 .skillGroupTitle {
@@ -194,6 +198,7 @@ html, body {
 .preview {
   color: var(--color-peri);
   text-align: center;
+  padding-bottom: 2%;
 }
 
 /* Page Title */
@@ -209,6 +214,8 @@ html, body {
   color: var(--color-peri);
   font-size: 18px;
   margin-bottom: 5%;
+  max-width: 50%;
+  margin-left: 25%;
 }
 
 /* Avatar Image */
@@ -265,11 +272,14 @@ html, body {
   /* Page Title */
   .title {
       font-size: 72px;
+      padding-top: 10%;
   }
 
   /* Page Subtitle */
   .subtitle {
     font-size: 18px;
+    max-width: 70%;
+    margin-left: 15%;
   }
 
   .foregroundContent {
@@ -281,5 +291,9 @@ html, body {
   .skillsContainer {
     justify-content: center;
     padding-bottom: 5%;
+  }
+
+  .gradient-bg {
+    height: 120vh;
   }
 }

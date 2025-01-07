@@ -10,19 +10,8 @@ export const Code = () => {
       {/* AR */}
       <div className={styles.project}>
         <Carousel interval={null} controls={true} className={styles.carousel}>
-          <Carousel.Item>
-            <video className="d-block w-100" controls loop
-              poster="/assets/code/Gestures/demo_thumb.png">
-                <source src="/assets/code/Gestures/Demo.mp4"
-                type="video/mp4"
-                />
-              </video>
-              <Carousel.Caption>
-                <h3>Demo</h3>
-              </Carousel.Caption>  
-            </Carousel.Item>
             <Carousel.Item>
-            <video className="d-block w-100" autoPlay loop muted>
+            <video className="d-block w-100" controls autoPlay loop muted>
                 <source src="/assets/code/Gestures/OpenBook.mp4"
                 type="video/mp4"
                 />
@@ -32,7 +21,7 @@ export const Code = () => {
               </Carousel.Caption>  
             </Carousel.Item>
             <Carousel.Item>
-            <video className="d-block w-100" autoPlay loop muted>
+            <video className="d-block w-100" controls autoPlay loop muted>
                 <source src="/assets/code/Gestures/Slinky.mp4"
                 type="video/mp4"
                 />
@@ -42,13 +31,24 @@ export const Code = () => {
               </Carousel.Caption>  
             </Carousel.Item>
             <Carousel.Item>
-            <video className="d-block w-100" autoPlay loop muted>
+            <video className="d-block w-100" controls autoPlay loop muted>
                 <source src="/assets/code/Gestures/FingerGun.mp4"
                 type="video/mp4"
                 />
               </video>
               <Carousel.Caption>
                 <h3>Finger Gun Gesture</h3>
+              </Carousel.Caption>  
+            </Carousel.Item>
+            <Carousel.Item>
+            <video className="d-block w-100" controls autoPlay loop muted
+              poster="/assets/code/Gestures/demo_thumb.png">
+                <source src="/assets/code/Gestures/RotationDemo.mp4"
+                type="video/mp4"
+                />
+              </video>
+              <Carousel.Caption>
+                <h3>Movement Demo</h3>
               </Carousel.Caption>  
             </Carousel.Item> 
           </Carousel>
@@ -57,12 +57,12 @@ export const Code = () => {
             AR Gesture Prototype Series [Ongoing]
           </h3>
           <p className={styles.subtitle}>C#, Unity, MRTK, Microsoft HoloLens 2</p>
-          <p className={styles.logLine}>Investigating the abilities of single-handed, gesture-based UI as an Augmented Reality Research Co-op at the Northeastern <a target="_blank" className={styles.link} href="http://www.realitydesign.studio/">Reality Design Studio</a>, led by Dr. Wallace Lages.</p>
+          <p className={styles.logLine}>Under the Northeastern <a target="_blank" className={styles.link} href="http://www.realitydesign.studio/">Reality Design Studio</a> research group, this project aims to investigate the potential of single-handed gesture controls to enhance mobility and immersion in augmented reality spaces.  As the student investigator, my responsibilities include:</p>
           <ul>
+            <li>Developing high-fidelity augmented reality prototypes in Unity through extensive design research and rapid prototype ideation.</li>
             <li>Leveraging the Mixed Reality Toolkit (MRTK) Unity package to program and deploy prototypes to the Microsoft HoloLens 2.</li>
-            <li>Conducting user interviews and usability testing to discover prototype errors, utilizing gesture elicitation study frameworks.</li>
+            <li>Conducting usability testing and user interviews, applying gesture elicitation frameworks to identify and resolve prototype issues.</li>
           </ul>
-          <p className={styles.contributors}>Contributors: Shiqi Yu</p>
         </div>
       </div>
         <div>
@@ -103,7 +103,7 @@ export const Code = () => {
               <p className={styles.subtitle}>Python, PyQt, Krita API</p>
               <ul className={styles.bodyul}>
                   <li className={styles.bodyli}>
-                    Developed a Krita docker plugin for generating color palettes from images.
+                    Developed a Krita docker plugin for generating color palettes from images, enhancing digital artists' workflows.
                   </li>
                   <li className={styles.bodyli}>
                     Implemented functionality to load, regenerate, save, and display color palettes, including drag-and-drop image support.
@@ -150,10 +150,10 @@ export const Code = () => {
               <p className={styles.subtitle}>TypeScript, JavaScript, React, Generative AI</p>
               <ul className={styles.bodyul}>
                   <li className={styles.bodyli}>
-                    Collaborated with a team to develop a web application that generates production plans with OpenAI for animation students and creative hobbyists.
+                    Collaborated with a team to develop a web application that generates tailored production plans for animation students and creatives using the OpenAI API, reducing reliance on manual spreadsheet management.
                   </li>
                   <li className={styles.bodyli}>
-                    Incorporated csv export and spreadsheet stylization for a user-friendly experience.
+                    Integrated features like CSV export, project history tracking, and custom spreadsheet styling, creating intuitive user experience for planning animation projects.
                   </li>
                   <li className={styles.bodyli}>
                     Interviewed capstone students to understand current frustrations with spreadsheet platforms and find prototype errors.
