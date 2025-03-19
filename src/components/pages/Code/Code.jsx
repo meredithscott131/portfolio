@@ -165,6 +165,33 @@ export const Code = () => {
             </Card.Body>
           </Card>
 
+          {/* Spirograph */}
+          <Card className={`${styles.projectCard} border-0`}>
+            <Carousel variant="dark" interval={null} controls={true}>
+              <Carousel.Item>
+                <video className="d-block w-100" autoPlay muted loop>
+                  <source src="/assets/code/Spirograph/Spirograph.mp4"
+                  type="video/mp4"
+                  />
+                </video>
+              </Carousel.Item>
+            </Carousel>
+            <Card.Body>
+              <h3 className={styles.projectTitle}>Spirograph Animation</h3>
+              <p className={styles.subtitle}>C++, OpenGL, MVC Pattern</p>
+              <ul className={styles.bodyul}>
+                  <li className={styles.bodyli}>
+                    Developed an interactive spirograph animation with OpenGL that dynamically visualizes patterns using custom 2D mesh generation.
+                  </li>
+                  <li className={styles.bodyli}>
+                    Enabled real-time keyboard input, allowing adjustments to the inner circle radius and toggling of the curve visualization.
+                  </li>
+                </ul>
+                <a href="https://github.com/meredithscott131/Spirograph"
+            target="_blank" className={styles.githubLink}>GitHub Repo</a>
+            </Card.Body>
+          </Card>
+
           {/* Personal Website */}
           <Card className={`${styles.projectCard} border-0`}>
             <Carousel variant="dark" interval={null} controls={true}>
