@@ -4,6 +4,105 @@ import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
 
 export const Code = () => {
+  const krita = {
+    title: "Image to Palette Krita Plugin",
+    subtitle: "Python, PyQt, Krita API",
+    github: "https://github.com/meredithscott131/ImageToPalette",
+    media: [
+      { type: "image", src: "/assets/code/Image-To-Palette/interface.png" },
+      { type: "video", src: "/assets/code/Image-To-Palette/dragndrop_demo.mp4" },
+      { type: "video", src: "/assets/code/Image-To-Palette/saving_demo.mp4" }
+    ],
+    bullets: [
+      "Developed a Krita docker plugin for generating color palettes from images, enhancing digital artists' workflows.",
+      "Implemented functionality to load, regenerate, save, and display color palettes, including drag-and-drop image support.",
+      "Managed JSON file conversion to support color palette saving and recent palette history across Krita sessions.",
+      "Utilized PyQt5 and Krita’s API for a dynamic and intuitive user interface."
+    ],
+    contributors: null
+  };
+  const productionPlan = {
+    title: "Animation Production Plan Generator",
+    subtitle: "TypeScript, JavaScript, React, Generative AI",
+    github: "https://github.com/Abby-Dennin/Animation-Production-Plan-Generator",
+    media: [
+      { type: "image", src: "/assets/code/Production-Plan/top_view.png" },
+      { type: "image", src: "/assets/code/Production-Plan/bottom_view.png" },
+      { type: "video", src: "/assets/code/Production-Plan/full_demo.mp4" }
+    ],
+    bullets: [
+      "Collaborated with a team to develop a web application that generates tailored production plans for animation students and creatives using the OpenAI API.",
+      "Integrated features like CSV export, project history tracking, and custom spreadsheet styling.",
+      "Interviewed capstone students to understand frustrations and improve the prototype."
+    ],
+    contributors: "Contributors: Abby Dennin, Natasha Mishra Daas, Sophia Allen"
+  };
+  const spirograph = {
+    title: "Spirograph Animation",
+    subtitle: "C++, OpenGL, MVC Pattern",
+    github: "https://github.com/meredithscott131/Spirograph",
+    media: [
+      { type: "video", src: "/assets/code/Spirograph/Spirograph.mp4" }
+    ],
+    bullets: [
+      "Developed an interactive spirograph animation with OpenGL that dynamically visualizes patterns using custom 2D mesh generation.",
+      "Enabled real-time keyboard input to adjust circle radius and toggle curve visualization."
+    ],
+    contributors: null
+  };
+  const website = {
+    title: "This Website!",
+    subtitle: "JavaScript, React, CSS, HTML, Adobe Suite",
+    github: "https://github.com/meredithscott131/Portfolio",
+    media: [
+      { type: "image", src: "/assets/code/Website/home_page.png" },
+      { type: "image", src: "/assets/code/Website/code_page.png" },
+      { type: "image", src: "/assets/code/Website/animation_page.png" },
+      { type: "image", src: "/assets/code/Website/about_page.png" }
+    ],
+    bullets: [
+      "Built a portfolio website showcasing programming and animation projects using JavaScript and Vite.",
+      "Utilized React, Bootstrap, and MUI for dynamic animations and interactions.",
+      "Deployed via GitHub Pages using GitHub Actions Workflows.",
+      "Created and edited all media for the site using Adobe Suite."
+    ],
+    contributors: null
+  };
+  const quizzy = {
+    title: "\"Quizzy\" Database",
+    subtitle: "Python, MySQL, REST API, Docker, Appsmith",
+    github: "https://github.com/nicolesorial/quizzy",
+    media: [
+      { type: "image", src: "/assets/code/Quizzy/diagram.png" },
+      { type: "video", src: "/assets/code/Quizzy/full_demo.mp4" }
+    ],
+    bullets: [
+      "Conceptualized and implemented a database for a quiz platform with a team.",
+      "Supported user profiles with functionality to create, edit, and delete quizzes.",
+      "Managed API implementation to optimize quiz statistics retrieval and user management.",
+      "Adapted backend to a local Appsmith server with sample data."
+    ],
+    contributors: "Contributors: Nicole Sorial, Jenna Sigman"
+  };
+  const bulletJournal = {
+    title: "Bullet Journal",
+    subtitle: "Java, JavaFX, MVC Pattern",
+    github: "https://github.com/meredithscott131/bullet-journal",
+    media: [
+      { type: "image", src: "/assets/code/Bullet-Journal/main_view.png" },
+      { type: "image", src: "/assets/code/Bullet-Journal/start_screen.png" }
+    ],
+    bullets: [
+      "Collaborated to create a bullet journal app supporting event/task management, ordering, file saving, and theme customization.",
+      "Directed .bujo file saving using JSON conversion.",
+      "Structured project with model-view-controller (MVC) pattern.",
+      "Implemented JavaFX graphics using Scene Builder."
+    ],
+    contributors: "Contributors: Aspen Tabar, Zeynep Lal Celikbilek"
+  };
+
+  const projects = [krita, productionPlan, spirograph, website];
+  
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Coding Projects</h2>
@@ -66,268 +165,49 @@ export const Code = () => {
         </div>
       </div>
         <div>
-          <div className={styles.grid}>
-          {/* Krita Plugin */}
-          <Card className={`${styles.projectCard} border-0`}>
-            <Carousel variant="dark" interval={null} controls={true}>
-              <Carousel.Item>
-                <img 
-                  className="d-block w-100"
-                  src="/assets/code/Image-To-Palette/interface.png"
-                  alt="Image One"
-                />   
-              </Carousel.Item> 
-              <Carousel.Item>
-                <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="/assets/code/Image-To-Palette/dragndrop_demo.mp4"
-                  type="video/mp4"
-                  />
-                </video>
-                <Carousel.Caption>
-                  <h3>Loading Demo</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="/assets/code/Image-To-Palette/saving_demo.mp4"
-                  type="video/mp4"
-                  />
-                </video>
-                <Carousel.Caption>
-                  <h3>Saving Demo</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
-            <Card.Body>
-              <h3 className={styles.projectTitle}>Image to Palette Krita Plugin</h3>
-              <p className={styles.subtitle}>Python, PyQt, Krita API</p>
-              <ul className={styles.bodyul}>
-                  <li className={styles.bodyli}>
-                    Developed a Krita docker plugin for generating color palettes from images, enhancing digital artists' workflows.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Implemented functionality to load, regenerate, save, and display color palettes, including drag-and-drop image support.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Managed JSON file conversion to support color palette saving and recent palette history across Krita sessions.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Utilized PyQt5 and Krita’s API for a dynamic and intuitive user interface.
-                  </li>
-                </ul>
-                <a href="https://github.com/meredithscott131/ImageToPalette"
-            target="_blank" className={styles.githubLink}>GitHub Repo</a>
-            </Card.Body>
-          </Card>
-
-          {/* Production Plan */}
-          <Card className={`${styles.projectCard} border-0`}>
-            <Carousel variant="dark" interval={null} controls={true}>
-            <Carousel.Item> 
-              <img 
-                className="d-block w-100"
-                src="/assets/code/Production-Plan/top_view.png"
-                alt="Top View"
-              />   
-            </Carousel.Item>
-            <Carousel.Item> 
-              <img 
-                className="d-block w-100"
-                src="/assets/code/Production-Plan/bottom_view.png"
-                alt="Bottom View"
-              />   
-            </Carousel.Item> 
-            <Carousel.Item>
-              <video className="d-block w-100" controls autoPlay muted loop>
-                <source src="/assets/code/Production-Plan/full_demo.mp4"
-                type="video/mp4"
-                />
-              </video>
-            </Carousel.Item>
-            </Carousel>
-            <Card.Body>
-              <h3 className={styles.projectTitle}>Animation Production Plan Generator</h3>
-              <p className={styles.subtitle}>TypeScript, JavaScript, React, Generative AI</p>
-              <ul className={styles.bodyul}>
-                  <li className={styles.bodyli}>
-                    Collaborated with a team to develop a web application that generates tailored production plans for animation students and creatives using the OpenAI API, reducing reliance on manual spreadsheet management.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Integrated features like CSV export, project history tracking, and custom spreadsheet styling, creating intuitive user experience for planning animation projects.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Interviewed capstone students to understand current frustrations with spreadsheet platforms and find prototype errors.
-                  </li>
-                </ul>
-                <p className={styles.contributors}>Contributors: Abby Dennin, Natasha Mishra Daas, Sophia Allen</p>
-                <a href="https://github.com/Abby-Dennin/Animation-Production-Plan-Generator"
-            target="_blank" className={styles.githubLink}>GitHub Repo</a>
-            </Card.Body>
-          </Card>
-
-          {/* Spirograph */}
-          <Card className={`${styles.projectCard} border-0`}>
-            <Carousel variant="dark" interval={null} controls={true}>
-              <Carousel.Item>
-                <video className="d-block w-100" autoPlay muted loop>
-                  <source src="/assets/code/Spirograph/Spirograph.mp4"
-                  type="video/mp4"
-                  />
-                </video>
-              </Carousel.Item>
-            </Carousel>
-            <Card.Body>
-              <h3 className={styles.projectTitle}>Spirograph Animation</h3>
-              <p className={styles.subtitle}>C++, OpenGL, MVC Pattern</p>
-              <ul className={styles.bodyul}>
-                  <li className={styles.bodyli}>
-                    Developed an interactive spirograph animation with OpenGL that dynamically visualizes patterns using custom 2D mesh generation.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Enabled real-time keyboard input, allowing adjustments to the inner circle radius and toggling of the curve visualization.
-                  </li>
-                </ul>
-                <a href="https://github.com/meredithscott131/Spirograph"
-            target="_blank" className={styles.githubLink}>GitHub Repo</a>
-            </Card.Body>
-          </Card>
-
-          {/* Personal Website */}
-          <Card className={`${styles.projectCard} border-0`}>
-            <Carousel variant="dark" interval={null} controls={true}>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="/assets/code/Website/home_page.png"
-                  alt="Home Page"
-                />   
-              </Carousel.Item>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="/assets/code/Website/code_page.png"
-                  alt="Code Page"
-                />   
-              </Carousel.Item>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="/assets/code/Website/animation_page.png"
-                  alt="Code Page"
-                />   
-              </Carousel.Item>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="/assets/code/Website/about_page.png"
-                  alt="Code Page"
-                />   
-              </Carousel.Item>
-            </Carousel>
-            <Card.Body>
-              <h3 className={styles.projectTitle}>This Website!</h3>
-              <p className={styles.subtitle}>JavaScript, React, CSS, HTML, Adobe Suite</p>
-              <ul className={styles.bodyul}>
-                  <li className={styles.bodyli}>
-                    Built a portfolio website showcasing programming and animation projects with JavaScript and Vite JS.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Utilized React, Bootstrap, and MUI to implement dynamic animations and interactions to the site.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Deployed on GitHub Pages using GitHub Workflows.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Created and edited all media for the site using the Adobe Suite.
-                  </li>
-                </ul>
-                <a href="https://github.com/meredithscott131/Portfolio"
-            target="_blank" className={styles.githubLink}>GitHub Repo</a>
-            </Card.Body>
-          </Card>
-
-          {/* Quiz Database */}
-          <Card className={`${styles.projectCard} border-0`}>
-            <Carousel interval={null} controls={true}>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="/assets/code/Quizzy/diagram.png"
-                  alt="Image Two"
-                />   
-              </Carousel.Item> 
-              <Carousel.Item>
-              <video className="d-block w-100" controls autoPlay muted loop>
-                  <source src="/assets/code/Quizzy/full_demo.mp4"
-                  type="video/mp4"
-                  />
-                </video>
-              </Carousel.Item> 
+        <div className={styles.grid}>
+          {projects.map((project, index) => (
+            <Card key={index} className={`${styles.projectCard} border-0`}>
+              <Carousel variant="dark" interval={null} controls={true}>
+                {project.media.map((mediaItem, mediaIndex) => (
+                  <Carousel.Item key={mediaIndex}>
+                    {mediaItem.type === "image" ? (
+                      <img
+                        className="d-block w-100"
+                        src={mediaItem.src}
+                        alt={`Slide ${mediaIndex}`}
+                      />
+                    ) : (
+                      <video className="d-block w-100" controls autoPlay muted loop>
+                        <source src={mediaItem.src} type="video/mp4" />
+                      </video>
+                    )}
+                  </Carousel.Item>
+                ))}
               </Carousel>
-            <Card.Body>
-              <h3 className={styles.projectTitle}>"Quizzy" Database</h3>
-              <p className={styles.subtitle}>Python, MySQL, REST API, Docker, Appsmith</p>
-              <ul className={styles.bodyul}>
-                  <li className={styles.bodyli}>
-                    Conceptualized and implemented a database for a proof-of-concept quiz taking platform with a team.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Arranged user profiles with functionality to create, delete and edit quizzes as well as view their aggregated statistics.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Managed the REST API implementation of query commands in Python to optimize the retrieval of quiz statistics and management of user profiles.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Adapted the database to a front-end application by a local Appsmith server with sample data.
-                  </li>
+              <Card.Body>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <p className={styles.subtitle}>{project.subtitle}</p>
+                <ul className={styles.bodyul}>
+                  {project.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className={styles.bodyli}>{bullet}</li>
+                  ))}
                 </ul>
-                <p className={styles.contributors}>Contributors: Nicole Sorial, Jenna Sigman</p>
-                <a href="https://github.com/nicolesorial/quizzy"
-            target="_blank" className={styles.githubLink}>GitHub Repo</a>
-            </Card.Body>
-          </Card>
-          
-          {/* Bullet Journal */}
-          <Card className={`${styles.projectCard} border-0`}>
-            <Carousel variant="dark" interval={null} controls={true}>
-              <Carousel.Item> 
-                <img 
-                  className="d-block w-100"
-                  src="/assets/code/Bullet-Journal/main_view.png"
-                  alt="Image Two"
-                />   
-              </Carousel.Item> 
-              <Carousel.Item>
-                <img 
-                    className="d-block w-100"
-                    src="/assets/code/Bullet-Journal/start_screen.png"
-                    alt="Image Two"
-                  /> 
-              </Carousel.Item>
-              </Carousel>
-            <Card.Body>
-              <h3 className={styles.projectTitle}>Bullet Journal</h3>
-              <p className={styles.subtitle}>Java, JavaFX, MVC Pattern</p>
-              <ul className={styles.bodyul}>
-                  <li className={styles.bodyli}>
-                    Collaborated with a team to create a bullet journal application with a variety of features including event/task creation, event/task ordering, file creation, and theme customization.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Directed the custom .bujo file creation and saving features for the application, utilizing JSON conversion.
-                  </li>
-                  <li className={styles.bodyli}>
-                    Structured the project with the model-view-controller design pattern for a streamlined development process. 
-                  </li>
-                  <li className={styles.bodyli}>
-                    Implemented graphics in JavaFX using Scene Builder to create dynamic layouts.
-                  </li>
-                </ul>
-                <p className={styles.contributors}>Contributors: Aspen Tabar, Zeynep Lal Celikbilek</p>
-                <a href="https://github.com/meredithscott131/bullet-journal"
-            target="_blank" className={styles.githubLink}>GitHub Repo</a>
-            </Card.Body>
-          </Card>
-          </div>
+                {project.contributors && (
+                  <p className={styles.contributors}>{project.contributors}</p>
+                )}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className={styles.githubLink}
+                  rel="noopener noreferrer"
+                >
+                  GitHub Repo
+                </a>
+              </Card.Body>
+            </Card>
+          ))}
+        </div>
         </div>
     </section>
   );
