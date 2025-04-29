@@ -29,9 +29,9 @@
 /* Project Text Container */
 .textContainer {
     float: right;
-    width: 60%;
+    max-width: 40%;
+    min-width: 40%;
     height: auto;
-    padding: 25px;
     border-radius: 10px;
     background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
 }
@@ -68,7 +68,7 @@
     align-content: center;
     flex-wrap: wrap;
     gap: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     padding-top: 5%;
     max-width: 100%;
     margin: 0 auto;
