@@ -19,9 +19,6 @@ const ExpandedView = ({ thumbnail, title, onClose }) => {
           <button className={styles.closeButton} onClick={onClose}>
             <img src="/assets/Icons/menu_close_icon_white.png" alt="Close" />
           </button>
-          <div className={styles.titleContainer}>
-            <h3 className={styles.expandedTitle}>{title}</h3>
-          </div>
           {thumbnail.src.endsWith('.mp4') ? (
             <video
               className="d-block w-100"

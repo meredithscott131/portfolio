@@ -9,178 +9,176 @@ import ExpandedView from "./ExpandedView.jsx";
 export const Animation = () => {
   const [expandedthumbnail, setExpandedthumbnail] = useState(null);
   const videoRefs = useRef([]);
-  const anim1Content = [
-    { src: 'Anim1/concept_art.png',
-      poster: null,
-      title: 'Concept Art' },
-    { src: 'Anim1/room_fly_through.mp4',
-      poster: '/assets/animation/Anim1/room_fly_through_thumb.png',
-      title: 'Room Flythrough' },
-    { src: 'Anim1/neil_turnaround.mp4',
-      poster: '/assets/animation/Anim1/neil_turnaround_thumb.png',
-      title: 'Character Turnaround' },
-    { src: 'Anim1/neil_rig.png',
-      poster: null,
-      title: 'Character Rig' },
-    { src: 'Anim1/progress_shot.mp4',
-      poster: '/assets/animation/Anim1/progress_shot_thumb.png',
-      title: 'Progress Shot' }
-  ];
-  const basicsContent = [
-    { src: 'Basics/concept_art.PNG',
-      poster: null,
-      title: 'Concept Art' },
-    { src: 'Basics/turnaround.png',
-      poster: null,
-      title: 'Character Turnaround' },
-    { src: 'Basics/animatic.mp4',
-      poster: '/assets/animation/Basics/animatic_thumb.png',
-      title: 'Animatic' },
-    { src: 'Basics/blend_shapes_demo.mp4',
-      poster: '/assets/animation/Basics/blend_shapes_demo_thumb.png',
-      title: 'Blend Shapes Demo' }
+  const projects = [
+    {
+      name: "The Trespassers",
+      hero: {
+        src: "/assets/animation/Anim1/anim1_final.mp4",
+        poster: "/assets/animation/Anim1/anim1_final_thumb.png"
+      },
+      description: {
+        subtitle: "Maya, Substance Painter, Rigging, Animation",
+        logLine: "After a boy sneaks into the astronomy exhibit after hours, he realizes he might not be alone.",
+        bullets: [
+          "Independently created a short film over the course of four months with the goal of conveying the relationship between a character and room.",
+          "Modeled and lit all room objects in Maya and textured content in Substance Painter.",
+          "Rigged character model using Advanced Skeleton.",
+          "Composited scenes in Adobe After Effects.",
+          "Rendered in Arnold."
+        ]
+      },
+      content: [
+        { src: 'Anim1/concept_art.png', poster: null, title: 'Concept Art' },
+        { src: 'Anim1/room_fly_through.mp4', poster: '/assets/animation/Anim1/room_fly_through_thumb.png', title: 'Room Flythrough' },
+        { src: 'Anim1/neil_turnaround.mp4', poster: '/assets/animation/Anim1/neil_turnaround_thumb.png', title: 'Turnaround' },
+        { src: 'Anim1/neil_rig.png', poster: null, title: 'Character Rig' },
+        { src: 'Anim1/progress_shot.mp4', poster: '/assets/animation/Anim1/progress_shot_thumb.png', title: 'Progress Shot' }
+      ]
+    },
+    {
+      name: "Animal Hybrid Sculpt",
+      hero: {
+        src: "/assets/animation/Character/CharAnim.mp4",
+        poster: "/assets/animation/Character/Still.png"
+      },
+      description: {
+        subtitle: "ZBrush, Maya, Substance Painter, Mixamo",
+        logLine: "What if a beaver lived in the artic, and was also a... penguin?",
+        bullets: [
+          "Designed and sculpted in ZBrush, converting the model to low poly for Maya import and texturing.",
+          "Rigged and animated via Mixamo, refining the animation in Maya.",
+          "Configured sculpt in ZBrush for 3D printing.",
+          "Rendered in Arnold."
+        ]
+      },
+      content: [
+        { src: 'Character/concept_art.png', poster: null, title: 'Concept Art' },
+        { src: 'Character/Turnaround.mp4', poster: null, title: 'Turnaround' },
+        { src: 'Character/rig.mp4', poster: null, title: 'Mixamo Rig' },
+        { src: 'Character/Print.png', poster: null, title: '3D Print' }
+      ]
+    },
+    {
+      name: "Talent Show",
+      hero: {
+        src: "/assets/animation/Basics/basics_final.mp4",
+        poster: "/assets/animation/Basics/basics_final_thumb.png"
+      },
+      description: {
+        subtitle: "Maya, Animation, Adobe Suite",
+        logLine: "How high can a singer go before they reach their limit?",
+        bullets: [
+          "Created a short animation in Maya, showcasing knowledge on animation principles, staging, and simple storytelling.",
+          "Modeled, textured, and designed an original character inspired by my own beloved debug duck.",
+          "Utilized Maya’s blend shape feature to animate the character.",
+          "Edited all content in Adobe Premiere Pro and After Effects.",
+          "Rendered in Arnold."
+        ]
+      },
+      content: [
+        { src: 'Basics/concept_art.PNG', poster: null, title: 'Concept Art' },
+        { src: 'Basics/turnaround.png', poster: null, title: 'Turnaround' },
+        { src: 'Basics/animatic.mp4', poster: '/assets/animation/Basics/animatic_thumb.png', title: 'Animatic' },
+        { src: 'Basics/blend_shapes_demo.mp4', poster: '/assets/animation/Basics/blend_shapes_demo_thumb.png', title: 'Blend Shapes Demo' }
+      ]
+    }
   ];
   
+  
+  const allThumbnails = projects.flatMap(project => project.content);
+
+  
   // Handles clicks on thumbnails to open the expanded view
-  const handlethumbnailClick = (index, videoSources) => {
+  const handlethumbnailClick = (index) => {
     if (expandedthumbnail !== null) {
-      // Close expanded view
       setExpandedthumbnail(null);
-      // Pause and reset the video
       const refIndex = expandedthumbnail;
       if (videoRefs.current[refIndex]) {
         videoRefs.current[refIndex].pause();
         videoRefs.current[refIndex].currentTime = 0;
-        // Reload video to reset to the poster frame
         videoRefs.current[refIndex].load();
       }
     } else {
-      // Open expanded view
       setExpandedthumbnail(index);
     }
-  };
-
+  };  
+  
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>3D Art and Animation Projects</h2>
 
-      {/* The Trespassers - Anim 1*/}
-      <div className={styles.project}>
-        <div className="ratio ratio-16x9">
-          <video
-            controls
-            src="/assets/animation/Anim1/anim1_final.mp4"
-            poster='/assets/animation/Anim1/anim1_final_thumb.png'
-          />
-        </div>
-        <div className={styles.textContainer}>
-          <h3 className={styles.projectTitle}>
-            The Trespassers
-          </h3>
-          <p className={styles.subtitle}>Maya, Substance Painter, Rigging, Animation</p>
-          <p className={styles.logLine}>After a boy sneaks into the astronomy exhibit after hours, he realizes he might not be alone.</p>
-          <ul>
-            <li>Independently created a short film over the course of four months with the goal of conveying the relationship between a character and room.</li>
-            <li>Modeled and lit all room objects in Maya and textured content in Substance Painter.</li>
-            <li>Rigged character model using Advanced Skeleton.</li>
-            <li>Composited scenes in Adobe After Effects.</li>
-            <li>Rendered in Arnold.</li>
-          </ul>
-        </div>
-      </div>
-      <div className={styles.grid}>
-        {anim1Content.map((thumbnail, index) => (
-          <div
-            key={index}
-            className={`${styles.thumbnail} ${expandedthumbnail === index ? styles.expandedPlaceholder : ''}`}
-            onClick={() => handlethumbnailClick(index, anim1Content)}
-          >
-            {thumbnail.src.endsWith('.mp4') ? (
+      {projects.map((project, projectIndex) => (
+        <div key={projectIndex} className={styles.projectSection}>
+          {/* Final Project */}
+          <div className={styles.project}>
+            <div className="ratio ratio-16x9">
               <video
-                className="d-block w-100"
-                src={`/assets/animation/${thumbnail.src}`}
-                controls={false}
+                controls
                 loop
-                poster={thumbnail.poster}
-                ref={(el) => videoRefs.current[index] = el}
-                alt={`thumbnail ${index + 1}`}
+                src={project.hero.src}
+                poster={project.hero.poster}
               />
-            ) : (
-              <img
-                className="d-block w-100"
-                src={`/assets/animation/${thumbnail.src}`}
-                alt={`thumbnail ${index + 1}`}
-              />
-            )}
+            </div>
+            <div className={styles.textContainer}>
+              <h3 className={styles.projectTitle}>{project.name}</h3>
+              <p className={styles.subtitle}>{project.description.subtitle}</p>
+              <p className={styles.logLine}>{project.description.logLine}</p>
+              <ul>
+                {project.description.bullets.map((bullet, idx) => (
+                  <li key={idx}>{bullet}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        ))}
-      </div>
-      {expandedthumbnail !== null && expandedthumbnail < anim1Content.length && (
-        <ExpandedView
-          thumbnail={anim1Content[expandedthumbnail]}
-          title={anim1Content[expandedthumbnail].title}
-          onClose={() => setExpandedthumbnail(null)}
-        />
-      )}
 
-      {/* Talent Show - Basics */}
-      <div className={styles.project}>
-        <div className="ratio ratio-16x9">
-          <video
-            controls
-            src="/assets/animation/Basics/basics_final.mp4"
-            poster='/assets/animation/Basics/basics_final_thumb.png'
-          />
-        </div>
-        <div className={styles.textContainer}>
-          <h3 className={styles.projectTitle}>
-            Talent Show
-          </h3>
-          <p className={styles.subtitle}>Maya, Animation, Adobe Suite</p>
-          <p className={styles.logLine}>How high can a singer go before they reach their limit?</p>
-          <ul>
-            <li>Learned Maya to create a short animation showcasing knowledge on animation principles, staging, and simple storytelling.</li>
-            <li>Modeled, textured, and designed an original character inspired by my own beloved <a target="_blank" className={styles.link} href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">debug duck</a>.</li>
-            <li>Utilized Maya’s blend shape feature to animate the character.</li>
-            <li>Edited all content in Adobe Premiere Pro and After Effects.</li>
-            <li>Rendered in Arnold.</li>
-        </ul>
-        </div>
-      </div>
-      <div className={styles.grid}>
-        {basicsContent.map((thumbnail, index) => (
-          <div
-            key={index}
-            className={`${styles.thumbnail} ${expandedthumbnail === anim1Content.length + index ? styles.expandedPlaceholder : ''}`}
-            onClick={() => handlethumbnailClick(anim1Content.length + index, basicsContent)}
-          >
-            {thumbnail.src.endsWith('.mp4') ? (
-              <video
-                className="d-block w-100"
-                src={`/assets/animation/${thumbnail.src}`}
-                controls={false}
-                loop
-                poster={thumbnail.poster}
-                ref={(el) => videoRefs.current[anim1Content.length + index] = el}
-                alt={`thumbnail ${anim1Content.length + index + 1}`}
-              />
-            ) : (
-              <img
-                className="d-block w-100"
-                src={`/assets/animation/${thumbnail.src}`}
-                alt={`thumbnail ${anim1Content.length + index + 1}`}
-              />
-            )}
+          {/* Project Thumbnails */}
+          <div className={styles.grid}>
+            {project.content.map((thumbnail, index) => {
+              const globalIndex = projects.slice(0, projectIndex)
+                                          .reduce((sum, p) => sum + p.content.length, 0) + index;
+              return (
+                <div
+                  key={globalIndex}
+                  className={`${styles.thumbnail} ${expandedthumbnail === globalIndex ? styles.expandedPlaceholder : ''}`}
+                  onClick={() => handlethumbnailClick(globalIndex)}
+                >
+                  <div className={styles.thumbnailMedia}>
+                    {thumbnail.src.endsWith('.mp4') ? (
+                      <video
+                        className="d-block w-100"
+                        src={`/assets/animation/${thumbnail.src}`}
+                        controls={false}
+                        loop
+                        poster={thumbnail.poster}
+                        ref={(el) => videoRefs.current[globalIndex] = el}
+                        alt={`thumbnail ${globalIndex + 1}`}
+                      />
+                    ) : (
+                      <img
+                        className="d-block w-100"
+                        src={`/assets/animation/${thumbnail.src}`}
+                        alt={`thumbnail ${globalIndex + 1}`}
+                      />
+                    )}
+                    <div className={styles.thumbnailTitle}>
+                      {thumbnail.title}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        ))}
-      </div>
-      {expandedthumbnail !== null && expandedthumbnail >= anim1Content.length && expandedthumbnail < anim1Content.length + basicsContent.length && (
+        </div>
+      ))}
+
+      {/* Thumbnail Expanded View */}
+      {expandedthumbnail !== null && (
         <ExpandedView
-          thumbnail={basicsContent[expandedthumbnail - anim1Content.length]}
-          title={basicsContent[expandedthumbnail - anim1Content.length].title}
+          thumbnail={allThumbnails[expandedthumbnail]}
+          title={allThumbnails[expandedthumbnail].title}
           onClose={() => setExpandedthumbnail(null)}
         />
       )}
     </section>
   );
-};
+}

@@ -31,7 +31,7 @@ export const Navbar = () => {
               <NavLink to="/code">Code</NavLink>
             </li>
             <li className={styles.menuItem}>
-              <NavLink to="/animation">3D Animation</NavLink>
+              <NavLink to="/animation">Animation</NavLink>
             </li>
             <li className={styles.menuItem}>
               <NavLink to="/about">About</NavLink>

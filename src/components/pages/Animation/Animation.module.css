@@ -29,7 +29,7 @@
 /* Project Text Container */
 .textContainer {
     float: right;
-    max-width: 40%;
+    width: 60%;
     height: auto;
     padding: 25px;
     border-radius: 10px;
@@ -82,9 +82,9 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 11; /* Make sure it's on top of the image/video */
+    z-index: 11;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: var(--color-red);
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -107,7 +107,7 @@
     cursor: pointer;
     z-index: 12;
     width: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--color-red);
     border-radius: 5px;
 }
 
@@ -123,9 +123,32 @@
     transition: opacity 0.2s ease-in-out;
 }
 
-/* Item in Thumbnail Grid Hover Animation */
-.thumbnail:hover {
-    opacity: 0.5;
+.thumbnailMedia {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.thumbnailTitle {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    padding: 8px 0;
+    background: var(--color-red);
+    color: white;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0;
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.thumbnail:hover .thumbnailTitle {
+    bottom: 0;
+    opacity: 1;
 }
 
 /* Expanded View Styles */
@@ -141,7 +164,7 @@
     transform: translate(-50%, -50%);
     z-index: 10;
     overflow: hidden;
-    position: relative; /* To position the close button inside */
+    position: relative;
 }
 
 /* Expanded Item Content */
@@ -240,5 +263,9 @@
         text-align: center;
         padding: 0%;
         padding-bottom: 2%;
+    }
+
+    .thumbnailTitle {
+        font-size: 12px;
     }
 }
