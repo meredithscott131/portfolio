@@ -70,8 +70,8 @@ export const AnimationProjects = () => {
         },
         content: [
           { src: 'Character/concept_art.png', poster: null, title: 'Concept Art' },
-          { src: 'Character/Turnaround.mp4', poster: null, title: 'Turnaround' },
-          { src: 'Character/rig.mp4', poster: null, title: 'Mixamo Rig' },
+          { src: 'Character/Turnaround.mp4', poster: '/assets/animation/Character/Turnaround_Still.png', title: 'Turnaround' },
+          { src: 'Character/rig.mp4', poster: '/assets/animation/Character/Rig_Still.png', title: 'Mixamo Rig' },
           { src: 'Character/Print.png', poster: null, title: '3D Print' }
         ],
         contributors: null
@@ -96,8 +96,8 @@ export const AnimationProjects = () => {
         },
         content: [
           { src: 'Environment/modularBuilding.png', poster: null, title: 'Modular Breakdown' },
-          { src: 'Environment/Lighthouse.mp4', poster: null, title: 'Lighthouse Modeling' },
-          { src: 'Environment/Bush.mp4', poster: null, title: 'Plant Modeling' },
+          { src: 'Environment/Lighthouse.mp4', poster: '/assets/animation/Environment/Lighthouse_Still.png', title: 'Lighthouse Modeling' },
+          { src: 'Environment/Bush.mp4', poster: '/assets/animation/Environment/Bush_Still.png', title: 'Plant Modeling' },
           { src: 'Environment/screenshot1.png', poster: null, title: 'Town Screenshot' },
           { src: 'Environment/screenshot4.png', poster: null, title: 'Lighthouse Screenshot' }
         ],
