@@ -11,11 +11,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={withFadeIn(Home)()} />
-          <Route path="/about" element={withFadeIn(About)()} />
+          <Route path="/about-contact" element={withFadeIn(About)()} />
           <Route path="/code" element={withFadeIn(Code)()} />
-          <Route path="/animation" element={withFadeIn(Animation)()} />
+          <Route path="/art" element={withFadeIn(Animation)()} />
         </Routes>
-        <Footer />
+        {location.pathname !== "/about-contact" && <Footer />}
       </div>
   );
 }
