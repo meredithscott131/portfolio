@@ -62,7 +62,7 @@ export const Code = () => {
             AR Gesture Prototype Series [Ongoing]
           </h3>
           <p className={styles.subtitle}>C#, Unity, MRTK, Microsoft HoloLens 2</p>
-          <p className={styles.logLine}>Under the Northeastern <a target="_blank" className={styles.link} href="http://www.realitydesign.studio/">Reality Design Studio</a> research group, this project aims to investigate the potential of single-handed gesture controls to enhance mobility and immersion in augmented reality spaces.  As the student investigator, my responsibilities include:</p>
+          <p className={styles.logLine}>Under the Northeastern <a target="_blank" className={styles.link} href="https://realitydesign.sites.northeastern.edu/">Reality Design Studio</a> research group, this project aims to investigate the potential of single-handed gesture controls to enhance mobility and immersion in augmented reality spaces.  As the student investigator, my responsibilities include:</p>
           <ul>
             <li>Developing high-fidelity augmented reality prototypes in Unity through extensive design research and rapid prototype ideation.</li>
             <li>Leveraging the Mixed Reality Toolkit (MRTK) Unity package to program and deploy prototypes to the Microsoft HoloLens 2.</li>

@@ -7,7 +7,10 @@ export const About = () => {
         <li className={styles.textContainer}>
             <h2 className={styles.title}>Hi, I'm Meredith!</h2>
           <p className={styles.description}>
-            I’m a fourth-year computer science and animation student at Northeastern University, interested in exploring the intersections of technology and art. Since a young age, I’ve always had an equal curiosity for STEM and dedication to my creative hobbies like drawing and writing. This has led me to pursue a career in developing tools and technical solutions for entertainment and its surrounding industries. I love solving problems, being challenged, and most importantly, creating. When I'm not working, you'll find me exploring new hiking trails, expanding my graphic novel collection, and diving into puzzle games.
+            I’m a fourth-year computer science and animation student at Northeastern University, interested in exploring the intersections of technology and art. Since a young age, I’ve always had an equal curiosity for STEM and dedication to my creative hobbies like drawing, a combination that continues to shape my work today. With experience spanning pipeline technical direction, UI/UX research for extended reality, and software development, I’m interested in solving technical problems that enhance creative workflows and push the boundaries of visual storytelling. I thrive on solving challenges, exploring new ideas, and building meaningful experiences. When I'm not coding, you'll find me discovering local cafes, expanding my graphic novel collection, and figuring out puzzle games.
+          </p>
+          <p className={styles.description}>
+            I'm currently seeking full-time positions starting May 2026.
           </p>
           <h3 className={styles.contactTitle}>Contact</h3>
           <ul className={styles.socialsList}>

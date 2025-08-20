@@ -34,8 +34,29 @@
   max-width: 50%;
 }
 
+.clickMe {
+  position: absolute;
+  top: 50%; /* adjust as needed */
+  left: 55%;
+  width: 150px; /* adjust size */
+  z-index: 10;
+}
+
 
 @media screen and (max-width: 1000px) {
+  .threeContainer {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .clickMe {
+    top: 43%;
+    left: 60%;
+    width: 125px;
+  }
   .textContainer {
     padding-top: 15%;
     height: 75vh;
@@ -58,6 +79,22 @@
 }
 
 @media screen and (max-width: 400px) {
+
+  .threeContainer {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+
+  .clickMe {
+    top: 50%;
+    left: 60%;
+    width: 100px;
+  }
+
   .textContainer {
     padding-top: 15%;
   }

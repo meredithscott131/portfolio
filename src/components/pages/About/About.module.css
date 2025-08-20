@@ -33,7 +33,6 @@
 /* Profile Description */
 .description {
     font-size: 18px;
-    margin-bottom: 5%;
     text-align: left;
 }
 
@@ -43,6 +42,7 @@
     font-size: 24px;
     font-weight: bolder;
     color: var(--color-red);
+    margin-top: 5%;
 }
 
 /* List of Social Media Elements */
@@ -113,7 +113,7 @@
 
 /* Profile Image Sizing */
 .profileImage img {
-    max-width: 95%;
+    max-width: 90%;
     height: auto;
 }
 

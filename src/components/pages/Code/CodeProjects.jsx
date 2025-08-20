@@ -67,16 +67,16 @@ export const CodeProjects = () => {
 
       const website = {
         title: "This Website!",
-        subtitle: "JavaScript, React, CSS, HTML, Adobe Suite",
+        subtitle: "JavaScript, React, CSS, HTML, Adobe Suite, Blender",
         github: "https://github.com/meredithscott131/Portfolio",
         media: [
-          { type: "image", src: "/assets/code/Website/home_page.png" }
+          { type: "video", src: "/assets/code/Website/home_page.mp4" }
         ],
         bullets: [
           "Built a portfolio website showcasing programming and animation projects using JavaScript and Vite.",
           "Utilized React, Three.js, Bootstrap, and MUI for dynamic animations, 3D graphics, and interactions.",
-          "Deployed via GitHub Pages using GitHub Actions Workflows.",
-          "Created and edited all media for the site using Adobe Suite."
+          "Created and edited all media for the site using Adobe Suite and Blender.",
+          "Deployed via GitHub Pages using GitHub Actions Workflows."
         ],
         contributors: null
       };
