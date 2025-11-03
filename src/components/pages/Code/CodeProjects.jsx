@@ -1,5 +1,43 @@
 export const CodeProjects = () => {
-    const krita = {
+    
+  const bookGenerator = {
+        title: "Procedural Book Generator HDA [Ongoing]",
+        subtitle: "Houdini, VEX, Python, Procedural Content Generation",
+        github: "https://github.com/meredithscott131/BookGenerator",
+        media: [
+          { type: "video", src: "/assets/code/BookGenerator/Row_Loop.mp4" },
+          { type: "video", src: "/assets/code/BookGenerator/Stack_Loop.mp4" },
+          { type: "image", src: "/assets/code/BookGenerator/Interface.png" },
+          { type: "image", src: "/assets/code/BookGenerator/Stills.png" }
+        ],
+        bullets: [
+          "Developing a fully procedural system in Houdini to generate books with randomized dimensions, colors, and orientations for environment and prop design.",
+          "Implementing parameterized controls like book width, height, rotation, and offset, enabling flexible customization and scalable asset generation.",
+          "Utilizing VEX and node-based workflows to automate material variation, hue shifts, and spatial alignment using Match Size and Copy to Points nodes.",
+          "Optimizing geometry instancing to ensure efficient viewport performance and seamless integration into larger procedural scene setups."
+        ],
+        contributors: null
+  };
+
+  const gestures = {
+        title: "AR Gesture Prototype Series [Ongoing]",
+        subtitle: "C#, Unity, MRTK, Microsoft HoloLens 2",
+        github: "https://github.com/meredithscott131/BookGenerator",
+        media: [
+          { type: "image", src: "/assets/code/Image-To-Palette/interface.png" },
+          { type: "video", src: "/assets/code/Image-To-Palette/dragndrop_demo.mp4" },
+          { type: "video", src: "/assets/code/Image-To-Palette/saving_demo.mp4" }
+        ],
+        bullets: [
+          "Developed a Krita docker plugin for generating color palettes from images, enhancing digital artists' workflows.",
+          "Implemented functionality to load, regenerate, save, and display color palettes, including drag-and-drop image support.",
+          "Managed JSON file conversion to support color palette saving and recent palette history across Krita sessions.",
+          "Utilized PyQt5 and Krita’s API for a dynamic and intuitive user interface."
+        ],
+        contributors: null
+  };
+  
+  const krita = {
         title: "Image to Palette Krita Plugin",
         subtitle: "Python, PyQt, Krita API",
         github: "https://github.com/meredithscott131/ImageToPalette",
@@ -115,5 +153,5 @@ export const CodeProjects = () => {
         contributors: "Aspen Tabar, Zeynep Lal Celikbilek"
       };
     
-    return [krita, raytracer, productionPlan, website];
+    return [bookGenerator, krita, raytracer, productionPlan, website];
 }

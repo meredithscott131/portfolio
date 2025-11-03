@@ -12,7 +12,52 @@ export const Code = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Coding Projects</h2>
-      {/* AR */}
+        <div>
+        <div className={styles.grid}>
+          {projects.map((project, index) => (
+            <Card key={index} className={`${styles.projectCard} border-0`}>
+              <Carousel variant="dark" interval={null} controls={true}>
+                {project.media.map((mediaItem, mediaIndex) => (
+                  <Carousel.Item key={mediaIndex}>
+                    {mediaItem.type === "image" ? (
+                      <img
+                        className="d-block w-100"
+                        src={mediaItem.src}
+                        alt={`Slide ${mediaIndex}`}
+                      />
+                    ) : (
+                      <video className="d-block w-100" controls autoPlay muted loop>
+                        <source src={mediaItem.src} type="video/mp4" />
+                      </video>
+                    )}
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+              <Card.Body>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <p className={styles.subtitle}>{project.subtitle}</p>
+                <ul className={styles.bodyul}>
+                  {project.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className={styles.bodyli}>{bullet}</li>
+                  ))}
+                </ul>
+                {project.contributors && (
+                  <p className={styles.contributors}>Contributors: {project.contributors}</p>
+                )}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className={styles.githubLink}
+                  rel="noopener noreferrer"
+                >
+                  GitHub Repo
+                </a>
+              </Card.Body>
+            </Card>
+          ))}
+        </div>
+        </div>
+              {/* AR */}
       <div className={styles.project}>
         <Carousel interval={null} controls={true} className={styles.carousel}>
             <Carousel.Item>
@@ -70,51 +115,6 @@ export const Code = () => {
           </ul>
         </div>
       </div>
-        <div>
-        <div className={styles.grid}>
-          {projects.map((project, index) => (
-            <Card key={index} className={`${styles.projectCard} border-0`}>
-              <Carousel variant="dark" interval={null} controls={true}>
-                {project.media.map((mediaItem, mediaIndex) => (
-                  <Carousel.Item key={mediaIndex}>
-                    {mediaItem.type === "image" ? (
-                      <img
-                        className="d-block w-100"
-                        src={mediaItem.src}
-                        alt={`Slide ${mediaIndex}`}
-                      />
-                    ) : (
-                      <video className="d-block w-100" controls autoPlay muted loop>
-                        <source src={mediaItem.src} type="video/mp4" />
-                      </video>
-                    )}
-                  </Carousel.Item>
-                ))}
-              </Carousel>
-              <Card.Body>
-                <h3 className={styles.projectTitle}>{project.title}</h3>
-                <p className={styles.subtitle}>{project.subtitle}</p>
-                <ul className={styles.bodyul}>
-                  {project.bullets.map((bullet, bulletIndex) => (
-                    <li key={bulletIndex} className={styles.bodyli}>{bullet}</li>
-                  ))}
-                </ul>
-                {project.contributors && (
-                  <p className={styles.contributors}>Contributors: {project.contributors}</p>
-                )}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className={styles.githubLink}
-                  rel="noopener noreferrer"
-                >
-                  GitHub Repo
-                </a>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-        </div>
     </section>
   );
 };
