@@ -10,11 +10,11 @@
 
 /* Page Title */
 .title {
-    font-size: 72px;
+    font-size: 42px;
     font-family: 'DM Sans';
     font-weight: bolder;
     color: var(--color-red);
-    padding-bottom: 5%;
+    padding-bottom: 25px;
 }
 
 /* Project Container */
@@ -38,7 +38,7 @@
 
 /* Project Title */
 .projectTitle {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 1000;
     font-family: "DM Sans";
     font-weight: bolder;

@@ -3,20 +3,54 @@ import styles from "./Code.module.css";
 import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
 import {CodeProjects as getProjects} from "./CodeProjects.jsx";
+import { Tabs, Tab, Box } from "@mui/material";
+import { useState } from "react";
 
 export const Code = () => {
+
+  const [tab, setTab] = useState("All");
+
+  const handleTabChange = (_, newValue) => {
+    setTab(newValue);
+  };
 
   // Importing code projects data
   const projects = getProjects();
 
+  const filteredProjects =
+    tab === "All"
+      ? projects
+      : projects.filter(project => project.category === tab);
+
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Coding Projects</h2>
+      <Box sx={{ borderBottom: 1, borderColor: "divider", mb: 3 }}>
+        <Tabs
+          value={tab}
+          onChange={handleTabChange}
+          variant="scrollable"
+          scrollButtons="auto"
+          sx={{
+            "& .MuiTabs-indicator": {
+              backgroundColor: "var(--color-peri)",
+            },
+            "& .MuiTab-root.Mui-selected": {
+              color: "var(--color-peri)",
+            },
+          }}
+        >
+          <Tab label="All" value="All" />
+          <Tab label="Software Development" value="Software Development" />
+          <Tab label="Pipeline Tools" value="Pipeline Tools" />
+          <Tab label="Graphics Programming" value="Graphics Programming" />
+        </Tabs>
+      </Box>
         <div>
         <div className={styles.grid}>
-          {projects.map((project, index) => (
-            <Card key={index} className={`${styles.projectCard} border-0`}>
-              <Carousel variant="dark" interval={null} controls={true}>
+          {filteredProjects.map((project) => (
+            <Card key={`${tab}-${project.title}`} className={`${styles.projectCard} border-0`}>
+              <Carousel variant="dark" interval={null} controls>
                 {project.media.map((mediaItem, mediaIndex) => (
                   <Carousel.Item key={mediaIndex}>
                     {mediaItem.type === "image" ? (
@@ -26,9 +60,22 @@ export const Code = () => {
                         alt={`Slide ${mediaIndex}`}
                       />
                     ) : (
-                      <video className="d-block w-100" controls autoPlay muted loop>
+                      <video
+                        className="d-block w-100"
+                        controls
+                        autoPlay
+                        muted
+                        loop
+                        poster={mediaItem.poster}
+                      >
                         <source src={mediaItem.src} type="video/mp4" />
                       </video>
+                    )}
+
+                    {mediaItem.caption && (
+                      <Carousel.Caption>
+                        <h3>{mediaItem.caption}</h3>
+                      </Carousel.Caption>
                     )}
                   </Carousel.Item>
                 ))}
@@ -36,85 +83,46 @@ export const Code = () => {
               <Card.Body>
                 <h3 className={styles.projectTitle}>{project.title}</h3>
                 <p className={styles.subtitle}>{project.subtitle}</p>
+
+                {(() => {
+                  const logLine = project.logLine ?? project.description?.logLine;
+                  return logLine ? (
+                    <p className={styles.logLine}>{logLine}</p>
+                  ) : null;
+                })()}
+
                 <ul className={styles.bodyul}>
-                  {project.bullets.map((bullet, bulletIndex) => (
-                    <li key={bulletIndex} className={styles.bodyli}>{bullet}</li>
-                  ))}
+                  {(project.bullets ?? project.description?.bullets)?.map(
+                    (bullet, bulletIndex) => (
+                      <li key={bulletIndex} className={styles.bodyli}>
+                        {bullet}
+                      </li>
+                    )
+                  )}
                 </ul>
+
                 {project.contributors && (
-                  <p className={styles.contributors}>Contributors: {project.contributors}</p>
+                  <p className={styles.contributors}>
+                    Contributors: {project.contributors}
+                  </p>
                 )}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className={styles.githubLink}
-                  rel="noopener noreferrer"
-                >
-                  GitHub Repo
-                </a>
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className={styles.githubLink}
+                    rel="noopener noreferrer"
+                  >
+                    GitHub Repo
+                  </a>
+                )}
               </Card.Body>
+
             </Card>
           ))}
         </div>
         </div>
-              {/* AR */}
-      <div className={styles.project}>
-        <Carousel interval={null} controls={true} className={styles.carousel}>
-            <Carousel.Item>
-            <video className="d-block w-100" controls autoPlay loop muted>
-                <source src="/assets/code/Gestures/OpenBook.mp4"
-                type="video/mp4"
-                />
-              </video>
-              <Carousel.Caption>
-                <h3>Open Book Gesture</h3>
-              </Carousel.Caption>  
-            </Carousel.Item>
-            <Carousel.Item>
-            <video className="d-block w-100" controls autoPlay loop muted>
-                <source src="/assets/code/Gestures/Slinky.mp4"
-                type="video/mp4"
-                />
-              </video>
-              <Carousel.Caption>
-                <h3>Pull Gesture</h3>
-              </Carousel.Caption>  
-            </Carousel.Item>
-            <Carousel.Item>
-            <video className="d-block w-100" controls autoPlay loop muted>
-                <source src="/assets/code/Gestures/FingerGun.mp4"
-                type="video/mp4"
-                />
-              </video>
-              <Carousel.Caption>
-                <h3>Finger Gun Gesture</h3>
-              </Carousel.Caption>  
-            </Carousel.Item>
-            <Carousel.Item>
-            <video className="d-block w-100" controls autoPlay loop muted
-              poster="/assets/code/Gestures/demo_thumb.png">
-                <source src="/assets/code/Gestures/RotationDemo.mp4"
-                type="video/mp4"
-                />
-              </video>
-              <Carousel.Caption>
-                <h3>Movement Demo</h3>
-              </Carousel.Caption>  
-            </Carousel.Item> 
-          </Carousel>
-        <div className={styles.textContainer}>
-          <h3 className={styles.projectTitle}>
-            AR Gesture Prototype Series [Ongoing]
-          </h3>
-          <p className={styles.subtitle}>C#, Unity, MRTK, Microsoft HoloLens 2</p>
-          <p className={styles.logLine}>Under the Northeastern <a target="_blank" className={styles.link} href="https://realitydesign.sites.northeastern.edu/">Reality Design Studio</a> research group, this project aims to investigate the potential of single-handed gesture controls to enhance mobility and immersion in augmented reality spaces.  As the student investigator, my responsibilities include:</p>
-          <ul>
-            <li>Developing high-fidelity augmented reality prototypes in Unity through extensive design research and rapid prototype ideation.</li>
-            <li>Leveraging the Mixed Reality Toolkit (MRTK) Unity package to program and deploy prototypes to the Microsoft HoloLens 2.</li>
-            <li>Conducting usability testing and user interviews, applying gesture elicitation frameworks to identify and resolve prototype issues.</li>
-          </ul>
-        </div>
-      </div>
     </section>
   );
 };
