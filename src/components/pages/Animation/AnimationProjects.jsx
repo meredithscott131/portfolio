@@ -1,6 +1,6 @@
 export const AnimationProjects = () => {
   const hair = {
-    name: "XGen Groom",
+    name: "Super Graphic Ultra Modern Groom",
     hero: {
       src: "/assets/animation/Hair/Demo.mp4",
       poster: "/assets/animation/Hair/Thumbnail.png"
