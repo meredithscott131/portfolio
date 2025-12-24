@@ -28,6 +28,9 @@ export const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className={styles.menuItem}>
+              <NavLink to="/reel">Reel</NavLink>
+            </li>
+            <li className={styles.menuItem}>
               <NavLink to="/code">Code</NavLink>
             </li>
             <li className={styles.menuItem}>
