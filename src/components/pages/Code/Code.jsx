@@ -5,6 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import {CodeProjects as getProjects} from "./CodeProjects.jsx";
 import { Tabs, Tab, Box } from "@mui/material";
 import { useState } from "react";
+import { GoArrowRight } from "react-icons/go";
 
 export const Code = () => {
 
@@ -24,7 +25,7 @@ export const Code = () => {
 
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>Coding Projects</h2>
+      <h1 className={styles.title}>Coding Projects</h1>
       <Box sx={{ borderBottom: 1, borderColor: "divider", mb: 3 }}>
         <Tabs
           value={tab}
@@ -46,7 +47,7 @@ export const Code = () => {
           <Tab label="Graphics Programming" value="Graphics Programming" />
         </Tabs>
       </Box>
-        <div>
+        <div className={styles.gridContainer}>
         <div className={styles.grid}>
           {filteredProjects.map((project) => (
             <Card key={`${tab}-${project.title}`} className={`${styles.projectCard} border-0`}>
@@ -81,7 +82,7 @@ export const Code = () => {
                 ))}
               </Carousel>
               <Card.Body>
-                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <h2>{project.title}</h2>
                 <p className={styles.subtitle}>{project.subtitle}</p>
 
                 {(() => {
@@ -90,6 +91,22 @@ export const Code = () => {
                     <p className={styles.logLine}>{logLine}</p>
                   ) : null;
                 })()}
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.githubLink}
+                  >
+                    <img
+                      src="/assets/Icons/github_circle_icon.png"
+                      alt="GitHub"
+                      className={styles.githubIcon}
+                    />
+                    <span className={styles.linkText}>View Project</span>
+                  </a>
+                )}
 
                 <ul className={styles.bodyul}>
                   {(project.bullets ?? project.description?.bullets)?.map(
@@ -105,17 +122,6 @@ export const Code = () => {
                   <p className={styles.contributors}>
                     Contributors: {project.contributors}
                   </p>
-                )}
-
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className={styles.githubLink}
-                    rel="noopener noreferrer"
-                  >
-                    GitHub Repo
-                  </a>
                 )}
               </Card.Body>
 

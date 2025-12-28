@@ -2,12 +2,11 @@
 
 /* About Page Container */
 .container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    column-gap: 10%;
-    padding: 5%;
-    z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  width: 100%;
 }
 
 /* Text Container */
@@ -18,30 +17,22 @@
     align-items: flex-start;
     color: var(--color-text);
     z-index: 1;
-    max-width: 50%;
+    max-width: 600px;
 }
 
 /* Page Title */
 .title {
-    color: var(--color-red);
-    font-family: 'DM Sans';
-    font-weight: bolder;
-    font-size: 72px;
     margin-bottom: 5%;
 }
 
 /* Profile Description */
 .description {
-    font-size: 18px;
+    font-size: var(--size-body);
     text-align: left;
 }
 
 /* Contact Title */
 .contactTitle {
-    font-family: 'DM Sans';
-    font-size: 24px;
-    font-weight: bolder;
-    color: var(--color-red);
     margin-top: 5%;
 }
 
@@ -73,48 +64,175 @@
     color: var(--color-text);
 }
 
-/* Social Media Text Hover Animation */
-.socialText:hover {
-    text-decoration: underline;
-}
-
-/* Social Media Text On Click Animation */
-.socialText:active {
-    opacity: 50%;
-    text-decoration: underline;
-}
-
 /* Resume Text */
 .resume {
     text-align: left;
     color: var(--color-text);
+    font-weight: var(--weight-bold);
     text-decoration: none;
 }
 
-/* Resume Text Hover Animation */
-.resume:hover {
-    text-decoration: underline;
+/* Social links */
+.socialText {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-text);
 }
 
-/* Resume Text On Click Animation */
+.socialText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-peri);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.socialText:hover {
+  color: var(--color-peri);
+}
+
+.socialText:hover::after {
+  transform: scaleX(1);
+}
+
+/* Resume */
+.resumeItem {
+  list-style: none;
+}
+
+.resumeLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.resumeText {
+  position: relative;
+  font-weight: var(--weight-bold);
+}
+
+.resumeText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-peri);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.resumeLink:hover .resumeText {
+  color: var(--color-peri);
+}
+
+.resumeLink:hover .resumeText::after {
+  transform: scaleX(1);
+}
+
+/* Shared animated underline text */
+.socialText,
+.resume {
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-roboto);
+  font-weight: var(--weight-regular);
+}
+
+.resume {
+    font-weight: var(--weight-bold);
+    text-wrap: inherit;
+}
+
+/* Underline element */
+.socialText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-peri);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+/* Hover animation */
+.socialText:hover {
+  color: var(--color-peri);
+}
+
+.socialText:hover::after {
+  transform: scaleX(1);
+}
+
+/* Click feedback */
+.socialText:active {
+  opacity: 0.6;
+}
+
+.resumeText {
+  position: relative;
+  font-weight: var(--weight-bold);
+}
+
+/* Animated underline */
+.resumeText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-peri);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+/* Trigger animation when parent link is hovered */
+.resume:hover .resumeText::after {
+  transform: scaleX(1);
+}
+
+.resume:hover .resumeText {
+  color: var(--color-peri);
+}
+
+/* Active state */
 .resume:active {
-    opacity: 50%;
-    text-decoration: underline;
+  opacity: 0.6;
 }
 
-/* Profile Image */
+/* Profile Image Container */
 .profileImage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 125px;
+  margin-left: 50px;
+  flex-shrink: 0;
 }
 
-/* Profile Image Sizing */
+/* Circular Image */
 .profileImage img {
-    max-width: 90%;
-    height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 /* Floating Animation */
@@ -150,7 +268,6 @@
 
     /* Page Title */
     .title {
-        font-size: 54px;
         margin-top: 0;
     }
 
@@ -169,11 +286,18 @@
         text-align: center;
     }
 
-    /* Profile Image */
-    .profileImage {
-        width: 75%;
-        padding-top: 10%;
-        align-items: center;
-        justify-content: center;
-    }
+  .profileImage {
+    width: 75vw;
+    height: 75vw;
+    max-width: 350px;
+    max-height: 350px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .profileImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
 }

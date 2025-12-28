@@ -25,10 +25,10 @@ export const Home = () => {
     threeContainerRef.current.appendChild(renderer.domElement);
 
     // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 4);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 2.5);
     directionalLight.position.set(-4, 3, 5);
     directionalLight.castShadow = true;
     scene.add(directionalLight);
@@ -156,38 +156,32 @@ export const Home = () => {
   }
 
   return (
-    <div>
-      <div ref={threeContainerRef} className={styles.threeContainer}></div>
-      <img
-        src="/assets/home/Click_Me.png"
-        alt="Foreground"
-        className={styles.clickMe}
-      />
-      <div className={styles.foregroundContent}>
-        <div className={styles.textContainer}>
-          <motion.p
-            className={styles.name}
-            animate={
-              shake
-                ? { y: [0, -25, 25, -25, 25, -12, 12, -6, 6, -3, 3, 0] }
-                : {}
-            }
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-          >
-            Meredith Scott
-          </motion.p>
-          <motion.p
-            className={styles.pitch}
-            animate={
-              shake
-                ? { y: [0, -20, 20, -20, 20, -10, 10, -5, 5, -2, 2, 0] }
-                : {}
-            }
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-          >
-            Technical Director, Software Developer, Multimedia Artist, Researcher
-          </motion.p>
-        </div>
+    <div className={styles.homeRoot}>
+      <div className={styles.textContainer}>
+        <motion.p
+          className={styles.name}
+          animate={shake ? { y: [0, -25, 25, -25, 25, -12, 12, -6, 6, -3, 3, 0] } : {}}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+        >
+          Meredith Scott
+        </motion.p>
+
+        <motion.p
+          className={styles.pitch}
+          animate={shake ? { y: [0, -20, 20, -20, 20, -10, 10, -5, 5, -2, 2, 0] } : {}}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+        >
+          Technical Director, Software Developer, Multimedia Artist, Researcher
+        </motion.p>
+      </div>
+
+      <div className={styles.threeBlock}>
+        <div ref={threeContainerRef} className={styles.threeContainer} />
+        <img
+          src="/assets/home/Click_Me.png"
+          alt="Click Me"
+          className={styles.clickMe}
+        />
       </div>
     </div>
   );
