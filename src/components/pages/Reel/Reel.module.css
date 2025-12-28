@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
+  padding: 50px;
 }
 
 .videoGrid {
@@ -35,10 +36,5 @@
 }
 
 .videoTitle {
-  font-size: 24px;
-  font-weight: 1000;
-  font-family: "DM Sans";
-  font-weight: bolder;
-  color: var(--color-red);
   text-align: center;
 }

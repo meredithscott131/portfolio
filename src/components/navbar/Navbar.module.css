@@ -3,29 +3,56 @@
     height: 75px;
 }
 
+.brand {
+  flex: 1;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-montserrat);
+  font-size: var(--size-regular);
+  font-weight: var(--weight-bolder);
+}
+
+.brandLink {
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+  color: var(--color-blue);
+}
+
+/* Subtitle next to name */
+.subtitle {
+  font-size: 0.8rem;
+  font-weight: var(--weight-normal);
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
 /* Navbar Container */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--color-green);
-    z-index: 100;
-    opacity: 100%;
-    height: 75px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Menu Dropdown Button */
 .menuBtn {
-    width: 10%;
-    display: none;
+  display: none;
+  width: 28px;
+  cursor: pointer;
 }
 
 /* Menu Container */
 .menu {
-    display: flex;
+  flex: 2;
+  display: flex;
+  justify-content: center;
 }
 
 /* Menu Items */
@@ -40,8 +67,10 @@
 .menuItems a {
     display: block;
     text-decoration: none;
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-bold);
     color: var(--color-text);
-    font-family: 'DM Sans';
+    font-size: var(--size-button);
     font-weight: bolder;
     border-radius: 0.5rem;
     transition: .1s;
@@ -49,7 +78,7 @@
 
 /* Menu Item Hover Animation */
 .menuItems a:not(a[class="active"]):hover {
-    opacity: 65%;
+    opacity: 70%;
 }
 
 /* Menu Selected */
@@ -57,57 +86,126 @@ a[class="active"] {
     opacity: 50%;
 }
 
-@media screen and (max-width: 700px) {
-    /* Navbar Container */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+/* RIGHT */
+.socialContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+/* Social List */
+.socialList {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-top: 10px;
+}
+
+/* Social List Item */
+.socialList li {
+    list-style: none;
+    border-radius: 0.5rem;
+}
+
+.socialList li:hover {
+    opacity: 70%;
+}
+
+/* Social Image */
+.socialImage {
+    width: 20px;
+    height: 20px;
+}
+
+.rightControls {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  padding-right: 50px;
+}
+
+/* MOBILE MENU — hidden by default (desktop) */
+.mobileMenu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Hide desktop menu + socials */
+  .menu {
+    display: none;
+  }
+
+  .socialList {
+    display: none;
+  }
+
+  /* Hamburger moves right */
+  .menuBtn {
+    display: block;
+  }
+
+  /* Dropdown menu */
+  .mobileMenu {
+    position: absolute;
+    top: 75px;
+    right: 40px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    z-index: 100;
+  }
+
+  .menuOpen {
+    display: flex;
+    align-items: end;
+  }
+
+  .mobileMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     }
 
-    /* Menu Container */
-    .menu {
-        position: absolute;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        z-index: 10;
-        background-image: linear-gradient(180deg, var(--color-secondary) 0%, rgba(0, 13, 80, 0) 100%);
-        background-size: 100% 0;
-        background-repeat: no-repeat;
-        transition: 0.5s;
-    }
+  .mobileMenu a {
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    list-style: none;
+    text-decoration: none;
+  }
 
-    /* Menu Dropdown Button */
-    .menuBtn {
-        display: block;
-        margin-top: 5%;
-        margin-left: 5%;
-        cursor: pointer;
-    }
+  .mobileMenu li {
+    list-style: none;
+  }
 
-    /* Menu Items */
-    .menuItems {
-        display: none;
-        flex-direction: column;
-        gap: 20px;
-        border-radius: 10px;
-        background: var(--color-green);
-        padding: 20px;
-    }
+  .mobileMenu a:hover {
+    opacity: 70%;
+  }
 
-    /* Menu Item Hover Animation */
-    .menuItems:hover {
-        background-size: 100% 100%;
-    }
+  /* Socials now live inside menu */
+  .mobileSocials {
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.15);
+  }
 
-    /* Makes the menu visible when open */
-    .menuOpen {
-        display: flex;
-        z-index: 1;
-    }
-
-    /* Menu Item */
-    .menuItem {
-        text-align: left;
-    }
+  .mobileSocials .socialList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
 }

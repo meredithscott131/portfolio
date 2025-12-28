@@ -18,7 +18,7 @@ export const Reel = () => {
       <div className={styles.videoGrid}>
         {videos.map((video) => (
           <div key={video.id} className={styles.videoBlock}>
-            <h2 className={styles.videoTitle}>{video.title}</h2>
+            <h3 className={styles.videoTitle}>{video.title}</h3>
 
             <div className={styles.videoWrapper}>
               <iframe

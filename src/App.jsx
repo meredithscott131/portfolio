@@ -16,7 +16,6 @@ function App() {
           <Route path="/code" element={withFadeIn(Code)()} />
           <Route path="/art" element={withFadeIn(Animation)()} />
         </Routes>
-        {location.pathname !== "/about-contact" && <Footer />}
       </div>
   );
 }

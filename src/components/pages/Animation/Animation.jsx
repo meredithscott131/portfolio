@@ -33,7 +33,7 @@ export const Animation = () => {
   
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>3D Art and Animation Projects</h2>
+      <h1 className={styles.title}>3D Art and Animation Projects</h1>
 
       {projects.map((project, projectIndex) => (
         <div key={projectIndex} className={styles.projectSection}>
@@ -48,7 +48,7 @@ export const Animation = () => {
               />
             </div>
             <div className={styles.textContainer}>
-              <h3 className={styles.projectTitle}>{project.name}</h3>
+              <h2 className={styles.projectTitle}>{project.name}</h2>
               {project.description.subtitle && (
                 <p className={styles.subtitle}>{project.description.subtitle}</p>
               )}

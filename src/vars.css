@@ -1,13 +1,36 @@
+@import "@fontsource/montserrat";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/500.css";
+@import "@fontsource/montserrat/600.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/montserrat/800.css";
+@import "@fontsource/montserrat/900.css";
+
 :root {
 
     /* Colors */
-    --color-text: rgb(21, 34, 61);
+    --color-text: #222c36;
     --color-peri: rgb(141, 154, 255);
     --color-peri-hover: rgb(198, 205, 255);
-    --color-green: rgb(235, 245, 104);
+    --color-green: #aeca34;
     --colorss-bg: #e2eef3;
-    --color-red: rgb(255, 109, 64);
+    --color-blue: #1ba9dd;
 
     /* Fonts */
-    --font-roboto: "Roboto";
+    --font-montserrat: "Montserrat";
+    --font-Roboto: "Roboto";
+
+    /* Font Weights */
+    --weight-regular: 400;
+    --weight-bold: 700;
+    --weight-bolder: 800;
+    --weight-black: 900;
+
+    /* Font Sizes */
+    --size-small: 12px;
+    --size-button: 14px;
+    --size-body: 16px;
+    --size-h3: 18px;
+    --size-h2: 22px;
+    --size-h1: 32px;
 }
