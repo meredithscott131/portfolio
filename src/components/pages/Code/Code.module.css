@@ -157,6 +157,15 @@
     color: var(--color-peri);
 }
 
+.caption {
+    font-size: var(--size-body);
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-bold);
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
 @media (max-width: 800px) {
     /* Project Container */
     .project {

@@ -75,7 +75,7 @@ export const Code = () => {
 
                     {mediaItem.caption && (
                       <Carousel.Caption>
-                        <h3>{mediaItem.caption}</h3>
+                        <h3 className={styles.caption}>{mediaItem.caption}</h3>
                       </Carousel.Caption>
                     )}
                   </Carousel.Item>
