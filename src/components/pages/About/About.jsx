@@ -78,7 +78,7 @@ export const About = () => {
           {/* RESUME */}
           <li className={styles.resumeItem}>
             <a
-              href="/assets/Resume.pdf"
+              href="/assets/about/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.resumeLink}
