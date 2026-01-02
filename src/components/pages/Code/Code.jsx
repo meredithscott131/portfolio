@@ -63,12 +63,10 @@ export const Code = () => {
                     ) : (
                       <video
                         className="d-block w-100"
+                        controls
                         muted
                         loop
-                        playsInline
-                        preload="none"
                         poster={mediaItem.poster}
-                        controls={false}
                       >
                         <source src={mediaItem.src} type="video/mp4" />
                       </video>
