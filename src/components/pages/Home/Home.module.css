@@ -3,14 +3,34 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  overflow: hidden; /* Prevent overflow */
+  position: relative; /* Establish positioning context */
+}
+
+.threeBlock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: auto; /* Allow clicks on the duck */
+  overflow: hidden; /* Prevent any overflow */
 }
 
 .threeContainer {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the container */
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+}
+
+.threeContainer canvas {
+  display: block; /* Remove inline spacing */
+  pointer-events: auto; /* Allow clicks on canvas */
 }
 
 .textContainer {
@@ -23,6 +43,8 @@
   padding: 5%;
   padding-top: 10%;
   padding-bottom: 14%;
+  position: relative;
+  z-index: 1;
 }
 
 .name {
@@ -34,29 +56,28 @@
 }
 
 .pitch {
+  font-family: var(--font-montserrat);
+  font-size: var(--size-body);
+  font-weight: var(--weight-medium);
   color: var(--color-peri);
-  font-family: var(--font-roboto);
-  font-size: 54;
-  font-weight: var(--weight-semibold);
   margin-bottom: 5%;
 }
 
 .clickMe {
   position: absolute;
-  top: 50%; /* adjust as needed */
+  top: 50%;
   left: 55%;
-  width: 125px; /* adjust size */
+  width: 125px;
   z-index: 10;
+  pointer-events: none; /* Arrow shouldn't block clicks */
 }
 
 
 @media screen and (max-width: 1000px) {
   .threeContainer {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    z-index: -1;
-    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%); /* Adjust vertical centering */
   }
 
   .clickMe {
@@ -64,35 +85,29 @@
     left: 60%;
     width: 125px;
   }
+  
   .textContainer {
     padding-top: 15%;
     height: 75vh;
   }
+  
   .name {
-    color: var(--color-blue);
     font-size: 72px;
     line-height: 1.1;
   }
   
   .pitch {
-    color: var(--color-peri);
-    font-family: var(--font-roboto);
-    font-size: var(--size-body);
     margin-bottom: 5%;
     max-width: 75%;
   }
 }
 
-@media screen and (max-width: 400px) {
-
+@media screen and (max-width: 600px) {
   .threeContainer {
-    position: absolute;
-    top: -20px;
-    left: 0;
-    z-index: -1;
-    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%); /* Adjust vertical centering */
   }
-
 
   .clickMe {
     top: 50%;
@@ -101,7 +116,7 @@
   }
 
   .textContainer {
-    padding-top: 15%;
+    padding-top: 30%;
   }
 
   .name {
@@ -110,7 +125,6 @@
   }
   
   .pitch {
-    font-size: 14px;
     margin-bottom: 5%;
     max-width: 75%;
   }

@@ -20,9 +20,9 @@ export const Navbar = () => {
   <div className={styles.menu}>
     <ul className={styles.menuItems}>
       <li className={styles.menuItem}><NavLink to="/reel">Reel</NavLink></li>
-      <li className={styles.menuItem}><NavLink to="/code">Code</NavLink></li>
-      <li className={styles.menuItem}><NavLink to="/art">3D Art</NavLink></li>
-      <li className={styles.menuItem}><NavLink to="/about-contact">About / Contact</NavLink></li>
+      <li className={styles.menuItem}><NavLink to="/projects">Projects</NavLink></li>
+      <li className={styles.menuItem}><NavLink to="/3d-work">3D Work</NavLink></li>
+      <li className={styles.menuItem}><NavLink to="/about">About</NavLink></li>
     </ul>
   </div>
 
@@ -60,9 +60,9 @@ export const Navbar = () => {
     onClick={() => setMenuOpen(false)}
   >
     <li><NavLink to="/reel">Reel</NavLink></li>
-    <li><NavLink to="/code">Code</NavLink></li>
-    <li><NavLink to="/art">3D Art</NavLink></li>
-    <li><NavLink to="/about-contact">About / Contact</NavLink></li>
+    <li><NavLink to="/projects">Projects</NavLink></li>
+    <li><NavLink to="/3d-work">3D Work</NavLink></li>
+    <li><NavLink to="/about">About</NavLink></li>
 
     {/* Socials move INTO menu on mobile */}
     <li className={styles.mobileSocials}>

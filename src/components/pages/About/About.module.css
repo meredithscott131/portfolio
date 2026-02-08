@@ -31,6 +31,13 @@
     text-align: left;
 }
 
+.seeking {
+    font-size: var(--size-body);
+    font-weight: var(--weight-bold);
+    color: var(--color-peri);
+    text-align: left;
+}
+
 /* Contact Title */
 .contactTitle {
     margin-top: 5%;
@@ -273,6 +280,10 @@
 
     /* Profile Description */
     .description {
+        text-align: center;
+    }
+
+    .seeking {
         text-align: center;
     }
 

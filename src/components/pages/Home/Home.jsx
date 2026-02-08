@@ -18,10 +18,11 @@ export const Home = () => {
       0.1,
       1000
     );
-    let renderer = new THREE.WebGLRenderer({ alpha: true });
+    let renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFShadowMap;
+    renderer.domElement.style.display = 'block'; // Remove inline spacing
     threeContainerRef.current.appendChild(renderer.domElement);
 
     // Lighting
@@ -48,7 +49,7 @@ export const Home = () => {
       model.position.sub(center);
 
       model.position.y -= 0.07;
-      applyToonMaterial(model)
+      applyToonMaterial(model);
       scene.add(model);
 
       // Setup animation mixer
@@ -89,13 +90,12 @@ export const Home = () => {
           action.play();
           action.loop = THREE.LoopOnce;
           action.clampWhenFinished = true;
-          action.onFinished = () => action.stop();
         });
 
         const sound = new Audio("/assets/home/squeak_sound.mp3");
-        sound.volume = 0.2
+        sound.volume = 0.2;
         setTimeout(() => {
-            sound.play();
+          sound.play();
         }, 500);
 
         setShake(true);
@@ -136,27 +136,37 @@ export const Home = () => {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("resize", onWindowResize);
       window.removeEventListener("click", onClick);
-      if (threeContainerRef.current) {
+      if (threeContainerRef.current && renderer.domElement.parentNode === threeContainerRef.current) {
         threeContainerRef.current.removeChild(renderer.domElement);
       }
+      renderer.dispose();
     };
   }, []);
 
   // Helper function for toon gradient
   function applyToonMaterial(model) {
-      model.traverse((child) => {
-          if (child.isMesh) {
-              // Preserve original texture
-              const originalMap = child.material.map;
-              child.material = new THREE.MeshToonMaterial({
-                  map: originalMap,
-              });
-          }
-      });
+    model.traverse((child) => {
+      if (child.isMesh) {
+        // Preserve original texture
+        const originalMap = child.material.map;
+        child.material = new THREE.MeshToonMaterial({
+          map: originalMap,
+        });
+      }
+    });
   }
 
   return (
     <div className={styles.homeRoot}>
+      <div className={styles.threeBlock}>
+        <div ref={threeContainerRef} className={styles.threeContainer} />
+        <img
+          src="/assets/home/Click_Me.png"
+          alt="Click Me"
+          className={styles.clickMe}
+        />
+      </div>
+
       <div className={styles.textContainer}>
         <motion.p
           className={styles.name}
@@ -171,17 +181,8 @@ export const Home = () => {
           animate={shake ? { y: [0, -20, 20, -20, 20, -10, 10, -5, 5, -2, 2, 0] } : {}}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
         >
-          Technical Director, Software Developer, Multimedia Artist, Researcher
+          Software Developer & Designer - Creating interactive applications and production tools
         </motion.p>
-      </div>
-
-      <div className={styles.threeBlock}>
-        <div ref={threeContainerRef} className={styles.threeContainer} />
-        <img
-          src="/assets/home/Click_Me.png"
-          alt="Click Me"
-          className={styles.clickMe}
-        />
       </div>
     </div>
   );

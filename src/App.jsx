@@ -12,9 +12,9 @@ function App() {
         <Routes>
           <Route path="/" element={withFadeIn(Home)()} />
           <Route path="/reel" element={withFadeIn(Reel)()} />
-          <Route path="/about-contact" element={withFadeIn(About)()} />
-          <Route path="/code" element={withFadeIn(Code)()} />
-          <Route path="/art" element={withFadeIn(Animation)()} />
+          <Route path="/about" element={withFadeIn(About)()} />
+          <Route path="/projects" element={withFadeIn(Code)()} />
+          <Route path="/3d-work" element={withFadeIn(Animation)()} />
         </Routes>
       </div>
   );

@@ -25,7 +25,7 @@ export const Code = () => {
 
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>Coding Projects</h1>
+      <h1 className={styles.title}>Projects</h1>
       <Box sx={{ borderBottom: 1, borderColor: "divider", mb: 3 }}>
         <Tabs
           value={tab}

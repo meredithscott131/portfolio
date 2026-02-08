@@ -10,19 +10,19 @@ export const About = () => {
         <h1 className={styles.title}>Hi, I'm Meredith!</h1>
 
         <p className={styles.description}>
-          I’m a fourth-year computer science and animation student at Northeastern
+          I’m a computer science and animation student at Northeastern
           University, interested in exploring the intersections of technology and
           art. Since a young age, I’ve always had an equal curiosity for STEM and
           dedication to my creative hobbies like drawing, a combination that
-          continues to shape my work today. With experience spanning animation pipeline
-          technical direction, UI/UX research for extended reality, and software
+          continues to shape my work today. With experience spanning pipeline
+          technical direction, UI/UX research, and software
           development, I’m interested in solving technical problems that enhance
           creative workflows and push the boundaries of visual storytelling.
           When I'm not coding, you'll find me discovering local cafes, expanding
           my graphic novel collection, and figuring out puzzle games.
         </p>
 
-        <p className={styles.description}>
+        <p className={styles.seeking}>
           I'm currently seeking full-time positions starting May 2026.
         </p>
 
