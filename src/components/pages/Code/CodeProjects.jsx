@@ -2,6 +2,23 @@ import styles from "./Code.module.css";
 
 export const CodeProjects = () => {
 
+  const racereplay = {
+    title: "Race Replay [Ongoing]",
+    subtitle: "TypeScript, React, Python, FastF1 API, Product Design",
+    github: "https://github.com/meredithscott131/f1-race-replay/tree/react-setup",
+    media: [
+      { type: "image", src: "/assets/code/RaceReplay/Screenshot.png" }
+    ],
+    bullets: [
+      "Refactoring a Python application for web to reach broader F1 audience, conducting user research to identify accessibility barriers and transforming a developer-only tool into a zero-setup web platform",
+      "Creating responsive canvas-based layout with intuitive playback controls, real-time telemetry display, and a live leaderboard enabling users to analyze 140k+ frames from 20 drivers across full F1 seasons (2018-2025)",
+      "Architecting client-server system to support web constraints, implementing intelligent caching and efficient data delivery strategy to achieve smooth 60 FPS rendering",
+      "Designing professional visual identity in Figma, matching F1 branding with team colors and logos"
+    ],
+    contributors: null,
+    category: "Software Development"
+  }
+
   const renderstack = {
     title: "RenderStack: 3D Artist Forum",
     subtitle: "TypeScript, React, Three.js, MongoDB, CI/CD",
@@ -228,6 +245,7 @@ export const CodeProjects = () => {
   };
 
   return [
+    racereplay,
     renderstack,
     bookGenerator,
     krita,
