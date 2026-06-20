@@ -1,239 +1,69 @@
 @import "../../../vars.css";
 
-/* About Page Container */
-.container {
+/* ── Page wrapper ── */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 5% 5% 8%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ── Section shared ── */
+.section {
+  width: 100%;
+}
+
+.sectionTitle {
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* ══════════════════════════════════════
+   SECTION 1 — Bio + Portrait
+══════════════════════════════════════ */
+.bioSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5%;
-  width: 100%;
+  gap: 60px;
 }
 
-/* Text Container */
-.textContainer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: var(--color-text);
-    z-index: 1;
-    max-width: 600px;
-}
-
-/* Page Title */
-.title {
-    margin-bottom: 5%;
-}
-
-/* Profile Description */
-.description {
-    font-size: var(--size-body);
-    text-align: left;
-}
-
-.seeking {
-    font-size: var(--size-body);
-    font-weight: var(--weight-bold);
-    color: var(--color-peri);
-    text-align: left;
-}
-
-/* Contact Title */
-.contactTitle {
-    margin-top: 5%;
-}
-
-/* List of Social Media Elements */
-.socialsList {
-    list-style: none;
-    padding-top: 2%;
-    padding-left: 0%;
-}
-
-/* Social Media Element */
-.social {
-    display: flex;
-    flex-direction: row;
-    column-gap: 5%;
-    margin-bottom: 5%;
-}
-
-/* Social Media Image Icon Sizing */
-.socialImage {
-    width: 30px;
-    height: 30px;
-}
-
-/* Social Media Text */
-.socialText {
-    text-align: left;
-    text-decoration: none;
-    color: var(--color-text);
-}
-
-/* Resume Text */
-.resume {
-    text-align: left;
-    color: var(--color-text);
-    font-weight: var(--weight-bold);
-    text-decoration: none;
-}
-
-/* Social links */
-.socialText {
-  position: relative;
-  text-decoration: none;
-  color: var(--color-text);
-}
-
-.socialText::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-peri);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.socialText:hover {
-  color: var(--color-peri);
-}
-
-.socialText:hover::after {
-  transform: scaleX(1);
-}
-
-/* Resume */
-.resumeItem {
-  list-style: none;
-}
-
-.resumeLink {
+.bioText {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
+  flex-direction: column;
+  align-items: flex-start;
   color: var(--color-text);
+  max-width: 600px;
+  z-index: 1;
 }
 
-.resumeText {
-  position: relative;
-  font-weight: var(--weight-bold);
+.title {
+  margin-bottom: 5%;
+  font-size: var(--size-h3);
+  font-family: var(--font-montserrat);
+  font-weight: var(--weight-semiBold);
 }
 
-.resumeText::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-peri);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
+.description {
+  font-size: var(--size-body);
+  text-align: left;
+  line-height: 1.7;
 }
 
-.resumeLink:hover .resumeText {
-  color: var(--color-peri);
-}
-
-.resumeLink:hover .resumeText::after {
-  transform: scaleX(1);
-}
-
-/* Shared animated underline text */
-.socialText,
-.resume {
-  color: var(--color-text);
-  text-decoration: none;
-  font-family: var(--font-roboto);
-  font-weight: var(--weight-regular);
-}
-
-.resume {
-    font-weight: var(--weight-bold);
-    text-wrap: inherit;
-}
-
-/* Underline element */
-.socialText::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-peri);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-/* Hover animation */
-.socialText:hover {
-  color: var(--color-peri);
-}
-
-.socialText:hover::after {
-  transform: scaleX(1);
-}
-
-/* Click feedback */
-.socialText:active {
-  opacity: 0.6;
-}
-
-.resumeText {
-  position: relative;
-  font-weight: var(--weight-bold);
-}
-
-/* Animated underline */
-.resumeText::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-peri);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-/* Trigger animation when parent link is hovered */
-.resume:hover .resumeText::after {
-  transform: scaleX(1);
-}
-
-.resume:hover .resumeText {
-  color: var(--color-peri);
-}
-
-/* Active state */
-.resume:active {
-  opacity: 0.6;
-}
-
-/* Profile Image Container */
+/* Portrait */
 .profileImage {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 350px;
-  margin-bottom: 125px;
-  margin-left: 50px;
+  width: 320px;
+  height: 320px;
   flex-shrink: 0;
 }
 
-/* Circular Image */
 .profileImage img {
   width: 100%;
   height: 100%;
@@ -242,73 +72,254 @@
   display: block;
 }
 
-/* Floating Animation */
-@keyframes floating {
-    0% {
-        transform: translate(0, 0px);
-    }
-    50% {
-        transform: translate(0, -15px);
-    }
-    100% {
-        transform: translate(0, 0px);
-    }
+/* ══════════════════════════════════════
+   SECTION 2 — Experience Accordion
+══════════════════════════════════════ */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);
 }
 
+.accordionItem {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);
+  transition: background-color 0.3s ease;
+}
+
+.accordionItem:hover {
+  background-color: color-mix(in srgb, var(--color-text) 5%, transparent);
+}
+
+.accordionItemOpen {
+  background-color: color-mix(in srgb, var(--color-text) 5%, transparent);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 16px;
+  text-align: left;
+}
+
+/* Company name shown in collapsed state */
+.accordionCompanyName {
+  font-family: var(--font-montserrat);
+  font-size: var(--size-button);
+  font-weight: var(--weight-semiBold);
+  color: var(--color-text);
+}
+
+/* Role + period row shown only when expanded */
+.accordionExpandedMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.accordionRole {
+  font-size: var(--size-body);
+  color: var(--color-text);
+  opacity: 50%;
+}
+
+.accordionPeriod {
+  font-size: var(--size-body);
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  white-space: nowrap;
+}
+
+.accordionChevron {
+  font-size: var(--size-h2);
+  color: var(--color-text);
+  transform: rotate(0deg);
+  transition: transform 0.25s ease;
+  line-height: 1;
+  display: inline-block;
+}
+
+.accordionChevronOpen {
+  transform: rotate(90deg);
+}
+
+/* Animated body */
+.accordionBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 10px;
+}
+
+.accordionBodyOpen {
+  max-height: 300px;
+  padding: 0 16px 20px;
+}
+
+.accordionDescription {
+  font-size: var(--size-body);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* ── Resume Link ── */
+.resumeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  color: var(--color-peri);
+  text-decoration: none;
+  padding-top: 20px;
+  padding-left: 16px;
+}
+
+.resumeText {
+  position: relative;
+  font-weight: var(--weight-semiBold);
+  font-family: var(--font-montserrat);
+  font-size: var(--size-button);
+}
+
+.resumeText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-peri);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.resumeLink:hover .resumeText::after {
+  transform: scaleX(1);
+}
+
+.resumeIcon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+/* ══════════════════════════════════════
+   SECTION 3 — Skills (full-bleed)
+══════════════════════════════════════ */
+
+/* Escape the page's 5% padding on both sides */
+.skillsSection {
+  margin-left: -6%;
+  margin-right: -6%;
+  /* Also cancel the page gap so the bottom flush-aligns */
+  margin-bottom: -8%;
+  background-color: var(--color-blue);
+  /* Re-apply the same horizontal padding, plus generous vertical */
+  padding: 60px;
+}
+
+.skillsSectionTitle {
+  color: var(--color-bg);
+  margin-bottom: 24px;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 40px;
+}
+
+.skillCardTitle {
+  color: var(--color-bg);
+  font-size: var(--size-h3);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.skillList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skillItem {
+  color: var(--color-bg);
+  font-size: var(--size-body);
+  position: relative;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — ≤800px
+══════════════════════════════════════ */
 @media screen and (max-width: 800px) {
-    /* About Page Container */
-    .container {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 50px;
-        align-items: center;
-        align-items: center;
-        padding: 10%;
-    }
-
-    /* Text Container */
-    .textContainer {
-        text-align: center;
-        align-items: center;
-        max-width: 100%;
-    }
-
-    /* Page Title */
-    .title {
-        margin-top: 0;
-    }
-
-    /* Profile Description */
-    .description {
-        text-align: center;
-    }
-
-    .seeking {
-        text-align: center;
-    }
-
-    /* Social Media Text */
-    .socialText {
-        text-align: center;
-    }
-
-    /* Resume Text */
-    .resume {
-        text-align: center;
-    }
-
-  .profileImage {
-    width: 75vw;
-    height: 75vw;
-    max-width: 350px;
-    max-height: 350px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+  .page {
+    gap: 60px;
+    padding: 10% 6% 12%;
   }
 
-  .profileImage img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+  /* Bio */
+  .bioSection {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .bioText {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: var(--size-h3);
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .profileImage {
+    width: 72vw;
+    height: 72vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  /* Skills — match mobile page padding */
+  .skillsSection {
+    margin-left: -8%;
+    margin-right: -8%;
+    padding: 60px;
+  }
+
+  /* Skills grid → single column */
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 50px 0;
+  }
+
+  .skillCardTitle {
+    margin-bottom: 10px;
+  }
+
+  .skillList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px 12px;
   }
 }

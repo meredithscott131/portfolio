@@ -50,7 +50,7 @@ export const Code = () => {
         <div className={styles.gridContainer}>
         <div className={styles.grid}>
           {filteredProjects.map((project) => (
-            <Card key={`${tab}-${project.title}`} className={`${styles.projectCard} border-0`}>
+            <Card key={`${tab}-${project.title}`} className={`${styles.projectCard} border-0`} style={{ backgroundColor: "var(--color-bg)" }}>
               <Carousel variant="dark" interval={null} controls>
                 {project.media.map((mediaItem, mediaIndex) => (
                   <Carousel.Item key={mediaIndex}>
@@ -81,7 +81,7 @@ export const Code = () => {
                 ))}
               </Carousel>
               <Card.Body>
-                <h2>{project.title}</h2>
+                <h3>{project.title}</h3>
                 <p className={styles.subtitle}>{project.subtitle}</p>
 
                 {(() => {

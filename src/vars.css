@@ -1,4 +1,6 @@
 @import "@fontsource/montserrat";
+@import "@fontsource/poppins";
+@import '@fontsource-variable/plus-jakarta-sans/wght.css';
 @import "@fontsource/montserrat/400.css";
 @import "@fontsource/montserrat/500.css";
 @import "@fontsource/montserrat/600.css";
@@ -10,29 +12,40 @@
 
     /* Colors */
     --color-text: #222c36;
-    --color-peri: rgb(141, 154, 255);
+    --color-peri: rgb(150, 142, 237);
     --color-peri-hover: rgb(198, 205, 255);
     --color-green: #aeca34;
-    --colorss-bg: #e2eef3;
-    --color-blue: #1ba9dd;
+    --color-bg: #f5f7f9;
+    --color-blue: #60ADFF;
 
     /* Fonts */
     --font-montserrat: "Montserrat";
     --font-Roboto: "Roboto";
+    --font-Poppins: "Poppins";
+    --font-plus-jakarta-sans: "Plus Jakarta Sans Variable";
 
     /* Font Weights */
     --weight-regular: 400;
     --weight-medium: 500;
     --weight-semiBold: 600;
-    --weight-bold: 700;
+    --weight-bold: 800;
     --weight-bolder: 800;
     --weight-black: 900;
 
     /* Font Sizes */
     --size-small: 12px;
     --size-button: 14px;
-    --size-body: 16px;
+    --size-body: 14px;
     --size-h3: 18px;
-    --size-h2: 22px;
-    --size-h1: 32px;
+    --size-h2: 24px;
+    --size-h1: 36px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }

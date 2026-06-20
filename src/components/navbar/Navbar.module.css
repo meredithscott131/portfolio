@@ -10,14 +10,14 @@
   align-items: center;
   gap: 10px;
   font-family: var(--font-montserrat);
-  font-size: var(--size-regular);
-  font-weight: var(--weight-bolder);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-semiBold);
 }
 
 .brandLink {
   font-weight: var(--weight-bold);
   text-decoration: none;
-  color: var(--color-blue);
+  color: var(--color-text);
 }
 
 /* Subtitle next to name */
@@ -36,9 +36,8 @@
   height: 75px;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: var(--color-bg);
   z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Menu Dropdown Button */
@@ -50,15 +49,14 @@
 
 /* Menu Container */
 .menu {
-  flex: 2;
   display: flex;
-  justify-content: center;
+  margin-left: auto;
 }
 
 /* Menu Items */
 .menuItems {
     display: flex;
-    gap: 50px;
+    gap: 20px;
     list-style: none;
     padding-top: 15px;
 }
@@ -68,10 +66,9 @@
     display: block;
     text-decoration: none;
     font-family: var(--font-montserrat);
-    font-weight: var(--weight-bold);
     color: var(--color-text);
     font-size: var(--size-button);
-    font-weight: bolder;
+    font-weight: var(--weight-semiBold);
     border-radius: 0.5rem;
     transition: .1s;
 }
@@ -120,11 +117,8 @@ a[class="active"] {
 }
 
 .rightControls {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 25px;
   padding-right: 50px;
 }
 
@@ -140,6 +134,11 @@ a[class="active"] {
   .navbar {
     flex-direction: row;
     align-items: center;
+    padding: 0px;
+  }
+
+  .brand {
+    padding-left: 25px;
   }
 
   /* Hide desktop menu + socials */
@@ -164,7 +163,7 @@ a[class="active"] {
     display: none;
     flex-direction: column;
     gap: 20px;
-    background: white;
+    background: var(--color-bg);
     padding: 20px;
     z-index: 100;
   }
@@ -182,8 +181,9 @@ a[class="active"] {
 
   .mobileMenu a {
     font-family: var(--font-montserrat);
-    font-weight: var(--weight-bold);
     color: var(--color-text);
+    font-size: var(--size-button);
+    font-weight: var(--weight-semiBold);
     list-style: none;
     text-decoration: none;
   }
