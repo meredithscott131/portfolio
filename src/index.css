@@ -4,8 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scrollbar-color: var(--color-peri) white;
-  font-family: var(--font-roboto);
+  scrollbar-color: var(--color-peri) var(--color-bg);
+  font-family: var(--font-plus-jakarta-sans);
   font-size: var(--size-body);
   font-weight: var(--weight-regular);
 }
@@ -16,21 +16,21 @@ body {
 
 h1 {
   font-family: var(--font-montserrat);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semiBold);
   color: var(--color-blue);
   font-size: var(--size-h1);
 }
 
 h2 {
   font-family: var(--font-montserrat);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semiBold);
   color: var(--color-green);
   font-size: var(--size-h2);
 }
 
 h3 {
   font-family: var(--font-montserrat);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semiBold);
   color: var(--color-green);
   font-size: var(--size-h3);
 }
