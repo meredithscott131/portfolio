@@ -1,133 +1,70 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Code.module.css";
-import Card from 'react-bootstrap/Card';
-import Carousel from 'react-bootstrap/Carousel';
-import {CodeProjects as getProjects} from "./CodeProjects.jsx";
-import { Tabs, Tab, Box } from "@mui/material";
-import { useState } from "react";
-import { GoArrowRight } from "react-icons/go";
+import { CodeProjects as getProjects, getPreviewMedia } from "./CodeProjects.jsx";
 
 export const Code = () => {
-
-  const [tab, setTab] = useState("All");
-
-  const handleTabChange = (_, newValue) => {
-    setTab(newValue);
-  };
 
   // Importing code projects data
   const projects = getProjects();
 
-  const filteredProjects =
-    tab === "All"
-      ? projects
-      : projects.filter(project => project.category === tab);
-
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Projects</h1>
-      <Box sx={{ borderBottom: 1, borderColor: "divider", mb: 3 }}>
-        <Tabs
-          value={tab}
-          onChange={handleTabChange}
-          variant="scrollable"
-          scrollButtons="auto"
-          sx={{
-            "& .MuiTabs-indicator": {
-              backgroundColor: "var(--color-peri)",
-            },
-            "& .MuiTab-root.Mui-selected": {
-              color: "var(--color-peri)",
-            },
-          }}
-        >
-          <Tab label="All" value="All" />
-          <Tab label="Software Development" value="Software Development" />
-          <Tab label="Pipeline Tools" value="Pipeline Tools" />
-          <Tab label="Graphics Programming" value="Graphics Programming" />
-        </Tabs>
-      </Box>
-        <div className={styles.gridContainer}>
+      <div className={styles.gridContainer}>
         <div className={styles.grid}>
-          {filteredProjects.map((project) => (
-            <Card key={`${tab}-${project.title}`} className={`${styles.projectCard} border-0`} style={{ backgroundColor: "var(--color-bg)" }}>
-              <Carousel variant="dark" interval={null} controls>
-                {project.media.map((mediaItem, mediaIndex) => (
-                  <Carousel.Item key={mediaIndex}>
-                    {mediaItem.type === "image" ? (
-                      <img
-                        className="d-block w-100"
-                        src={mediaItem.src}
-                        alt={`Slide ${mediaIndex}`}
-                      />
-                    ) : (
-                      <video
-                        className="d-block w-100"
-                        controls
-                        muted
-                        loop
-                        poster={mediaItem.poster}
-                      >
-                        <source src={mediaItem.src} type="video/mp4" />
-                      </video>
-                    )}
+          {projects.map((project) => {
+            const previewMedia = getPreviewMedia(project);
 
-                    {mediaItem.caption && (
-                      <Carousel.Caption>
-                        <h3 className={styles.caption}>{mediaItem.caption}</h3>
-                      </Carousel.Caption>
-                    )}
-                  </Carousel.Item>
-                ))}
-              </Carousel>
-              <Card.Body>
-                <h3>{project.title}</h3>
-                <p className={styles.subtitle}>{project.subtitle}</p>
-
-                {(() => {
-                  const logLine = project.logLine ?? project.description?.logLine;
-                  return logLine ? (
-                    <p className={styles.logLine}>{logLine}</p>
-                  ) : null;
-                })()}
-
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.githubLink}
-                  >
+            return (
+              <Link
+                key={project.slug}
+                to={`/projects/${project.slug}`}
+                className={styles.previewCard}
+              >
+                <div className={styles.previewMediaWrapper}>
+                  {previewMedia?.type === "image" ? (
                     <img
-                      src="/assets/Icons/github_circle_icon.png"
-                      alt="GitHub"
-                      className={styles.githubIcon}
+                      className={styles.previewMedia}
+                      src={previewMedia.src}
+                      alt={project.title}
                     />
-                    <span className={styles.linkText}>View Project</span>
-                  </a>
-                )}
+                  ) : previewMedia?.type === "video" ? (
+                    <video
+                      className={styles.previewMedia}
+                      src={previewMedia.src}
+                      poster={previewMedia.poster}
+                      muted
+                      playsInline
+                    />
+                  ) : null}
+                </div>
 
-                <ul className={styles.bodyul}>
-                  {(project.bullets ?? project.description?.bullets)?.map(
-                    (bullet, bulletIndex) => (
-                      <li key={bulletIndex} className={styles.bodyli}>
-                        {bullet}
-                      </li>
-                    )
+                <div className={styles.previewBody}>
+                  <h3 className={styles.previewTitle}>{project.title}</h3>
+                  {project.subtitle && (
+                    <div className={styles.skillsList}>
+                      {project.subtitle.split(",").map((skill) => (
+                        <span key={skill.trim()} className={styles.skillTag}>
+                          {skill.trim()}
+                        </span>
+                      ))}
+                    </div>
                   )}
-                </ul>
+                  {project.blurb && (
+                    <p className={styles.previewBlurb}>{project.blurb}</p>
+                  )}
 
-                {project.contributors && (
-                  <p className={styles.contributors}>
-                    Contributors: {project.contributors}
-                  </p>
-                )}
-              </Card.Body>
-
-            </Card>
-          ))}
+                  <span className={styles.viewProjectLink}>
+                    View Project
+                    <span className={styles.viewProjectArrow}>→</span>
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
-        </div>
+      </div>
     </section>
   );
 };

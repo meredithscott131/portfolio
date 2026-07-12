@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar } from "./components/navbar/Navbar.jsx";
 import { Footer } from "./components/footer/Footer.jsx";
 import { About, Code, Home, Animation, Reel } from "./components/pages";
+import { ProjectDetail } from './components/pages/Code/Projectdetail.jsx';
 import withFadeIn from "./withFadeIn";
 import styles from "./App.module.css";
 
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={withFadeIn(About)()} />
           <Route path="/projects" element={withFadeIn(Code)()} />
+<Route path="/projects/:slug" element={<ProjectDetail />} />
         </Routes>
         <Footer />
       </div>

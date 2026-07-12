@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Prevent the page from scrolling behind the full-screen overlay while it's open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <>
@@ -30,7 +38,7 @@ export const Navbar = () => {
     />
   </div>
 
-  {/* MOBILE DROPDOWN */}
+  {/* MOBILE FULL-SCREEN OVERLAY */}
   <ul
     className={`${styles.mobileMenu} ${menuOpen ? styles.menuOpen : ""}`}
     onClick={() => setMenuOpen(false)}

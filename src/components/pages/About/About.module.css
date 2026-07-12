@@ -176,9 +176,10 @@
   gap: 5px;
   width: fit-content;
   color: var(--color-peri);
-  text-decoration: none;
+  text-decoration: underline;
   padding-top: 20px;
   padding-left: 16px;
+  transition: opacity 0.3s ease;
 }
 
 .resumeText {
@@ -188,21 +189,8 @@
   font-size: var(--size-button);
 }
 
-.resumeText::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-peri);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.resumeLink:hover .resumeText::after {
-  transform: scaleX(1);
+.resumeLink:hover {
+  opacity: 70%;
 }
 
 .resumeIcon {
@@ -304,7 +292,7 @@
   .skillsSection {
     margin-left: -8%;
     margin-right: -8%;
-    padding: 60px;
+    padding: 40px;
   }
 
   /* Skills grid → single column */
