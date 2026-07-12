@@ -118,7 +118,6 @@
     color: var(--color-peri);
 }
 
-/* Skills tag list (replaces plain-text subtitle line) */
 .skillsList {
     display: flex;
     flex-wrap: wrap;
