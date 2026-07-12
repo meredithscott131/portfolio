@@ -257,7 +257,7 @@ export const CodeProjects = () => {
               rel="noopener noreferrer"
               className={styles.link}
             >
-              Reality Design Studio
+              Reality Design
             </a>{" "}
             research group, this project investigates the potential of single-handed
             gesture controls to enhance mobility and immersion in augmented reality
