@@ -5,11 +5,11 @@ import styles from "./About.module.css";
 const experiences = [
   {
     id: "wdi",
-    role: "Visual Effects Design Intern",
+    role: "Visual Effects Design (Pipeline TD) Intern",
     company: "Walt Disney Imagineering",
     period: "Jun. 2026 – Present",
     description:
-      "Building and debugging production tools for Adobe After Effects, Maya, Unreal, Nuke, and Houdini supporting VFX pipelines across Disney theme parks and attractions.",
+      "Building and debugging production tools for Adobe After Effects, AWS Deadline, Maya, and Nuke, supporting VFX pipelines across Disney theme parks and attractions.",
   },
   {
     id: "uiux",
@@ -17,12 +17,12 @@ const experiences = [
     company: "Paramount Animation",
     period: "Jun. 2025 – Aug. 2025",
     description:
-      "Developed Python and Qt tools that streamlined artist workflows and automated file management on active film productions. Worked directly with TDs and artists in agile sprints to deploy, debug, and document pipeline tooling.",
+      "Developed Python and Qt tools that streamlined artist workflows and automated file management on active film productions (Avatar Aang: The Last Airbender, TMNT Mutant Mayhem 2). Worked directly with TDs and artists in agile sprints to deploy, debug, and document pipeline tooling.",
   },
   {
     id: "pipeline",
     role: "Augmented Reality UX Research Co-op",
-    company: "Reality Design Studio",
+    company: "Reality Design Lab",
     period: "Jul. 2024 – Apr. 2025",
     description:
       "Prototyped augmented reality interfaces in Unity with the HoloLens 2 and MRTK, exploring 3D UI design and gesture recognition. Ran usability studies using gesture elicitation frameworks to surface and resolve UX issues.",
@@ -43,7 +43,7 @@ const skills = [
   {
     id: "workflow",
     label: "Animation & VFX",
-    items: ["Maya", "Houdini", "Unity", "ZBrush", "XGen", "Marvelous Designer", "Adobe Suite"],
+    items: ["Maya", "Adobe Suite", "Nuke", "AWS Deadline", "Houdini", "Unity", "ZBrush", "XGen", "Marvelous Designer"],
   },
 ];
 
@@ -57,9 +57,9 @@ export const About = () => {
       {/* ── SECTION 1: Bio + Portrait ── */}
       <section className={styles.bioSection}>
         <div className={styles.bioText}>
-          <p className={styles.title}>Hi! I’m Meredith, a pipeline tool developer and design technologist, passionate about enhancing creative workflows that push the boundaries of how we tell and experience stories.</p>
+          <p className={styles.title}>Hi! I’m Meredith, a pipeline technical director and design technologist, passionate about enhancing creative workflows that push the boundaries of how we tell and experience stories.</p>
           <p className={styles.description}>
-            Driven by an equal love for engineering and art, I build production software with a focus on user experience and artistic empathy. Currently, I'm doing that at <strong>Walt Disney Imagineering</strong>, developing tools for immersive experiences.
+            Driven by an equal love for engineering and art, I build production software with a focus on user experience and artistic empathy. Currently, I'm doing that at <strong>Walt Disney Imagineering</strong>, developing VFX pipeline tools for immersive theme park experiences.
           </p>
           <p className={styles.description}>
             Outside of work, you can find me searching for the perfect matcha spot, expanding my graphic novel collection, or doodling in my sketchbook.
