@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
 import { CodeProjects as getProjects } from "./CodeProjects.jsx";
-import { ProjectSection } from "./ProjectSection.jsx";
+import { ProjectSection } from "./Projectsection.jsx";
 import styles from "./Code.module.css";
 
 export const ProjectDetail = () => {
